@@ -1,0 +1,270 @@
+/* ==========================================================
+   PROYECTO : MINUTA DIGITAL 360
+   ARCHIVO  : estilos.css
+
+   DESCRIPCIÓN:
+   Estilos generales de toda la aplicación.
+========================================================== */
+
+
+/* ==========================================================
+   01. COLORES DEL SISTEMA
+========================================================== */
+
+:root {
+
+    /* Colores principales */
+    --azul-oscuro: #0F172A;
+    --azul: #1E3A8A;
+    --azul-claro: #2563EB;
+    --cian: #22D3EE;
+
+    /* Colores de estado */
+    --verde: #16A34A;
+    --naranja: #D97706;
+    --rojo: #DC2626;
+
+    /* Colores de texto */
+    --blanco: #FFFFFF;
+    --texto: #1E293B;
+    --texto-secundario: #64748B;
+
+    /* Colores claros */
+    --gris-claro: #F8FAFC;
+    --gris: #CBD5E1;
+    --borde: #E2E8F0;
+
+    /* Fuente principal */
+    --fuente: 'Poppins', sans-serif;
+
+
+    /* ======================================================
+       VARIABLES DEL TEMA
+    ======================================================= */
+
+    --fondo-app: var(--azul-oscuro);
+
+    --texto-app: var(--texto);
+
+}
+
+
+/* ==========================================================
+   02. TEMA OSCURO
+========================================================== */
+
+[data-tema="oscuro"] {
+
+    --fondo-app: #0F172A;
+
+    --texto-app: #FFFFFF;
+
+}
+
+
+/* ==========================================================
+   03. TEMA CLARO
+========================================================== */
+
+[data-tema="claro"] {
+
+    --fondo-app: #F1F5F9;
+
+    --texto-app: #1E293B;
+
+}
+
+
+/* ==========================================================
+   04. TEMA AUTOMÁTICO
+========================================================== */
+
+@media (prefers-color-scheme: light) {
+
+    [data-tema="sistema"] {
+
+        --fondo-app: #F1F5F9;
+
+        --texto-app: #1E293B;
+
+    }
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+    [data-tema="sistema"] {
+
+        --fondo-app: #0F172A;
+
+        --texto-app: #FFFFFF;
+
+    }
+
+}
+
+
+/* ==========================================================
+   05. CONFIGURACIÓN GENERAL
+========================================================== */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family: var(--fuente);
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    color: var(--texto-app);
+
+    background: var(--fondo-app);
+
+    overflow-x: hidden;
+
+    transition:
+        background-color .25s ease,
+        color .25s ease;
+
+}
+
+
+/* ==========================================================
+   06. TÍTULOS Y PÁRRAFOS
+========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    margin: 0;
+
+    line-height: 1.2;
+
+}
+
+
+p {
+
+    margin: 0;
+
+}
+
+
+/* ==========================================================
+   07. FORMULARIOS
+========================================================== */
+
+button,
+input,
+select,
+textarea {
+
+    font: inherit;
+
+}
+
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+}
+
+
+input,
+select,
+textarea {
+
+    max-width: 100%;
+
+}
+
+
+textarea {
+
+    resize: vertical;
+
+}
+
+
+/* ==========================================================
+   08. ENLACES
+========================================================== */
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+/* ==========================================================
+   09. IMÁGENES
+========================================================== */
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+
+/* ==========================================================
+   10. ACCESIBILIDAD
+========================================================== */
+
+:focus-visible {
+
+    outline:
+        3px solid
+        var(--cian);
+
+    outline-offset: 2px;
+
+}
+
+
+/* ==========================================================
+   11. SELECCIÓN DE TEXTO
+========================================================== */
+
+::selection {
+
+    background: var(--azul-claro);
+
+    color: var(--blanco);
+
+}

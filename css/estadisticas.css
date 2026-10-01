@@ -1,0 +1,822 @@
+/* ==========================================================
+   PROYECTO : MINUTA DIGITAL 360
+   ARCHIVO  : estadisticas.css
+   DESCRIPCIÓN:
+   Estilos del panel de estadísticas.
+   AUTOR:
+   Richard Duvan Gelves Laguado
+   FECHA:
+   2026
+========================================================== */
+
+
+/* ==========================================================
+   01. CONTENEDOR
+========================================================== */
+
+.contenedor-estadisticas {
+
+    min-height: 100vh;
+
+    padding: 35px 25px;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(59, 130, 246, .20),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(34, 211, 238, .12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            var(--color-fondo),
+            var(--color-primario),
+            var(--color-secundario)
+        );
+}
+
+
+/* ==========================================================
+   02. ENCABEZADO
+========================================================== */
+
+.encabezado-estadisticas {
+
+    max-width: 1200px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.encabezado-estadisticas h1 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #FFFFFF;
+
+    font-size: 30px;
+
+    font-weight: 800;
+}
+
+
+.encabezado-estadisticas h1 i {
+
+    color: #22D3EE;
+}
+
+
+.encabezado-estadisticas p {
+
+    margin-top: 5px;
+
+    color: #CBD5E1;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   03. BOTÓN VOLVER
+========================================================== */
+
+.btn-volver {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 16px;
+
+    color: #FFFFFF;
+
+    background: rgba(255, 255, 255, .08);
+
+    border: 1px solid rgba(103, 232, 249, .30);
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: .2s ease;
+}
+
+
+.btn-volver i {
+
+    color: #67E8F9;
+}
+
+
+.btn-volver:hover {
+
+    background: rgba(37, 99, 235, .25);
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   04. INDICADORES
+========================================================== */
+
+.indicadores-estadisticas {
+
+    max-width: 1200px;
+
+    margin: 0 auto 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+
+.indicador {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    min-height: 95px;
+
+    padding: 18px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E2E8F0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 12px
+        rgba(15, 23, 42, .08);
+}
+
+
+.indicador-icono {
+
+    width: 44px;
+
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #FFFFFF;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563EB,
+            #06B6D4
+        );
+
+    border-radius: 12px;
+}
+
+
+.indicador span {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #64748B;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+.indicador strong {
+
+    color: #1E3A8A;
+
+    font-size: 24px;
+
+    font-weight: 800;
+}
+
+
+/* ==========================================================
+   05. ALERTA
+========================================================== */
+
+.alerta-estadistica {
+
+    max-width: 1200px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(254, 243, 199, .98),
+            rgba(255, 255, 255, .98)
+        );
+
+    border: 1px solid #FCD34D;
+
+    border-radius: 14px;
+}
+
+
+.alerta-icono {
+
+    width: 44px;
+
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #92400E;
+
+    background: #FEF3C7;
+
+    border-radius: 12px;
+}
+
+
+.alerta-estadistica span {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #92400E;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+.alerta-estadistica strong {
+
+    display: block;
+
+    color: #1E293B;
+
+    font-size: 14px;
+}
+
+
+.alerta-estadistica p {
+
+    margin-top: 3px;
+
+    color: #64748B;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================================
+   06. TARJETAS
+========================================================== */
+
+.tarjeta-estadistica {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto 20px;
+
+    padding: 24px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E2E8F0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 12px
+        rgba(15, 23, 42, .08);
+}
+
+
+/* ==========================================================
+   07. CABECERA
+========================================================== */
+
+.cabecera-seccion,
+.cabecera-grafica {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+.cabecera-seccion h2,
+.cabecera-grafica h2 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #1E3A8A;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+.cabecera-seccion h2 i,
+.cabecera-grafica h2 i {
+
+    color: #2563EB;
+}
+
+
+.cabecera-seccion p,
+.cabecera-grafica p {
+
+    margin-top: 5px;
+
+    color: #64748B;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================================
+   08. FILTROS
+========================================================== */
+
+.filtros-estadisticas {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.3fr 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+.campo-estadistica label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #1E293B;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.campo-estadistica input,
+.campo-estadistica select {
+
+    width: 100%;
+
+    min-height: 43px;
+
+    padding: 10px 12px;
+
+    color: #1E293B;
+
+    background: #FFFFFF;
+
+    border: 1px solid #CBD5E1;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-family: var(--fuente);
+
+    font-size: 12px;
+}
+
+
+.campo-estadistica input:focus,
+.campo-estadistica select:focus {
+
+    border-color: #2563EB;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, .10);
+}
+
+
+/* ==========================================================
+   09. ACCIONES
+========================================================== */
+
+.acciones-estadisticas {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+
+.btn-primario,
+.btn-secundario {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 42px;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    font-family: var(--fuente);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+
+.btn-primario {
+
+    color: #FFFFFF;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563EB,
+            #06B6D4
+        );
+
+    border: none;
+}
+
+
+.btn-primario:hover {
+
+    transform: translateY(-2px);
+}
+
+
+.btn-secundario {
+
+    color: #1E293B;
+
+    background: #F8FAFC;
+
+    border: 1px solid #E2E8F0;
+}
+
+
+.btn-secundario:hover {
+
+    background: #E2E8F0;
+}
+
+
+/* ==========================================================
+   10. CONTADOR
+========================================================== */
+
+.contador-grafica {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 38px;
+
+    height: 38px;
+
+    padding: 0 10px;
+
+    color: #FFFFFF;
+
+    background: #1E3A8A;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   11. GRÁFICA
+========================================================== */
+
+.contenedor-grafica {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 380px;
+}
+
+
+/* ==========================================================
+   12. RESUMEN OPERATIVO
+========================================================== */
+
+.resumen-operativo {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+
+.tarjeta-operativa {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 18px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E2E8F0;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 12px
+        rgba(15, 23, 42, .06);
+}
+
+
+.icono-operativo {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #2563EB;
+
+    background: #EFF6FF;
+
+    border-radius: 10px;
+}
+
+
+.tarjeta-operativa span {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #64748B;
+
+    font-size: 10px;
+}
+
+
+.tarjeta-operativa strong {
+
+    color: #1E293B;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   13. SIN DATOS
+========================================================== */
+
+.sin-datos {
+
+    max-width: 700px;
+
+    margin: 30px auto;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    color: #64748B;
+}
+
+
+.sin-datos i {
+
+    color: #94A3B8;
+
+    font-size: 40px;
+}
+
+
+.sin-datos h3 {
+
+    margin: 12px 0 6px;
+
+    color: #1E293B;
+
+    font-size: 16px;
+}
+
+
+.sin-datos p {
+
+    font-size: 12px;
+}
+
+
+/* ==========================================================
+   14. TABLETA
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .indicadores-estadisticas {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .filtros-estadisticas {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .resumen-operativo {
+
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+/* ==========================================================
+   15. MÓVIL
+========================================================== */
+
+@media (max-width: 650px) {
+
+    .contenedor-estadisticas {
+
+        padding: 20px 14px;
+    }
+
+
+    .encabezado-estadisticas {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .encabezado-estadisticas h1 {
+
+        font-size: 24px;
+    }
+
+
+    .btn-volver {
+
+        width: 100%;
+    }
+
+
+    .indicadores-estadisticas {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .tarjeta-estadistica {
+
+        padding: 18px;
+    }
+
+
+    .filtros-estadisticas {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .acciones-estadisticas {
+
+        flex-direction: column;
+    }
+
+
+    .acciones-estadisticas button {
+
+        width: 100%;
+    }
+
+
+    .contenedor-grafica {
+
+        height: 300px;
+    }
+
+
+    .alerta-estadistica {
+
+        align-items: flex-start;
+    }
+
+}

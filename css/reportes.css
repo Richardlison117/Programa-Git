@@ -1,0 +1,1036 @@
+/* ==========================================================
+   PROYECTO : MINUTA DIGITAL 360
+   ARCHIVO  : reportes.css
+
+   DESCRIPCIÓN:
+   Estilos exclusivos del módulo de reportes.
+
+   AUTOR:
+   Richard Duvan Gelves Laguado
+
+   FECHA:
+   2026
+========================================================== */
+
+
+/* ==========================================================
+   01. CONTENEDOR PRINCIPAL
+========================================================== */
+
+.contenedor-reportes {
+
+    min-height: 100vh;
+
+    padding: 32px 24px;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(59, 130, 246, .20),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(34, 211, 238, .12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            var(--color-fondo),
+            var(--color-primario),
+            var(--color-secundario)
+        );
+
+}
+
+
+/* ==========================================================
+   02. ENCABEZADO
+========================================================== */
+
+.encabezado-reportes {
+
+    width: min(100%, 1200px);
+
+    margin: 0 auto 28px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.etiqueta-modulo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 8px;
+
+    color: #67E8F9;
+
+    font-size: .78rem;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: .8px;
+
+}
+
+
+.encabezado-reportes h1 {
+
+    color: var(--color-blanco);
+
+    font-size: 2.2rem;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+}
+
+
+.encabezado-reportes p {
+
+    margin-top: 8px;
+
+    color: var(--gris-medio);
+
+    font-size: .92rem;
+
+}
+
+
+/* ==========================================================
+   03. TARJETAS PRINCIPALES
+========================================================== */
+
+.tarjeta-reporte {
+
+    width: min(100%, 1200px);
+
+    margin: 0 auto 20px;
+
+    padding: 26px;
+
+    border:
+        1px solid rgba(255, 255, 255, .16);
+
+    border-radius: var(--radio-lg);
+
+    background:
+        rgba(255, 255, 255, .96);
+
+    box-shadow:
+        var(--sombra-md);
+
+}
+
+
+/* ==========================================================
+   04. TÍTULOS DE SECCIÓN
+========================================================== */
+
+.titulo-seccion {
+
+    margin-bottom: 20px;
+
+}
+
+
+.titulo-seccion h2,
+.cabecera-resultados h2 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin: 0;
+
+    color: var(--color-primario);
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+
+}
+
+
+.titulo-seccion h2 i,
+.cabecera-resultados h2 i {
+
+    color: var(--color-secundario);
+
+}
+
+
+/* ==========================================================
+   05. FILTROS
+========================================================== */
+
+.grid-filtros {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+
+    gap: 18px;
+
+}
+
+
+.grid-filtros > div {
+
+    min-width: 0;
+
+}
+
+
+.grid-filtros label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--color-texto);
+
+    font-size: .84rem;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================================
+   06. CAMPOS DE FILTRO
+========================================================== */
+
+.grid-filtros input,
+.grid-filtros select {
+
+    width: 100%;
+
+    min-height: 44px;
+
+    padding: 10px 12px;
+
+    border:
+        1px solid var(--gris-medio);
+
+    border-radius: var(--radio-sm);
+
+    color: var(--color-texto);
+
+    background:
+        var(--color-superficie);
+
+    font-family: var(--fuente);
+
+    font-size: .84rem;
+
+    outline: none;
+
+    transition:
+        border-color var(--transicion),
+        box-shadow var(--transicion);
+
+}
+
+
+.grid-filtros input:focus,
+.grid-filtros select:focus {
+
+    border-color:
+        var(--color-secundario);
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, .12);
+
+}
+
+
+/* ==========================================================
+   07. CAMPO DE ACCIÓN
+========================================================== */
+
+.campo-accion {
+
+    display: flex;
+
+    align-items: flex-end;
+
+}
+
+
+/* ==========================================================
+   08. BOTÓN BUSCAR
+========================================================== */
+
+.btn-buscar {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    min-height: 44px;
+
+    padding: 10px 16px;
+
+    border: none;
+
+    border-radius: var(--radio-sm);
+
+    color: var(--color-blanco);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--color-secundario),
+            #06B6D4
+        );
+
+    font-family: var(--fuente);
+
+    font-size: .84rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform var(--transicion),
+        box-shadow var(--transicion);
+
+}
+
+
+.btn-buscar:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, .25);
+
+}
+
+
+/* ==========================================================
+   09. RESUMEN
+========================================================== */
+
+.resumen-reportes {
+
+    width: min(100%, 1200px);
+
+    margin: 0 auto 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+
+    gap: 16px;
+
+}
+
+
+/* ==========================================================
+   10. TARJETAS DE RESUMEN
+========================================================== */
+
+.tarjeta-resumen {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    min-height: 100px;
+
+    padding: 18px;
+
+    border:
+        1px solid rgba(255, 255, 255, .16);
+
+    border-radius: var(--radio-lg);
+
+    background:
+        rgba(255, 255, 255, .96);
+
+    box-shadow:
+        var(--sombra-sm);
+
+}
+
+
+.icono-resumen {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-shrink: 0;
+
+    width: 46px;
+
+    height: 46px;
+
+    border-radius: 14px;
+
+    color: var(--color-blanco);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--color-secundario),
+            #06B6D4
+        );
+
+}
+
+
+.icono-resumen i {
+
+    font-size: 1.1rem;
+
+}
+
+
+.tarjeta-resumen span {
+
+    display: block;
+
+    color: var(--color-texto-secundario);
+
+    font-size: .78rem;
+
+}
+
+
+.tarjeta-resumen strong {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--color-texto);
+
+    font-size: 1.45rem;
+
+    font-weight: 800;
+
+}
+
+
+/* ==========================================================
+   11. CABECERA DE RESULTADOS
+========================================================== */
+
+.cabecera-resultados {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.cabecera-resultados p {
+
+    margin-top: 5px;
+
+    color: var(--color-texto-secundario);
+
+    font-size: .78rem;
+
+}
+
+
+/* ==========================================================
+   12. BOTÓN EXPORTAR
+========================================================== */
+
+.btn-exportar {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    min-height: 42px;
+
+    padding: 9px 15px;
+
+    border:
+        1px solid var(--gris-borde);
+
+    border-radius: var(--radio-sm);
+
+    color: var(--color-texto);
+
+    background:
+        var(--gris-claro);
+
+    font-family: var(--fuente);
+
+    font-size: .82rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform var(--transicion),
+        background var(--transicion);
+
+}
+
+
+.btn-exportar:hover {
+
+    transform: translateY(-2px);
+
+    background:
+        var(--gris-medio);
+
+}
+
+
+/* ==========================================================
+   13. CONTENEDOR DE TABLA
+========================================================== */
+
+.tabla-contenedor {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    border:
+        1px solid var(--gris-borde);
+
+    border-radius: var(--radio-md);
+
+}
+
+
+/* ==========================================================
+   14. TABLA
+========================================================== */
+
+.tabla-contenedor table {
+
+    width: 100%;
+
+    min-width: 900px;
+
+    border-collapse: collapse;
+
+}
+
+
+.tabla-contenedor thead {
+
+    background:
+        #F1F5F9;
+
+}
+
+
+.tabla-contenedor th {
+
+    padding: 13px 12px;
+
+    color: var(--color-texto);
+
+    font-size: .76rem;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    white-space: nowrap;
+
+}
+
+
+.tabla-contenedor td {
+
+    padding: 13px 12px;
+
+    border-top:
+        1px solid var(--gris-borde);
+
+    color: var(--color-texto-secundario);
+
+    font-size: .78rem;
+
+    white-space: nowrap;
+
+}
+
+
+.tabla-contenedor tbody tr {
+
+    transition:
+        background var(--transicion);
+
+}
+
+
+.tabla-contenedor tbody tr:hover {
+
+    background:
+        #F8FAFC;
+
+}
+
+
+/* ==========================================================
+   15. ESTADOS
+========================================================== */
+
+.estado {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 76px;
+
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    font-size: .7rem;
+
+    font-weight: 700;
+
+}
+
+
+/* ==========================================================
+   16. ESTADO PENDIENTE
+========================================================== */
+
+.estado-pendiente {
+
+    color: #92400E;
+
+    background:
+        #FEF3C7;
+
+}
+
+
+/* ==========================================================
+   17. ESTADO EN PROCESO
+========================================================== */
+
+.estado-en-proceso {
+
+    color: #075985;
+
+    background:
+        #E0F2FE;
+
+}
+
+
+/* ==========================================================
+   18. ESTADO CERRADA
+========================================================== */
+
+.estado-cerrada {
+
+    color: #166534;
+
+    background:
+        #DCFCE7;
+
+}
+
+
+/* ==========================================================
+   19. BOTÓN VER
+========================================================== */
+
+.btn-ver {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    border: none;
+
+    border-radius: var(--radio-sm);
+
+    color: var(--color-secundario);
+
+    background:
+        rgba(37, 99, 235, .10);
+
+    font-family: var(--fuente);
+
+    font-size: .74rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transicion),
+        transform var(--transicion);
+
+}
+
+
+.btn-ver:hover {
+
+    transform: translateY(-1px);
+
+    background:
+        rgba(37, 99, 235, .16);
+
+}
+
+
+/* ==========================================================
+   20. SIN RESULTADOS
+========================================================== */
+
+.sin-resultados {
+
+    padding: 50px 20px !important;
+
+    text-align: center;
+
+}
+
+
+.sin-resultados i {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--gris-medio);
+
+    font-size: 2rem;
+
+}
+
+
+.sin-resultados span {
+
+    color: var(--color-texto-secundario);
+
+    font-size: .84rem;
+
+}
+
+
+/* ==========================================================
+   21. MENSAJE
+========================================================== */
+
+.mensaje-reportes {
+
+    display: none;
+
+    width: min(100%, 900px);
+
+    margin: 18px auto 0;
+
+    padding: 13px 15px;
+
+    border-radius: var(--radio-md);
+
+    font-size: .84rem;
+
+}
+
+
+.mensaje-reportes.visible {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+}
+
+
+.mensaje-reportes.success {
+
+    color: #166534;
+
+    background: #DCFCE7;
+
+    border:
+        1px solid #86EFAC;
+
+}
+
+
+.mensaje-reportes.warning {
+
+    color: #92400E;
+
+    background: #FEF3C7;
+
+    border:
+        1px solid #FCD34D;
+
+}
+
+
+.mensaje-reportes.error {
+
+    color: #991B1B;
+
+    background: #FEE2E2;
+
+    border:
+        1px solid #FCA5A5;
+
+}
+
+
+.mensaje-reportes.info {
+
+    color: #075985;
+
+    background: #E0F2FE;
+
+    border:
+        1px solid #7DD3FC;
+
+}
+
+
+/* ==========================================================
+   22. RESPONSIVE - TABLET
+========================================================== */
+
+@media (max-width: 950px) {
+
+    .grid-filtros {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+    }
+
+
+    .resumen-reportes {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+    }
+
+}
+
+
+/* ==========================================================
+   23. RESPONSIVE - MÓVIL
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .contenedor-reportes {
+
+        padding: 20px 12px;
+
+    }
+
+
+    .encabezado-reportes {
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .encabezado-reportes h1 {
+
+        font-size: 1.6rem;
+
+    }
+
+
+    .encabezado-reportes p {
+
+        font-size: .82rem;
+
+    }
+
+
+    .tarjeta-reporte {
+
+        padding: 18px;
+
+        border-radius: var(--radio-md);
+
+    }
+
+
+    .grid-filtros {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .resumen-reportes {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .cabecera-resultados {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .btn-exportar {
+
+        width: 100%;
+
+    }
+
+
+    .tabla-contenedor {
+
+        border-radius: var(--radio-sm);
+
+    }
+
+}
+
+
+/* ==========================================================
+   24. ACCESIBILIDAD
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        transition: none !important;
+
+    }
+
+}
+
+/* ==========================================================
+   BOTÓN VOLVER AL INICIO
+========================================================== */
+
+.btn-volver-inicio {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+    padding: 9px 14px;
+
+    border:
+        1px solid rgba(255, 255, 255, .20);
+
+    border-radius: var(--radio-sm);
+
+    color: var(--color-blanco);
+
+    background:
+        rgba(255, 255, 255, .10);
+
+    font-size: .82rem;
+
+    font-weight: 600;
+
+    transition:
+        transform var(--transicion),
+        background var(--transicion);
+
+}
+
+
+.btn-volver-inicio:hover {
+
+    transform: translateX(-3px);
+
+    background:
+        rgba(255, 255, 255, .18);
+
+}
+
+
+.btn-volver-inicio i {
+
+    font-size: .85rem;
+
+}

@@ -1,0 +1,480 @@
+<!-- ==========================================================
+     PROYECTO : MINUTA DIGITAL 360
+     ARCHIVO  : configuracion.html
+
+     DESCRIPCIÓN:
+     Configuración general del sistema.
+
+     AUTOR:
+     Richard Duvan Gelves Laguado
+
+     FECHA:
+     2026
+========================================================== -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- ======================================================
+         01. CONFIGURACIÓN
+    ======================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Configuración de Minuta Digital 360.">
+
+    <meta
+        name="theme-color"
+        content="#2563EB">
+
+
+    <!-- ======================================================
+         02. TÍTULO
+    ======================================================= -->
+
+    <title>
+        Configuración | Minuta Digital 360
+    </title>
+
+
+    <!-- ======================================================
+         03. FUENTE
+    ======================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+
+
+    <!-- ======================================================
+         04. ICONOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- ======================================================
+         05. ESTILOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/configuracion.css">
+
+</head>
+
+
+<body>
+
+    <!-- ======================================================
+         CONTENEDOR PRINCIPAL
+    ======================================================= -->
+
+    <main class="contenedor-configuracion">
+
+
+        <!-- ==================================================
+             01. ENCABEZADO
+        =================================================== -->
+
+        <header class="encabezado-configuracion">
+
+            <div>
+
+                <h1>
+
+                    <i
+                        class="fa-solid fa-gear"
+                        aria-hidden="true">
+                    </i>
+
+                    Configuración
+
+                </h1>
+
+
+                <p>
+
+                    Administre las preferencias generales
+                    de Minuta Digital 360.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="./dashboard.html"
+                class="btn-volver">
+
+                <i
+                    class="fa-solid fa-arrow-left"
+                    aria-hidden="true">
+                </i>
+
+                Volver al inicio
+
+            </a>
+
+        </header>
+
+
+        <!-- ==================================================
+             02. APARIENCIA
+        =================================================== -->
+
+        <section class="tarjeta-configuracion">
+
+            <h2>
+
+                <i
+                    class="fa-solid fa-palette"
+                    aria-hidden="true">
+                </i>
+
+                Apariencia
+
+            </h2>
+
+
+            <div class="grid-configuracion">
+
+
+                <!-- TEMA -->
+
+                <div class="campo-configuracion">
+
+                    <label for="tema">
+
+                        Tema de la aplicación
+
+                    </label>
+
+
+                    <select id="tema">
+
+                        <option value="oscuro">
+                            Oscuro
+                        </option>
+
+                        <option value="claro">
+                            Claro
+                        </option>
+
+                        <option value="sistema">
+                            Automático
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TAMAÑO -->
+
+                <div class="campo-configuracion">
+
+                    <label for="tamanoInterfaz">
+
+                        Tamaño de la interfaz
+
+                    </label>
+
+
+                    <select id="tamanoInterfaz">
+
+                        <option value="normal">
+                            Normal
+                        </option>
+
+                        <option value="grande">
+                            Grande
+                        </option>
+
+                        <option value="compacto">
+                            Compacto
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             03. PREFERENCIAS
+        =================================================== -->
+
+        <section class="tarjeta-configuracion">
+
+            <h2>
+
+                <i
+                    class="fa-solid fa-sliders"
+                    aria-hidden="true">
+                </i>
+
+                Preferencias
+
+            </h2>
+
+
+            <div class="opciones-configuracion">
+
+
+                <!-- NOTIFICACIONES -->
+
+                <label class="opcion-configuracion">
+
+                    <div>
+
+                        <strong>
+                            Notificaciones
+                        </strong>
+
+                        <span>
+
+                            Mostrar avisos importantes
+                            del sistema.
+
+                        </span>
+
+                    </div>
+
+
+                    <input
+                        type="checkbox"
+                        id="notificaciones"
+                        checked>
+
+                </label>
+
+
+                <!-- CONFIRMACIÓN -->
+
+                <label class="opcion-configuracion">
+
+                    <div>
+
+                        <strong>
+                            Confirmar cierre de sesión
+                        </strong>
+
+                        <span>
+
+                            Solicitar confirmación antes
+                            de cerrar la sesión.
+
+                        </span>
+
+                    </div>
+
+
+                    <input
+                        type="checkbox"
+                        id="confirmarCierre"
+                        checked>
+
+                </label>
+
+
+                <!-- ACTUALIZACIÓN -->
+
+                <label class="opcion-configuracion">
+
+                    <div>
+
+                        <strong>
+                            Actualización automática
+                        </strong>
+
+                        <span>
+
+                            Actualizar información del panel
+                            automáticamente.
+
+                        </span>
+
+                    </div>
+
+
+                    <input
+                        type="checkbox"
+                        id="actualizacionAutomatica"
+                        checked>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             04. SISTEMA
+        =================================================== -->
+
+        <section class="tarjeta-configuracion">
+
+            <h2>
+
+                <i
+                    class="fa-solid fa-server"
+                    aria-hidden="true">
+                </i>
+
+                Información del sistema
+
+            </h2>
+
+
+            <div class="grid-configuracion">
+
+
+                <div class="dato-sistema">
+
+                    <span>
+                        Nombre
+                    </span>
+
+                    <strong>
+                        Minuta Digital 360
+                    </strong>
+
+                </div>
+
+
+                <div class="dato-sistema">
+
+                    <span>
+                        Versión
+                    </span>
+
+                    <strong>
+                        1.0.0
+                    </strong>
+
+                </div>
+
+
+                <div class="dato-sistema">
+
+                    <span>
+                        Estado
+                    </span>
+
+                    <strong class="estado-activo">
+                        Sistema activo
+                    </strong>
+
+                </div>
+
+
+                <div class="dato-sistema">
+
+                    <span>
+                        Plataforma
+                    </span>
+
+                    <strong>
+                        Aplicación web
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             05. MENSAJE
+        =================================================== -->
+
+        <div
+            id="mensajeConfiguracion"
+            class="mensaje-configuracion"
+            role="status"
+            aria-live="polite">
+        </div>
+
+
+        <!-- ==================================================
+             06. ACCIONES
+        =================================================== -->
+
+        <div class="acciones-configuracion">
+
+            <button
+                type="button"
+                id="btnGuardar"
+                class="btn-primario">
+
+                <i
+                    class="fa-solid fa-floppy-disk"
+                    aria-hidden="true">
+                </i>
+
+                Guardar configuración
+
+            </button>
+
+
+            <button
+                type="button"
+                id="btnRestablecer"
+                class="btn-secundario">
+
+                <i
+                    class="fa-solid fa-rotate-left"
+                    aria-hidden="true">
+                </i>
+
+                Restablecer
+
+            </button>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- ======================================================
+         07. JAVASCRIPT
+    ======================================================= -->
+
+    <script
+        src="../js/configuracion.js"
+        defer>
+    </script>
+
+</body>
+
+</html>

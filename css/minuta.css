@@ -1,0 +1,1079 @@
+/* ==========================================================
+   PROYECTO : MINUTA DIGITAL 360
+   ARCHIVO  : minuta.css
+   DESCRIPCIÓN:
+   Estilos del módulo de registro de novedades.
+   AUTOR:
+   Richard Duvan Gelves Laguado
+   FECHA:
+   2026
+========================================================== */
+
+
+/* ==========================================================
+   01. CONTENEDOR PRINCIPAL
+========================================================== */
+
+.contenedor-minuta {
+
+    /* Ocupa toda la pantalla */
+    min-height: 100vh;
+
+    /* Espacio */
+    padding: 30px;
+
+    /* Fondo */
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(59, 130, 246, 0.20),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(34, 211, 238, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #0F172A,
+            #1E3A8A,
+            #2563EB
+        );
+}
+
+
+/* ==========================================================
+   02. ENCABEZADO
+========================================================== */
+
+.encabezado {
+
+    /* Título y botón */
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    /* Ancho máximo */
+    max-width: 1200px;
+
+    /* Centrado */
+    margin: 0 auto 25px;
+}
+
+
+.informacion-encabezado h1 {
+
+    /* Alineación */
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    /* Título */
+    color: #FFFFFF;
+
+    font-size: 32px;
+
+    font-weight: 800;
+}
+
+
+.informacion-encabezado h1 i {
+
+    /* Icono */
+    color: #22D3EE;
+}
+
+
+.informacion-encabezado p {
+
+    /* Descripción */
+    margin-top: 6px;
+
+    color: #CBD5E1;
+
+    font-size: 15px;
+}
+
+
+/* ==========================================================
+   03. BOTÓN VOLVER
+========================================================== */
+
+.btn-volver-inicio {
+
+    /* Alineación */
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    /* Tamaño */
+    padding: 11px 16px;
+
+    /* Texto */
+    color: #FFFFFF;
+
+    /* Fondo */
+    background: rgba(255, 255, 255, 0.08);
+
+    /* Borde */
+    border: 1px solid rgba(103, 232, 249, 0.30);
+
+    /* Forma */
+    border-radius: 8px;
+
+    /* Cursor */
+    cursor: pointer;
+
+    /* Transición */
+    transition: 0.2s ease;
+}
+
+
+.btn-volver-inicio i {
+
+    color: #67E8F9;
+}
+
+
+.btn-volver-inicio:hover {
+
+    /* Efecto */
+    background: rgba(37, 99, 235, 0.30);
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   04. FORMULARIO
+========================================================== */
+
+#formulario-minuta {
+
+    /* Ancho */
+    width: 100%;
+
+    max-width: 1200px;
+
+    /* Centrado */
+    margin: 0 auto;
+}
+
+
+/* ==========================================================
+   05. TARJETAS
+========================================================== */
+
+.tarjeta {
+
+    /* Espacio interno */
+    padding: 25px;
+
+    /* Separación */
+    margin-bottom: 20px;
+
+    /* Fondo */
+    background: rgba(255, 255, 255, 0.08);
+
+    /* Borde */
+    border: 1px solid rgba(255, 255, 255, 0.14);
+
+    /* Forma */
+    border-radius: 14px;
+
+    /* Efecto cristal */
+    backdrop-filter: blur(10px);
+}
+
+
+/* ==========================================================
+   06. TÍTULOS
+========================================================== */
+
+.tarjeta h2 {
+
+    /* Alineación */
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    /* Espacio */
+    margin-bottom: 20px;
+
+    /* Texto */
+    color: #FFFFFF;
+
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+
+.tarjeta h2 i {
+
+    color: #22D3EE;
+}
+
+
+/* ==========================================================
+   07. DISTRIBUCIÓN
+========================================================== */
+
+.grid {
+
+    /* Organiza los campos */
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* ==========================================================
+   08. ETIQUETAS
+========================================================== */
+
+.tarjeta label {
+
+    /* Etiqueta */
+    display: block;
+
+    /* Separación */
+    margin-bottom: 7px;
+
+    /* Texto blanco */
+    color: #FFFFFF;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   09. CAMPOS
+========================================================== */
+
+.tarjeta input,
+.tarjeta select,
+.tarjeta textarea {
+
+    /* Ancho */
+    width: 100%;
+
+    /* Espacio */
+    padding: 12px 13px;
+
+    /* Fondo */
+    background: rgba(255, 255, 255, 0.08);
+
+    /* Texto */
+    color: #FFFFFF;
+
+    /* Borde */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    /* Forma */
+    border-radius: 8px;
+
+    /* Sin contorno */
+    outline: none;
+
+    /* Transición */
+    transition: 0.2s ease;
+}
+
+
+/* ==========================================================
+   10. PLACEHOLDER
+========================================================== */
+
+.tarjeta input::placeholder,
+.tarjeta textarea::placeholder {
+
+    color: #CBD5E1;
+
+    opacity: 1;
+}
+
+
+/* ==========================================================
+   11. MENÚ DESPLEGABLE
+========================================================== */
+
+.tarjeta select option {
+
+    /* Fondo */
+    background: #0F172A;
+
+    /* Texto */
+    color: #FFFFFF;
+}
+
+
+/* ==========================================================
+   12. CAMPOS ACTIVOS
+========================================================== */
+
+.tarjeta input:focus,
+.tarjeta select:focus,
+.tarjeta textarea:focus {
+
+    /* Borde */
+    border-color: #22D3EE;
+
+    /* Resalte */
+    box-shadow:
+        0 0 0 2px rgba(34, 211, 238, 0.12);
+}
+
+
+/* ==========================================================
+   13. SOLO LECTURA
+========================================================== */
+
+.tarjeta input[readonly] {
+
+    /* Mantiene el diseño */
+    background: rgba(255, 255, 255, 0.06);
+
+    /* Texto */
+    color: #CBD5E1;
+}
+
+
+/* ==========================================================
+   14. TEXTAREA
+========================================================== */
+
+.tarjeta textarea {
+
+    /* Altura */
+    min-height: 150px;
+
+    /* Permite aumentar */
+    resize: vertical;
+}
+
+
+/* ==========================================================
+   15. ELEMENTOS OCULTOS
+========================================================== */
+
+[hidden] {
+
+    /* Oculta completamente */
+    display: none !important;
+}
+
+
+/* ==========================================================
+   16. TEXTO DE AYUDA
+========================================================== */
+
+.texto-ayuda {
+
+    margin-bottom: 16px;
+
+    color: #CBD5E1;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   17. EVIDENCIAS
+========================================================== */
+
+.opciones-evidencia {
+
+    /* Organiza los botones */
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.btn-evidencia {
+
+    /* Alineación */
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    /* Espacio */
+    padding: 11px 16px;
+
+    /* Texto */
+    color: #FFFFFF;
+
+    /* Fondo */
+    background: #2563EB;
+
+    /* Borde */
+    border: none;
+
+    /* Forma */
+    border-radius: 8px;
+
+    /* Cursor */
+    cursor: pointer;
+
+    /* Transición */
+    transition: 0.2s ease;
+}
+
+
+.btn-evidencia:hover {
+
+    background: #1D4ED8;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   18. VISTA PREVIA
+========================================================== */
+
+.vista-previa-evidencias {
+
+    /* Organiza las imágenes */
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(130px, 1fr)
+        );
+
+    gap: 14px;
+
+    margin-top: 18px;
+}
+
+
+/* ==========================================================
+   19. EVIDENCIA
+========================================================== */
+
+.evidencia-item {
+
+    /* Permite colocar el botón */
+    position: relative;
+
+    /* Forma */
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 10px;
+}
+
+
+.evidencia-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ==========================================================
+   20. ELIMINAR EVIDENCIA
+========================================================== */
+
+.btn-eliminar-evidencia {
+
+    /* Posición */
+    position: absolute;
+
+    top: 8px;
+
+    right: 8px;
+
+    /* Tamaño */
+    width: 30px;
+
+    height: 30px;
+
+    /* Centrado */
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    /* Forma */
+    border: none;
+
+    border-radius: 50%;
+
+    /* Texto */
+    color: #FFFFFF;
+
+    /* Fondo */
+    background: #DC2626;
+
+    /* Cursor */
+    cursor: pointer;
+}
+
+
+.btn-eliminar-evidencia:hover {
+
+    background: #B91C1C;
+}
+
+
+/* ==========================================================
+   21. VENTANA DE CÁMARA
+========================================================== */
+
+/*
+   La ventana de cámara no oscurece la página.
+   Solo aparece cuando se pulsa "Tomar fotografía".
+*/
+
+.modal-camara-evidencia {
+
+    /* Cubre la pantalla para centrar la cámara */
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    /* Centra la ventana */
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    /* Espacio */
+    padding: 20px;
+
+    /* SIN CAPA OSCURA */
+    background: transparent;
+
+    /* SIN DESENFOQUE */
+    backdrop-filter: none;
+
+    -webkit-backdrop-filter: none;
+}
+
+
+/* ==========================================================
+   22. CONTENEDOR DE CÁMARA
+========================================================== */
+
+.camara-evidencia {
+
+    /* Tamaño */
+    width: min(100%, 620px);
+
+    /* Espacio */
+    padding: 22px;
+
+    /* Fondo */
+    background: #FFFFFF;
+
+    /* Forma */
+    border-radius: 14px;
+
+    /* Sombra */
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ==========================================================
+   23. CABECERA DE CÁMARA
+========================================================== */
+
+.cabecera-camara {
+
+    /* Alineación */
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    /* Espacio */
+    margin-bottom: 15px;
+}
+
+
+.cabecera-camara h3 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #1E293B;
+
+    font-size: 17px;
+}
+
+
+.cabecera-camara h3 i {
+
+    color: #2563EB;
+}
+
+
+/* ==========================================================
+   24. BOTÓN CERRAR
+========================================================== */
+
+.btn-cerrar-camara {
+
+    /* Tamaño */
+    width: 34px;
+
+    height: 34px;
+
+    /* Centrado */
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    /* Forma */
+    border: none;
+
+    border-radius: 50%;
+
+    /* Fondo */
+    background: #F1F5F9;
+
+    /* Texto */
+    color: #1E293B;
+
+    /* Cursor */
+    cursor: pointer;
+}
+
+
+.btn-cerrar-camara:hover {
+
+    background: #E2E8F0;
+}
+
+
+/* ==========================================================
+   25. VISOR DE CÁMARA
+========================================================== */
+
+.visor-camara {
+
+    /* Ancho */
+    width: 100%;
+
+    /* Oculta sobrante */
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #0F172A;
+}
+
+
+.visor-camara video {
+
+    /* Ancho */
+    width: 100%;
+
+    /* Altura */
+    aspect-ratio: 16 / 9;
+
+    /* Ajuste */
+    display: block;
+
+    object-fit: cover;
+
+    background: #0F172A;
+}
+
+
+/* ==========================================================
+   26. INDICACIÓN DE CÁMARA
+========================================================== */
+
+.indicacion-camara {
+
+    margin: 12px 0;
+
+    color: #64748B;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+
+/* ==========================================================
+   27. ACCIONES DE CÁMARA
+========================================================== */
+
+.acciones-camara-evidencia {
+
+    /* Alineación */
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+
+/* ==========================================================
+   28. ACCIONES FINALES
+========================================================== */
+
+.acciones {
+
+    /* Alineación */
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    padding-bottom: 20px;
+}
+
+
+/* ==========================================================
+   29. BOTONES GENERALES
+========================================================== */
+
+.btn-primario,
+.btn-secundario {
+
+    /* Alineación */
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    /* Espacio */
+    padding: 11px 18px;
+
+    /* Forma */
+    border-radius: 8px;
+
+    /* Texto */
+    color: #FFFFFF;
+
+    font-family: var(--fuente);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    /* Cursor */
+    cursor: pointer;
+
+    /* Transición */
+    transition: 0.2s ease;
+}
+
+
+/* ==========================================================
+   30. BOTÓN PRINCIPAL
+========================================================== */
+
+.btn-primario {
+
+    color: #FFFFFF;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563EB,
+            #06B6D4
+        );
+
+    border: none;
+}
+
+
+.btn-primario:hover {
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   31. BOTÓN SECUNDARIO
+========================================================== */
+
+.btn-secundario {
+
+    color: #FFFFFF;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+.btn-secundario:hover {
+
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* ==========================================================
+   32. MENSAJE
+========================================================== */
+
+.mensaje-minuta {
+
+    /* Oculto */
+    display: none;
+
+    /* Tamaño */
+    width: min(100%, 900px);
+
+    /* Centrado */
+    margin: 18px auto 0;
+
+    /* Espacio */
+    padding: 13px 15px;
+
+    /* Forma */
+    border-radius: 8px;
+
+    font-size: 13px;
+}
+
+
+.mensaje-minuta.visible {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+/* Mensaje correcto */
+
+.mensaje-minuta.success {
+
+    color: #166534;
+
+    background: #DCFCE7;
+
+    border: 1px solid #86EFAC;
+}
+
+
+/* Mensaje de advertencia */
+
+.mensaje-minuta.warning {
+
+    color: #92400E;
+
+    background: #FEF3C7;
+
+    border: 1px solid #FCD34D;
+}
+
+
+/* Mensaje de error */
+
+.mensaje-minuta.error {
+
+    color: #991B1B;
+
+    background: #FEE2E2;
+
+    border: 1px solid #FCA5A5;
+}
+
+
+/* Mensaje informativo */
+
+.mensaje-minuta.info {
+
+    color: #075985;
+
+    background: #E0F2FE;
+
+    border: 1px solid #7DD3FC;
+}
+
+
+/* ==========================================================
+   33. BOTONES DESHABILITADOS
+========================================================== */
+
+button:disabled {
+
+    opacity: 0.55;
+
+    cursor: not-allowed;
+}
+
+
+/* ==========================================================
+   34. TABLETA
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .contenedor-minuta {
+
+        padding: 20px;
+    }
+
+
+    .encabezado {
+
+        align-items: flex-start;
+    }
+
+
+    .grid {
+
+        /* Una columna */
+        grid-template-columns: 1fr;
+    }
+
+
+    .tarjeta {
+
+        padding: 20px;
+    }
+
+
+    .opciones-evidencia {
+
+        flex-direction: column;
+    }
+
+
+    .btn-evidencia {
+
+        width: 100%;
+    }
+
+
+    .acciones {
+
+        flex-direction: column;
+    }
+
+
+    .acciones button {
+
+        width: 100%;
+    }
+
+}
+
+
+/* ==========================================================
+   35. MÓVIL
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .contenedor-minuta {
+
+        padding: 15px;
+    }
+
+
+    .encabezado {
+
+        /* Elementos verticales */
+        flex-direction: column;
+    }
+
+
+    .informacion-encabezado h1 {
+
+        font-size: 23px;
+    }
+
+
+    .informacion-encabezado p {
+
+        font-size: 12px;
+    }
+
+
+    .btn-volver-inicio {
+
+        width: 100%;
+    }
+
+
+    .tarjeta {
+
+        padding: 17px;
+    }
+
+
+    .tarjeta h2 {
+
+        font-size: 17px;
+    }
+
+
+    .acciones-camara-evidencia {
+
+        flex-direction: column;
+    }
+
+
+    .acciones-camara-evidencia button {
+
+        width: 100%;
+    }
+
+}

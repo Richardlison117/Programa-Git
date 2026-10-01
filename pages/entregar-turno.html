@@ -1,0 +1,331 @@
+<!-- ==========================================================
+     PROYECTO   : MINUTA DIGITAL 360
+     ARCHIVO    : entregar-turno.html
+     DESCRIPCIÓN: Registro de entrega de turno
+     AUTOR      : Richard Duvan Gelves Laguado
+     FECHA      : 2026
+========================================================== -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- ==========================================================
+         CONFIGURACIÓN DEL DOCUMENTO
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Entrega de turno - Minuta Digital 360">
+
+    <meta name="author"
+          content="Richard Duvan Gelves Laguado">
+
+    <meta name="theme-color"
+          content="#2661E1">
+
+    <title>Entregar Turno | Minuta Digital 360</title>
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+          type="image/png"
+          href="../img/favicon.png">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="../css/estilos.css">
+
+    <link rel="stylesheet"
+          href="../css/entregar-turno.css">
+
+</head>
+
+<body>
+
+<main class="contenedor-entregar-turno">
+
+    <!-- ======================================================
+         ENCABEZADO
+    ======================================================= -->
+
+    <header class="encabezado">
+
+        <h1>
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Entregar Turno
+
+        </h1>
+
+        <p>
+
+            Registre la entrega del turno y el estado final del servicio.
+
+        </p>
+
+    </header>
+
+    <!-- ======================================================
+         FORMULARIO
+    ======================================================= -->
+
+    <form id="formulario-entregar-turno">
+
+        <!-- Información del Guarda -->
+
+        <section class="tarjeta">
+
+            <h2>
+
+                <i class="fa-solid fa-user-shield"></i>
+
+                Información del Guarda
+
+            </h2>
+
+            <div class="grid">
+
+                <div>
+
+                    <label for="nombre">Nombre completo</label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        required>
+
+                </div>
+
+                <div>
+
+                    <label for="documento">Documento</label>
+
+                    <input
+                        type="text"
+                        id="documento"
+                        name="documento"
+                        required>
+
+                </div>
+
+                <div>
+
+                    <label for="empresa">Empresa</label>
+
+                    <input
+                        type="text"
+                        id="empresa"
+                        name="empresa">
+
+                </div>
+
+                <div>
+
+                    <label for="cargo">Cargo</label>
+
+                    <input
+                        type="text"
+                        id="cargo"
+                        name="cargo">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Información del Turno -->
+
+        <section class="tarjeta">
+
+            <h2>
+
+                <i class="fa-solid fa-building-shield"></i>
+
+                Información del Turno
+
+            </h2>
+
+            <div class="grid">
+
+                <div>
+
+                    <label for="puesto">Puesto</label>
+
+                    <input
+                        type="text"
+                        id="puesto"
+                        name="puesto"
+                        required>
+
+                </div>
+
+                <div>
+
+                    <label for="fecha">Fecha</label>
+
+                    <input
+                        type="date"
+                        id="fecha"
+                        name="fecha"
+                        required>
+
+                </div>
+
+                <div>
+
+                    <label for="hora">Hora de entrega</label>
+
+                    <input
+                        type="time"
+                        id="hora"
+                        name="hora"
+                        required>
+
+                </div>
+
+                <div>
+
+                    <label for="estado">Estado del Puesto</label>
+
+                    <select
+                        id="estado"
+                        name="estado"
+                        required>
+
+                        <option value="">Seleccione...</option>
+                        <option>Óptimo</option>
+                        <option>Con novedades</option>
+                        <option>Pendiente de revisión</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Novedades -->
+
+        <section class="tarjeta">
+
+            <h2>
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+                Novedades del Turno
+
+            </h2>
+
+            <textarea
+                id="novedades"
+                name="novedades"
+                rows="5"
+                placeholder="Describa las novedades presentadas durante el turno..."></textarea>
+
+        </section>
+
+        <!-- Observaciones -->
+
+        <section class="tarjeta">
+
+            <h2>
+
+                <i class="fa-solid fa-clipboard"></i>
+
+                Observaciones Finales
+
+            </h2>
+
+            <textarea
+                id="observaciones"
+                name="observaciones"
+                rows="5"
+                placeholder="Ingrese las observaciones finales del servicio..."></textarea>
+
+        </section>
+
+        <!-- Evidencia -->
+
+        <section class="tarjeta">
+
+            <h2>
+
+                <i class="fa-solid fa-camera"></i>
+
+                Evidencia Fotográfica
+
+            </h2>
+
+            <input
+                type="file"
+                id="evidencia"
+                name="evidencia"
+                accept="image/*">
+
+        </section>
+
+        <!-- Botones -->
+
+        <section class="acciones">
+
+            <button
+                type="submit"
+                class="btn-primario">
+
+                <i class="fa-solid fa-check"></i>
+
+                Entregar Turno
+
+            </button>
+
+            <button
+                type="reset"
+                class="btn-secundario">
+
+                <i class="fa-solid fa-rotate-left"></i>
+
+                Limpiar
+
+            </button>
+
+        </section>
+
+    </form>
+
+</main>
+
+<!-- JavaScript -->
+
+<script src="../js/entregar-turno.js"></script>
+
+</body>
+
+</html>

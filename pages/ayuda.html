@@ -1,0 +1,738 @@
+<!-- ==========================================================
+     PROYECTO : MINUTA DIGITAL 360
+     ARCHIVO  : ayuda.html
+
+     DESCRIPCIÓN:
+     Centro de ayuda y orientación del sistema.
+
+     AUTOR:
+     Richard Duvan Gelves Laguado
+
+     FECHA:
+     2026
+========================================================== -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- ======================================================
+         01. CONFIGURACIÓN
+    ======================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Centro de ayuda de Minuta Digital 360.">
+
+    <meta
+        name="theme-color"
+        content="#2563EB">
+
+
+    <!-- ======================================================
+         02. TÍTULO
+    ======================================================= -->
+
+    <title>
+        Ayuda | Minuta Digital 360
+    </title>
+
+
+    <!-- ======================================================
+         03. FUENTE
+    ======================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+
+
+    <!-- ======================================================
+         04. ICONOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- ======================================================
+         05. ESTILOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/ayuda.css">
+
+</head>
+
+
+<body>
+
+    <!-- ======================================================
+         CONTENEDOR PRINCIPAL
+    ======================================================= -->
+
+    <main class="contenedor-ayuda">
+
+
+        <!-- ==================================================
+             01. ENCABEZADO
+        =================================================== -->
+
+        <header class="encabezado-ayuda">
+
+            <div>
+
+                <h1>
+
+                    <i
+                        class="fa-solid fa-circle-question"
+                        aria-hidden="true">
+                    </i>
+
+                    Centro de ayuda
+
+                </h1>
+
+
+                <p>
+
+                    Encuentre información para utilizar
+                    correctamente Minuta Digital 360.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="./dashboard.html"
+                class="btn-volver">
+
+                <i
+                    class="fa-solid fa-arrow-left"
+                    aria-hidden="true">
+                </i>
+
+                Volver al inicio
+
+            </a>
+
+        </header>
+
+
+        <!-- ==================================================
+             02. BUSCADOR
+        =================================================== -->
+
+        <section class="tarjeta-ayuda buscador-ayuda">
+
+            <div class="cabecera-seccion">
+
+                <div>
+
+                    <h2>
+
+                        <i
+                            class="fa-solid fa-magnifying-glass"
+                            aria-hidden="true">
+                        </i>
+
+                        ¿En qué podemos ayudarte?
+
+                    </h2>
+
+
+                    <p>
+
+                        Busque una función o tema del sistema.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="entrada-ayuda">
+
+                <i
+                    class="fa-solid fa-magnifying-glass"
+                    aria-hidden="true">
+                </i>
+
+
+                <input
+                    type="search"
+                    id="buscarAyuda"
+                    placeholder="Ejemplo: recibir turno, novedades, evidencias..."
+                    autocomplete="off">
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             03. ACCESOS RÁPIDOS
+        =================================================== -->
+
+        <section class="tarjeta-ayuda">
+
+
+            <div class="cabecera-seccion">
+
+                <div>
+
+                    <h2>
+
+                        <i
+                            class="fa-solid fa-bolt"
+                            aria-hidden="true">
+                        </i>
+
+                        Guías rápidas
+
+                    </h2>
+
+
+                    <p>
+
+                        Acceda directamente a los procedimientos
+                        más utilizados.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="listaGuias"
+                class="lista-guias">
+
+
+                <!-- RECIBIR TURNO -->
+
+                <article
+                    class="guia-ayuda"
+                    data-busqueda="recibir turno puesto recepción turno">
+
+                    <div class="icono-guia">
+
+                        <i
+                            class="fa-solid fa-right-to-bracket"
+                            aria-hidden="true">
+                        </i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Recibir turno
+                        </h3>
+
+
+                        <p>
+
+                            Registre la recepción del puesto,
+                            identificación del receptor,
+                            elementos y estado inicial.
+
+                        </p>
+
+
+                        <a href="./recibir-turno.html">
+
+                            Abrir módulo
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true">
+                            </i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- REGISTRAR NOVEDAD -->
+
+                <article
+                    class="guia-ayuda"
+                    data-busqueda="registrar novedad incidente minuta">
+
+                    <div class="icono-guia">
+
+                        <i
+                            class="fa-solid fa-triangle-exclamation"
+                            aria-hidden="true">
+                        </i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Registrar novedad
+                        </h3>
+
+
+                        <p>
+
+                            Registre incidentes, novedades,
+                            ubicación, descripción y evidencias.
+
+                        </p>
+
+
+                        <a href="./minuta.html">
+
+                            Abrir módulo
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true">
+                            </i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- EVIDENCIAS -->
+
+                <article
+                    class="guia-ayuda"
+                    data-busqueda="fotografías videos evidencias fotos">
+
+                    <div class="icono-guia">
+
+                        <i
+                            class="fa-solid fa-camera"
+                            aria-hidden="true">
+                        </i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Evidencias
+                        </h3>
+
+
+                        <p>
+
+                            Consulte fotografías y videos
+                            asociados a las novedades.
+
+                        </p>
+
+
+                        <a href="./evidencias.html">
+
+                            Abrir módulo
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true">
+                            </i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ESTADÍSTICAS -->
+
+                <article
+                    class="guia-ayuda"
+                    data-busqueda="estadísticas graficas reportes novedades frecuentes">
+
+                    <div class="icono-guia">
+
+                        <i
+                            class="fa-solid fa-chart-column"
+                            aria-hidden="true">
+                        </i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Estadísticas
+                        </h3>
+
+
+                        <p>
+
+                            Analice las novedades por períodos,
+                            tipos, ubicaciones y estados.
+
+                        </p>
+
+
+                        <a href="./estadisticas.html">
+
+                            Abrir módulo
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true">
+                            </i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- SIN RESULTADOS -->
+
+            <div
+                id="sinGuias"
+                class="sin-resultados"
+                hidden>
+
+                <i
+                    class="fa-solid fa-magnifying-glass"
+                    aria-hidden="true">
+                </i>
+
+
+                <h3>
+
+                    No encontramos una guía
+
+                </h3>
+
+
+                <p>
+
+                    Intente con otra palabra.
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ==================================================
+             04. PREGUNTAS FRECUENTES
+        =================================================== -->
+
+        <section class="tarjeta-ayuda">
+
+
+            <div class="cabecera-seccion">
+
+                <div>
+
+                    <h2>
+
+                        <i
+                            class="fa-solid fa-circle-question"
+                            aria-hidden="true">
+                        </i>
+
+                        Preguntas frecuentes
+
+                    </h2>
+
+
+                    <p>
+
+                        Respuestas a las preguntas más comunes.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="preguntas-frecuentes">
+
+
+                <!-- PREGUNTA 1 -->
+
+                <details class="pregunta">
+
+                    <summary>
+
+                        ¿Cómo recibo un turno?
+
+                        <i
+                            class="fa-solid fa-chevron-down"
+                            aria-hidden="true">
+                        </i>
+
+                    </summary>
+
+
+                    <div class="respuesta">
+
+                        <p>
+
+                            Ingrese a <strong>Recibir turno</strong>,
+                            complete la información del receptor,
+                            seleccione el puesto, registre los
+                            elementos recibidos y confirme la
+                            recepción.
+
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <!-- PREGUNTA 2 -->
+
+                <details class="pregunta">
+
+                    <summary>
+
+                        ¿Cómo registro una novedad?
+
+                        <i
+                            class="fa-solid fa-chevron-down"
+                            aria-hidden="true">
+                        </i>
+
+                    </summary>
+
+
+                    <div class="respuesta">
+
+                        <p>
+
+                            Ingrese a <strong>Minuta</strong>,
+                            seleccione el tipo de novedad,
+                            ubicación y lugar, escriba la
+                            descripción y agregue las evidencias
+                            correspondientes.
+
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <!-- PREGUNTA 3 -->
+
+                <details class="pregunta">
+
+                    <summary>
+
+                        ¿Dónde puedo consultar las evidencias?
+
+                        <i
+                            class="fa-solid fa-chevron-down"
+                            aria-hidden="true">
+                        </i>
+
+                    </summary>
+
+
+                    <div class="respuesta">
+
+                        <p>
+
+                            Ingrese al módulo
+                            <strong>Evidencias</strong>.
+                            Allí podrá consultar las fotografías
+                            y videos registrados.
+
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <!-- PREGUNTA 4 -->
+
+                <details class="pregunta">
+
+                    <summary>
+
+                        ¿Para qué sirven las estadísticas?
+
+                        <i
+                            class="fa-solid fa-chevron-down"
+                            aria-hidden="true">
+                        </i>
+
+                    </summary>
+
+
+                    <div class="respuesta">
+
+                        <p>
+
+                            Permiten analizar la frecuencia de
+                            las novedades y detectar patrones
+                            por período, tipo, ubicación,
+                            lugar o usuario.
+
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <!-- PREGUNTA 5 -->
+
+                <details class="pregunta">
+
+                    <summary>
+
+                        ¿Qué hago si encuentro un problema?
+
+                        <i
+                            class="fa-solid fa-chevron-down"
+                            aria-hidden="true">
+                        </i>
+
+                    </summary>
+
+
+                    <div class="respuesta">
+
+                        <p>
+
+                            Registre la situación en una novedad
+                            y conserve la evidencia correspondiente.
+                            Para problemas del sistema, solicite
+                            apoyo al administrador.
+
+                        </p>
+
+                    </div>
+
+                </details>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             05. SOPORTE
+        =================================================== -->
+
+        <section class="tarjeta-ayuda soporte-ayuda">
+
+
+            <div class="icono-soporte">
+
+                <i
+                    class="fa-solid fa-headset"
+                    aria-hidden="true">
+                </i>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    SOPORTE
+                </span>
+
+
+                <h2>
+
+                    ¿Necesita ayuda adicional?
+
+                </h2>
+
+
+                <p>
+
+                    Comuníquese con el administrador del sistema
+                    para recibir asistencia.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             06. INFORMACIÓN DEL SISTEMA
+        =================================================== -->
+
+        <section class="informacion-sistema-ayuda">
+
+            <span>
+                Minuta Digital 360
+            </span>
+
+
+            <span>
+                Versión 1.0.0
+            </span>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ======================================================
+         07. JAVASCRIPT
+    ======================================================= -->
+
+    <script
+        src="../js/ayuda.js"
+        defer>
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+/* ==========================================================
+   PROYECTO   : MINUTA DIGITAL 360
+   ARCHIVO    : entregar-turno.css
+   AUTOR      : Richard Duvan Gelves Laguado
+   DESCRIPCIÓN:
+   Estilos del módulo Entregar Turno.
+========================================================== */
+
+
+/* ==========================================================
+   CONTENEDOR PRINCIPAL
+========================================================== */
+
+.contenedor-entregar-turno{
+
+    min-height:100vh;
+
+    padding:2rem;
+
+    background:
+        radial-gradient(circle at top left, rgba(37,99,235,.20), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(6,182,212,.15), transparent 35%),
+        linear-gradient(135deg,#0F172A,#1E3A8A,#2563EB);
+
+}
+
+
+/* ==========================================================
+   ENCABEZADO
+========================================================== */
+
+.encabezado{
+
+    max-width:1200px;
+
+    margin:0 auto 2rem;
+
+    text-align:center;
+
+}
+
+
+.encabezado h1{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:.8rem;
+
+    margin-bottom:.8rem;
+
+    color:var(--blanco);
+
+    font-size:2.4rem;
+
+    font-weight:700;
+
+}
+
+
+.encabezado p{
+
+    color:#E2E8F0;
+
+    font-size:1rem;
+
+}
+
+
+/* ==========================================================
+   FORMULARIO
+========================================================== */
+
+#formulario-entregar-turno{
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+/* ==========================================================
+   TARJETAS
+========================================================== */
+
+.tarjeta{
+
+    margin-bottom:2rem;
+
+    padding:2rem;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.97);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+}
+
+
+.tarjeta h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.8rem;
+
+    margin-bottom:1.5rem;
+
+    color:var(--azul-principal);
+
+    font-size:1.35rem;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:1.5rem;
+
+}
+
+
+/* ==========================================================
+   ETIQUETAS
+========================================================== */
+
+label{
+
+    display:block;
+
+    margin-bottom:.5rem;
+
+    color:#334155;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+   CAMPOS
+========================================================== */
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:.95rem 1rem;
+
+    border:2px solid #CBD5E1;
+
+    border-radius:12px;
+
+    background:#FFFFFF;
+
+    outline:none;
+
+    font-family:inherit;
+
+    font-size:1rem;
+
+    transition:.30s;
+
+}
+
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border-color:#2563EB;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+
+textarea{
+
+    resize:vertical;
+
+    min-height:160px;
+
+}
+
+
+/* ==========================================================
+   INPUT FILE
+========================================================== */
+
+input[type="file"]{
+
+    padding:1rem;
+
+    border:2px dashed #2563EB;
+
+    background:#F8FAFC;
+
+    cursor:pointer;
+
+}
+
+
+/* ==========================================================
+   BOTONES
+========================================================== */
+
+.acciones{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:1rem;
+
+    margin-top:2rem;
+
+    flex-wrap:wrap;
+
+}
+
+
+.btn-primario,
+.btn-secundario{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:.8rem;
+
+    padding:1rem 2rem;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:.30s;
+
+}
+
+
+.btn-primario{
+
+    background:#2563EB;
+
+    color:#FFFFFF;
+
+}
+
+
+.btn-primario:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(37,99,235,.35);
+
+}
+
+
+.btn-secundario{
+
+    background:#E2E8F0;
+
+    color:#1E293B;
+
+}
+
+
+.btn-secundario:hover{
+
+    background:#CBD5E1;
+
+    transform:translateY(-3px);
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:768px){
+
+    .contenedor-entregar-turno{
+
+        padding:1rem;
+
+    }
+
+    .encabezado h1{
+
+        flex-direction:column;
+
+        font-size:2rem;
+
+    }
+
+    .tarjeta{
+
+        padding:1.5rem;
+
+    }
+
+    .acciones{
+
+        flex-direction:column;
+
+    }
+
+    .btn-primario,
+    .btn-secundario{
+
+        width:100%;
+
+    }
+
+}

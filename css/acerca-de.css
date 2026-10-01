@@ -1,0 +1,846 @@
+/* ==========================================================
+   PROYECTO : MINUTA DIGITAL 360
+   ARCHIVO  : acerca-de.css
+
+   DESCRIPCIÓN:
+   Estilos de la sección "Acerca de".
+========================================================== */
+
+
+/* ==========================================================
+   01. CONTENEDOR
+========================================================== */
+
+.contenedor-acerca {
+
+    min-height: 100vh;
+
+    padding: 35px 25px;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(59, 130, 246, .20),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(34, 211, 238, .12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #0F172A,
+            #1E3A8A,
+            #2563EB
+        );
+}
+
+
+/* ==========================================================
+   02. ENCABEZADO
+========================================================== */
+
+.encabezado-acerca {
+
+    max-width: 1050px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.encabezado-acerca h1 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #FFFFFF;
+
+    font-size: 30px;
+
+    font-weight: 800;
+}
+
+
+.encabezado-acerca h1 i {
+
+    color: #22D3EE;
+}
+
+
+.encabezado-acerca p {
+
+    margin-top: 5px;
+
+    color: #CBD5E1;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   03. BOTÓN VOLVER
+========================================================== */
+
+.btn-volver {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 16px;
+
+    color: #FFFFFF;
+
+    background:
+        rgba(255, 255, 255, .08);
+
+    border:
+        1px solid
+        rgba(103, 232, 249, .30);
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: .2s ease;
+}
+
+
+.btn-volver i {
+
+    color: #67E8F9;
+}
+
+
+.btn-volver:hover {
+
+    background:
+        rgba(37, 99, 235, .25);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* ==========================================================
+   04. PRESENTACIÓN
+========================================================== */
+
+.presentacion-acerca {
+
+    max-width: 1050px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 30px;
+
+    background:
+        rgba(255, 255, 255, .08);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, .14);
+
+    border-radius: 16px;
+
+    backdrop-filter: blur(14px);
+
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+.logo-acerca {
+
+    width: 150px;
+
+    height: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background:
+        rgba(255, 255, 255, .08);
+
+    border-radius: 20px;
+}
+
+
+.logo-acerca img {
+
+    width: 115px;
+
+    height: auto;
+}
+
+
+.etiqueta {
+
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: #67E8F9;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .10em;
+}
+
+
+.contenido-presentacion h2 {
+
+    color: #FFFFFF;
+
+    font-size: 24px;
+
+    font-weight: 800;
+}
+
+
+.contenido-presentacion p {
+
+    max-width: 800px;
+
+    margin-top: 10px;
+
+    color: #CBD5E1;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   05. TARJETAS
+========================================================== */
+
+.tarjeta-acerca {
+
+    max-width: 1050px;
+
+    margin: 0 auto 20px;
+
+    padding: 25px;
+
+    background: #FFFFFF;
+
+    border:
+        1px solid
+        #E2E8F0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 6px 18px
+        rgba(15, 23, 42, .10);
+}
+
+
+/* ==========================================================
+   06. TÍTULOS
+========================================================== */
+
+.titulo-seccion {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+.titulo-seccion > i {
+
+    color: #2563EB;
+
+    font-size: 22px;
+}
+
+
+.titulo-seccion h2 {
+
+    color: #1E3A8A;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+.titulo-seccion p {
+
+    margin-top: 4px;
+
+    color: #64748B;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================================
+   07. TEXTO
+========================================================== */
+
+.texto-acerca {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.texto-acerca p {
+
+    color: #475569;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   08. MISIÓN Y VISIÓN
+========================================================== */
+
+.mision-vision {
+
+    max-width: 1050px;
+
+    margin: 0 auto 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+.tarjeta-mision,
+.tarjeta-vision {
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, .14);
+
+    box-shadow:
+        0 6px 18px
+        rgba(15, 23, 42, .10);
+}
+
+
+.tarjeta-mision {
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFFFFF,
+            #EFF6FF
+        );
+}
+
+
+.tarjeta-vision {
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFFFFF,
+            #ECFEFF
+        );
+}
+
+
+.icono-institucional {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    color: #2563EB;
+
+    background: #DBEAFE;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+
+.tarjeta-mision > span,
+.tarjeta-vision > span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #2563EB;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .08em;
+}
+
+
+.tarjeta-mision h2,
+.tarjeta-vision h2 {
+
+    color: #1E293B;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+.tarjeta-mision p,
+.tarjeta-vision p {
+
+    margin-top: 10px;
+
+    color: #64748B;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   09. PROBLEMA
+========================================================== */
+
+.problema-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.problema-item {
+
+    padding: 18px;
+
+    background: #F8FAFC;
+
+    border:
+        1px solid
+        #E2E8F0;
+
+    border-radius: 11px;
+}
+
+
+.problema-item i {
+
+    color: #2563EB;
+
+    font-size: 20px;
+}
+
+
+.problema-item h3 {
+
+    margin: 9px 0 5px;
+
+    color: #1E293B;
+
+    font-size: 14px;
+}
+
+
+.problema-item p {
+
+    color: #64748B;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   10. CARACTERÍSTICAS
+========================================================== */
+
+.caracteristicas-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.caracteristica {
+
+    padding: 18px;
+
+    background: #F8FAFC;
+
+    border:
+        1px solid
+        #E2E8F0;
+
+    border-radius: 11px;
+
+    transition: .2s ease;
+}
+
+
+.caracteristica:hover {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(37, 99, 235, .25);
+}
+
+
+.caracteristica i {
+
+    color: #2563EB;
+
+    font-size: 20px;
+}
+
+
+.caracteristica h3 {
+
+    margin:
+        9px 0 5px;
+
+    color: #1E293B;
+
+    font-size: 14px;
+}
+
+
+.caracteristica p {
+
+    color: #64748B;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   11. CREADOR
+========================================================== */
+
+.tarjeta-creador {
+
+    max-width: 1050px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, .12),
+            rgba(34, 211, 238, .10)
+        );
+
+    border:
+        1px solid
+        rgba(103, 232, 249, .20);
+
+    border-radius: 14px;
+}
+
+
+.avatar-creador {
+
+    width: 64px;
+
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #FFFFFF;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563EB,
+            #06B6D4
+        );
+
+    border-radius: 50%;
+
+    font-size: 24px;
+}
+
+
+.informacion-creador > span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #67E8F9;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .10em;
+}
+
+
+.informacion-creador h2 {
+
+    color: #FFFFFF;
+
+    font-size: 18px;
+}
+
+
+.informacion-creador p {
+
+    margin-top: 5px;
+
+    color: #CBD5E1;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   12. PIE
+========================================================== */
+
+.pie-acerca {
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding-top: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    color: #CBD5E1;
+
+    font-size: 11px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, .10);
+}
+
+
+.pie-acerca div {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.pie-acerca strong {
+
+    color: #FFFFFF;
+}
+
+
+/* ==========================================================
+   13. TABLETA
+========================================================== */
+
+@media (max-width: 850px) {
+
+    .presentacion-acerca {
+
+        align-items:
+            flex-start;
+    }
+
+
+    .problema-grid,
+    .caracteristicas-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==========================================================
+   14. MÓVIL
+========================================================== */
+
+@media (max-width: 650px) {
+
+    .contenedor-acerca {
+
+        padding:
+            20px 14px;
+    }
+
+
+    .encabezado-acerca {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .encabezado-acerca h1 {
+
+        font-size: 24px;
+    }
+
+
+    .btn-volver {
+
+        width: 100%;
+    }
+
+
+    .presentacion-acerca {
+
+        flex-direction: column;
+
+        padding: 20px;
+    }
+
+
+    .logo-acerca {
+
+        width: 100%;
+
+        height: 130px;
+    }
+
+
+    .contenido-presentacion h2 {
+
+        font-size: 20px;
+    }
+
+
+    .tarjeta-acerca,
+    .tarjeta-creador {
+
+        padding: 18px;
+    }
+
+
+    .mision-vision {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .problema-grid,
+    .caracteristicas-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .tarjeta-creador {
+
+        align-items:
+            flex-start;
+    }
+
+
+    .pie-acerca {
+
+        flex-direction: column;
+
+        align-items:
+            flex-start;
+    }
+
+}

@@ -1,0 +1,732 @@
+/* ==========================================================
+   PROYECTO : MINUTA DIGITAL 360
+   ARCHIVO  : ayuda.css
+
+   DESCRIPCIÓN:
+   Estilos del centro de ayuda.
+========================================================== */
+
+
+/* ==========================================================
+   01. CONTENEDOR
+========================================================== */
+
+.contenedor-ayuda {
+
+    min-height: 100vh;
+
+    padding: 35px 25px;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(59, 130, 246, .20),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(34, 211, 238, .12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #0F172A,
+            #1E3A8A,
+            #2563EB
+        );
+}
+
+
+/* ==========================================================
+   02. ENCABEZADO
+========================================================== */
+
+.encabezado-ayuda {
+
+    max-width: 1050px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.encabezado-ayuda h1 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #FFFFFF;
+
+    font-size: 30px;
+
+    font-weight: 800;
+}
+
+
+.encabezado-ayuda h1 i {
+
+    color: #22D3EE;
+}
+
+
+.encabezado-ayuda p {
+
+    margin-top: 5px;
+
+    color: #CBD5E1;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   03. VOLVER
+========================================================== */
+
+.btn-volver {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 16px;
+
+    color: #FFFFFF;
+
+    background:
+        rgba(255, 255, 255, .08);
+
+    border:
+        1px solid
+        rgba(103, 232, 249, .30);
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: .2s ease;
+}
+
+
+.btn-volver i {
+
+    color: #67E8F9;
+}
+
+
+.btn-volver:hover {
+
+    background:
+        rgba(37, 99, 235, .25);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* ==========================================================
+   04. TARJETAS
+========================================================== */
+
+.tarjeta-ayuda {
+
+    max-width: 1050px;
+
+    margin: 0 auto 20px;
+
+    padding: 25px;
+
+    background: #FFFFFF;
+
+    border:
+        1px solid
+        #E2E8F0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 6px 18px
+        rgba(15, 23, 42, .10);
+}
+
+
+/* ==========================================================
+   05. CABECERA DE SECCIÓN
+========================================================== */
+
+.cabecera-seccion {
+
+    margin-bottom: 20px;
+}
+
+
+.cabecera-seccion h2 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #1E3A8A;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+.cabecera-seccion h2 i {
+
+    color: #2563EB;
+}
+
+
+.cabecera-seccion p {
+
+    margin-top: 5px;
+
+    color: #64748B;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================================
+   06. BUSCADOR
+========================================================== */
+
+.entrada-ayuda {
+
+    position: relative;
+
+    max-width: 750px;
+}
+
+
+.entrada-ayuda i {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 14px;
+
+    color: #94A3B8;
+
+    transform:
+        translateY(-50%);
+
+    pointer-events: none;
+}
+
+
+.entrada-ayuda input {
+
+    width: 100%;
+
+    min-height: 46px;
+
+    padding:
+        11px
+        14px
+        11px
+        40px;
+
+    color: #1E293B;
+
+    background: #FFFFFF;
+
+    border:
+        1px solid
+        #CBD5E1;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    font-family: var(--fuente);
+
+    font-size: 13px;
+
+    transition: .2s ease;
+}
+
+
+.entrada-ayuda input::placeholder {
+
+    color: #94A3B8;
+}
+
+
+.entrada-ayuda input:focus {
+
+    border-color: #2563EB;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, .10);
+}
+
+
+/* ==========================================================
+   07. GUÍAS
+========================================================== */
+
+.lista-guias {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+.guia-ayuda {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    background: #F8FAFC;
+
+    border:
+        1px solid
+        #E2E8F0;
+
+    border-radius: 12px;
+
+    transition: .2s ease;
+}
+
+
+.guia-ayuda:hover {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(37, 99, 235, .30);
+
+    box-shadow:
+        0 8px 18px
+        rgba(15, 23, 42, .08);
+}
+
+
+.icono-guia {
+
+    width: 44px;
+
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #2563EB;
+
+    background: #EFF6FF;
+
+    border-radius: 11px;
+
+    font-size: 18px;
+}
+
+
+.guia-ayuda h3 {
+
+    margin: 0 0 5px;
+
+    color: #1E293B;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.guia-ayuda p {
+
+    color: #64748B;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+.guia-ayuda a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 10px;
+
+    color: #2563EB;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.guia-ayuda a:hover {
+
+    color: #1D4ED8;
+}
+
+
+/* ==========================================================
+   08. SIN RESULTADOS
+========================================================== */
+
+.sin-resultados {
+
+    padding: 35px 15px;
+
+    text-align: center;
+}
+
+
+.sin-resultados i {
+
+    color: #94A3B8;
+
+    font-size: 32px;
+}
+
+
+.sin-resultados h3 {
+
+    margin:
+        10px 0 5px;
+
+    color: #1E293B;
+
+    font-size: 15px;
+}
+
+
+.sin-resultados p {
+
+    color: #64748B;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================================
+   09. PREGUNTAS FRECUENTES
+========================================================== */
+
+.preguntas-frecuentes {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+.pregunta {
+
+    overflow: hidden;
+
+    background: #F8FAFC;
+
+    border:
+        1px solid
+        #E2E8F0;
+
+    border-radius: 10px;
+}
+
+
+.pregunta summary {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    color: #1E293B;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    list-style: none;
+}
+
+
+.pregunta summary::-webkit-details-marker {
+
+    display: none;
+}
+
+
+.pregunta summary i {
+
+    color: #2563EB;
+
+    transition:
+        transform .2s ease;
+}
+
+
+.pregunta[open]
+summary i {
+
+    transform:
+        rotate(180deg);
+}
+
+
+.respuesta {
+
+    padding:
+        0 15px
+        15px;
+}
+
+
+.respuesta p {
+
+    color: #64748B;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+.respuesta strong {
+
+    color: #1E293B;
+}
+
+
+/* ==========================================================
+   10. SOPORTE
+========================================================== */
+
+.soporte-ayuda {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #EFF6FF,
+            #ECFEFF
+        );
+
+    border-color:
+        #BFDBFE;
+}
+
+
+.icono-soporte {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #2563EB;
+
+    background: #FFFFFF;
+
+    border-radius: 13px;
+
+    font-size: 21px;
+}
+
+
+.soporte-ayuda span {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #2563EB;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .08em;
+}
+
+
+.soporte-ayuda h2 {
+
+    color: #1E293B;
+
+    font-size: 16px;
+}
+
+
+.soporte-ayuda p {
+
+    margin-top: 4px;
+
+    color: #64748B;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================================
+   11. INFORMACIÓN DEL SISTEMA
+========================================================== */
+
+.informacion-sistema-ayuda {
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding-top: 8px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    color: #CBD5E1;
+
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   12. RESPONSIVE
+========================================================== */
+
+@media (max-width: 800px) {
+
+    .contenedor-ayuda {
+
+        padding: 25px 18px;
+    }
+
+
+    .encabezado-ayuda {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .encabezado-ayuda h1 {
+
+        font-size: 25px;
+    }
+
+
+    .btn-volver {
+
+        width: 100%;
+    }
+
+
+    .lista-guias {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .contenedor-ayuda {
+
+        padding:
+            20px 14px;
+    }
+
+
+    .tarjeta-ayuda {
+
+        padding: 18px;
+    }
+
+
+    .guia-ayuda {
+
+        flex-direction: column;
+    }
+
+
+    .soporte-ayuda {
+
+        align-items:
+            flex-start;
+    }
+
+
+    .informacion-sistema-ayuda {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}

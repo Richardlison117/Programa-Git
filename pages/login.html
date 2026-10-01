@@ -1,0 +1,295 @@
+<!-- ==========================================================
+     PROYECTO : MINUTA DIGITAL 360
+     ARCHIVO  : login.html
+     DESCRIPCIÓN:
+     Pantalla de inicio de sesión del sistema.
+     AUTOR:
+     Richard Duvan Gelves Laguado
+========================================================== -->
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <!-- ======================================================
+         CONFIGURACIÓN DEL DOCUMENTO
+    ======================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Inicio de sesión de Minuta Digital 360 para acceder al sistema de gestión digital de minutas de seguridad.">
+
+    <meta
+        name="theme-color"
+        content="#2563EB">
+
+
+    <!-- ======================================================
+         TÍTULO
+    ======================================================= -->
+
+    <title>
+        Iniciar Sesión | Minuta Digital 360
+    </title>
+
+
+    <!-- ======================================================
+         FAVICON
+    ======================================================= -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../img/logo-minuta-digital-360.png">
+
+
+    <!-- ======================================================
+         FUENTE PRINCIPAL
+    ======================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- ======================================================
+         ICONOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- ======================================================
+         ESTILOS GLOBALES
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css">
+
+
+    <!-- ======================================================
+         ESTILOS DEL LOGIN
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/login.css">
+
+
+</head>
+
+
+<body>
+
+    <!-- ======================================================
+         CONTENEDOR PRINCIPAL DEL LOGIN
+    ======================================================= -->
+
+    <main class="contenedor-login">
+
+
+        <!-- ==================================================
+             TARJETA DE INICIO DE SESIÓN
+        =================================================== -->
+
+        <section class="tarjeta-login">
+
+
+            <!-- ==================================================
+                 LOGO
+            =================================================== -->
+
+            <img
+                src="../img/logo-minuta-digital-360.png"
+                alt="Logo de Minuta Digital 360"
+                class="logo">
+
+
+            <!-- ==================================================
+                 TÍTULO
+            =================================================== -->
+
+            <h1>
+                Bienvenido
+            </h1>
+
+
+            <!-- ==================================================
+                 DESCRIPCIÓN
+            =================================================== -->
+
+            <p class="descripcion-login">
+                Ingrese sus credenciales para acceder
+                al sistema.
+            </p>
+
+
+            <!-- ==================================================
+                 FORMULARIO
+            =================================================== -->
+
+            <form
+                id="formulario-login"
+                class="formulario">
+
+
+                <!-- ==================================================
+                     USUARIO
+                =================================================== -->
+
+                <div class="grupo-input">
+
+                    <label for="usuario">
+                        Usuario
+                    </label>
+
+                    <input
+                        type="text"
+                        id="usuario"
+                        name="usuario"
+                        placeholder="Ingrese su usuario"
+                        autocomplete="username"
+                        required>
+
+                </div>
+
+
+                <!-- ==================================================
+                     CONTRASEÑA
+                =================================================== -->
+
+                <div class="grupo-input">
+
+                    <label for="password">
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Ingrese su contraseña"
+                        autocomplete="current-password"
+                        required>
+
+                </div>
+
+
+                <!-- ==================================================
+                     OPCIONES
+                =================================================== -->
+
+                <div class="opciones">
+
+
+                    <!-- Recordar usuario -->
+
+                    <label for="recordarme">
+
+                        <input
+                            type="checkbox"
+                            id="recordarme"
+                            name="recordarme">
+
+                        Recordarme
+
+                    </label>
+
+
+                    <!-- Recuperar contraseña -->
+
+                    <a href="./recuperar-contrasena.html">
+                        ¿Olvidó su contraseña?
+                    </a>
+
+                </div>
+
+
+                <!-- ==================================================
+                     MENSAJE DEL SISTEMA
+                =================================================== -->
+
+                <div
+                    id="mensaje-login"
+                    class="mensaje-login"
+                    role="alert"
+                    aria-live="polite">
+                </div>
+
+
+                <!-- ==================================================
+                     BOTÓN DE INICIO DE SESIÓN
+                =================================================== -->
+
+                <button
+                    type="submit"
+                    id="btn-login"
+                    class="btn-login">
+
+                    <i
+                        class="fa-solid fa-right-to-bracket"
+                        aria-hidden="true">
+                    </i>
+
+                    Iniciar Sesión
+
+                </button>
+
+
+            </form>
+
+
+            <!-- ==================================================
+                 PIE DEL LOGIN
+            =================================================== -->
+
+            <footer class="pie-login">
+
+                <p>
+                    © 2026 Minuta Digital 360
+                </p>
+
+                <small>
+                    Versión 1.0.0
+                </small>
+
+            </footer>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ======================================================
+         JAVASCRIPT
+    ======================================================= -->
+
+    <script
+        src="../js/login.js"
+        defer>
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,447 @@
+/* ==========================================================
+   PROYECTO : MINUTA DIGITAL 360
+   ARCHIVO  : login.css
+   DESCRIPCIÓN:
+   Estilos de la pantalla de inicio de sesión.
+========================================================== */
+
+
+/* ==========================================================
+   01. CONTENEDOR PRINCIPAL
+========================================================== */
+
+.contenedor-login {
+
+    /* Ocupa toda la pantalla */
+    min-height: 100vh;
+
+    /* Centra la tarjeta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Espacio en pantallas pequeñas */
+    padding: 20px;
+
+    /* Fondo */
+    background: linear-gradient(
+        135deg,
+        #0F172A,
+        #1E3A8A,
+        #2563EB
+    );
+}
+
+
+/* ==========================================================
+   02. TARJETA DE LOGIN
+========================================================== */
+
+.tarjeta-login {
+
+    /* Ancho de la tarjeta */
+    width: 100%;
+    max-width: 480px;
+
+    /* Espacio interno */
+    padding: 40px;
+
+    /* Fondo */
+    background: rgba(255, 255, 255, 0.10);
+
+    /* Borde */
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    /* Bordes redondeados */
+    border-radius: 20px;
+
+    /* Sombra */
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.20);
+
+    /* Centra el contenido */
+    text-align: center;
+
+    /* Efecto cristal */
+    backdrop-filter: blur(12px);
+}
+
+
+/* ==========================================================
+   03. LOGO
+========================================================== */
+
+.tarjeta-login .logo {
+
+    /* Tamaño del logo */
+    width: 130px;
+
+    /* Centra el logo */
+    margin: 0 auto 20px;
+}
+
+
+/* ==========================================================
+   04. TÍTULO
+========================================================== */
+
+.tarjeta-login h1 {
+
+    /* Tamaño del título */
+    font-size: 34px;
+
+    /* Grosor */
+    font-weight: 700;
+
+    /* Color */
+    color: white;
+
+    /* Espacio debajo */
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================================
+   05. DESCRIPCIÓN
+========================================================== */
+
+.descripcion-login {
+
+    /* Color */
+    color: #E2E8F0;
+
+    /* Espacio debajo */
+    margin-bottom: 30px;
+
+    /* Tamaño */
+    font-size: 15px;
+}
+
+
+/* ==========================================================
+   06. FORMULARIO
+========================================================== */
+
+.formulario {
+
+    /* Organiza los campos verticalmente */
+    display: flex;
+
+    flex-direction: column;
+
+    /* Espacio entre elementos */
+    gap: 20px;
+
+    /* Texto alineado a la izquierda */
+    text-align: left;
+}
+
+
+/* ==========================================================
+   07. GRUPO DE INPUT
+========================================================== */
+
+.grupo-input {
+
+    /* Organiza etiqueta e input */
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* ==========================================================
+   08. ETIQUETAS
+========================================================== */
+
+.grupo-input label {
+
+    /* Color */
+    color: white;
+
+    /* Grosor */
+    font-weight: 600;
+
+    /* Tamaño */
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   09. CAMPOS
+========================================================== */
+
+.grupo-input input {
+
+    /* Ocupa todo el ancho */
+    width: 100%;
+
+    /* Espacio interno */
+    padding: 14px;
+
+    /* Borde */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    /* Bordes redondeados */
+    border-radius: 8px;
+
+    /* Fondo */
+    background: rgba(255, 255, 255, 0.08);
+
+    /* Texto */
+    color: white;
+
+    /* Quita el contorno predeterminado */
+    outline: none;
+}
+
+
+/* ==========================================================
+   10. TEXTO DEL CAMPO
+========================================================== */
+
+.grupo-input input::placeholder {
+
+    color: #CBD5E1;
+}
+
+
+/* ==========================================================
+   11. CAMPO ACTIVO
+========================================================== */
+
+.grupo-input input:focus {
+
+    /* Borde de enfoque */
+    border-color: #22D3EE;
+
+    /* Efecto de enfoque */
+    box-shadow: 0 0 0 2px rgba(34, 211, 238, 0.15);
+}
+
+
+/* ==========================================================
+   12. OPCIONES
+========================================================== */
+
+.opciones {
+
+    /* Coloca las opciones en una fila */
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    /* Tamaño */
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   13. RECORDAR USUARIO
+========================================================== */
+
+.opciones label {
+
+    /* Color */
+    color: #E2E8F0;
+
+    /* Alinea el checkbox */
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* ==========================================================
+   14. CHECKBOX
+========================================================== */
+
+.opciones input[type="checkbox"] {
+
+    /* Tamaño */
+    width: 17px;
+    height: 17px;
+}
+
+
+/* ==========================================================
+   15. RECUPERAR CONTRASEÑA
+========================================================== */
+
+.opciones a {
+
+    /* Color */
+    color: #22D3EE;
+
+    /* Subrayado */
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   16. MENSAJE DEL SISTEMA
+========================================================== */
+
+.mensaje-login {
+
+    /* Reserva espacio para el mensaje */
+    min-height: 20px;
+
+    /* Tamaño */
+    font-size: 14px;
+
+    /* Centra el texto */
+    text-align: center;
+}
+
+
+/* ==========================================================
+   17. MENSAJE DE ERROR
+========================================================== */
+
+.mensaje-login.error {
+
+    color: #FCA5A5;
+}
+
+
+/* ==========================================================
+   18. MENSAJE DE ÉXITO
+========================================================== */
+
+.mensaje-login.exito {
+
+    color: #86EFAC;
+}
+
+
+/* ==========================================================
+   19. BOTÓN DE LOGIN
+========================================================== */
+
+.btn-login {
+
+    /* Ancho completo */
+    width: 100%;
+
+    /* Espacio interno */
+    padding: 14px;
+
+    /* Borde */
+    border: none;
+
+    /* Bordes redondeados */
+    border-radius: 10px;
+
+    /* Fondo */
+    background: #2563EB;
+
+    /* Texto */
+    color: white;
+
+    /* Tamaño */
+    font-size: 16px;
+
+    /* Grosor */
+    font-weight: 600;
+
+    /* Cursor */
+    cursor: pointer;
+
+    /* Transición */
+    transition: 0.2s ease;
+}
+
+
+/* ==========================================================
+   20. EFECTO DEL BOTÓN
+========================================================== */
+
+.btn-login:hover {
+
+    /* Cambia ligeramente el tono */
+    background: #1D4ED8;
+
+    /* Sube un poco */
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================================
+   21. BOTÓN DESACTIVADO
+========================================================== */
+
+.btn-login:disabled {
+
+    /* Reduce la intensidad */
+    opacity: 0.7;
+
+    /* Quita el cursor */
+    cursor: not-allowed;
+
+    /* No mueve el botón */
+    transform: none;
+}
+
+
+/* ==========================================================
+   22. PIE DEL LOGIN
+========================================================== */
+
+.pie-login {
+
+    /* Espacio superior */
+    margin-top: 30px;
+
+    /* Color */
+    color: #CBD5E1;
+
+    /* Tamaño */
+    font-size: 13px;
+}
+
+
+.pie-login p {
+
+    margin-bottom: 6px;
+}
+
+
+/* ==========================================================
+   23. PANTALLAS PEQUEÑAS
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .contenedor-login {
+
+        padding: 15px;
+    }
+
+
+    .tarjeta-login {
+
+        padding: 30px 20px;
+    }
+
+
+    .tarjeta-login h1 {
+
+        font-size: 28px;
+    }
+
+
+    .opciones {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+}

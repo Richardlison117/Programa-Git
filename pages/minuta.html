@@ -1,0 +1,1202 @@
+<!-- ==========================================================
+     PROYECTO   : MINUTA DIGITAL 360
+     ARCHIVO    : minuta.html
+
+     DESCRIPCIÓN:
+     Registro de novedades e incidentes del servicio.
+
+     AUTOR:
+     Richard Duvan Gelves Laguado
+
+     FECHA:
+     2026
+========================================================== -->
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <!-- ======================================================
+         01. CONFIGURACIÓN DEL DOCUMENTO
+    ======================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Registro de novedades del servicio - Minuta Digital 360"
+    >
+
+    <meta
+        name="author"
+        content="Richard Duvan Gelves Laguado"
+    >
+
+    <meta
+        name="theme-color"
+        content="#2563EB"
+    >
+
+
+    <!-- ======================================================
+         02. TÍTULO
+    ======================================================= -->
+
+    <title>
+        Registrar Novedad | Minuta Digital 360
+    </title>
+
+
+    <!-- ======================================================
+         03. FAVICON
+    ======================================================= -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../img/logo-minuta-digital-360.png"
+    >
+
+
+    <!-- ======================================================
+         04. FUENTE PRINCIPAL
+    ======================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    >
+
+
+    <!-- ======================================================
+         05. ICONOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- ======================================================
+         06. ESTILOS GLOBALES
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css"
+    >
+
+
+    <!-- ======================================================
+         07. ESTILOS DE LA PÁGINA
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/minuta.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ======================================================
+         CONTENEDOR PRINCIPAL
+    ======================================================= -->
+
+    <main class="contenedor-minuta">
+
+
+        <!-- ==================================================
+             01. ENCABEZADO
+        =================================================== -->
+
+        <header class="encabezado">
+
+
+            <!-- INFORMACIÓN DEL ENCABEZADO -->
+
+            <div class="informacion-encabezado">
+
+                <h1>
+
+                    <i
+                        class="fa-solid fa-triangle-exclamation"
+                        aria-hidden="true">
+                    </i>
+
+                    Registrar Novedad
+
+                </h1>
+
+
+                <p>
+
+                    Registre las novedades e incidentes ocurridos
+                    durante el turno.
+
+                </p>
+
+            </div>
+
+
+            <!-- ==================================================
+                 BOTÓN VOLVER AL INICIO
+            =================================================== -->
+
+            <a
+                href="./dashboard.html"
+                class="btn-volver-inicio"
+                title="Volver al inicio"
+            >
+
+                <i
+                    class="fa-solid fa-arrow-left"
+                    aria-hidden="true">
+                </i>
+
+                Volver al inicio
+
+            </a>
+
+
+        </header>
+
+
+        <!-- ==================================================
+             FORMULARIO PRINCIPAL
+        =================================================== -->
+
+        <form id="formulario-minuta">
+
+
+            <!-- ==================================================
+                 02. INFORMACIÓN DEL REGISTRO
+            =================================================== -->
+
+            <section
+                class="tarjeta"
+                aria-labelledby="titulo-registro"
+            >
+
+                <h2 id="titulo-registro">
+
+                    <i
+                        class="fa-solid fa-circle-info"
+                        aria-hidden="true">
+                    </i>
+
+                    Información del registro
+
+                </h2>
+
+
+                <div class="grid">
+
+
+                    <!-- FECHA -->
+
+                    <div>
+
+                        <label for="fecha">
+                            Fecha
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fecha"
+                            name="fecha"
+                            readonly
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- HORA -->
+
+                    <div>
+
+                        <label for="hora">
+                            Hora
+                        </label>
+
+                        <input
+                            type="time"
+                            id="hora"
+                            name="hora"
+                            readonly
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PUESTO -->
+
+                    <div>
+
+                        <label for="puesto">
+                            Puesto
+                        </label>
+
+                        <input
+                            type="text"
+                            id="puesto"
+                            name="puesto"
+                            readonly
+                            placeholder="Se cargará automáticamente"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- USUARIO -->
+
+                    <div>
+
+                        <label for="guarda">
+                            Usuario
+                        </label>
+
+                        <input
+                            type="text"
+                            id="guarda"
+                            name="guarda"
+                            readonly
+                            placeholder="Se cargará automáticamente"
+                            required
+                        >
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+ <!-- *==================================================*
+     *        03. INFORMACIÓN DE LA NOVEDAD*
+     *===================================================* -->
+
+<section
+    class="tarjeta"
+    aria-labelledby="titulo-novedad"
+>
+
+    <h2 id="titulo-novedad">
+
+        <i
+            class="fa-solid fa-triangle-exclamation"
+            aria-hidden="true">
+        </i>
+
+        Información de la novedad
+
+    </h2>
+
+
+    <div class="grid">
+
+
+        <!-- *TIPO DE NOVEDAD* -->
+
+        <div>
+
+            <label for="tipo">
+
+                Tipo de novedad
+
+            </label>
+
+
+            <select
+                id="tipo"
+                name="tipo"
+                required
+            >
+
+                <option value="">
+
+                    Seleccione...
+
+                </option>
+
+
+                <option value="hurto">
+
+                    Hurto
+
+                </option>
+
+
+                <option value="accidente">
+
+                    Accidente
+
+                </option>
+
+
+                <option value="persona_sospechosa">
+
+                    Persona sospechosa
+
+                </option>
+
+
+                <option value="rina">
+
+                    Riña
+
+                </option>
+
+
+                <option value="incendio">
+
+                    Incendio
+
+                </option>
+
+
+                <option value="emergencia_medica">
+
+                    Emergencia médica
+
+                </option>
+
+
+                <option value="objeto_perdido">
+
+                    Objeto perdido
+
+                </option>
+
+
+                <option value="dano_tecnico">
+
+                    Daño técnico
+
+                </option>
+
+
+                <option value="apoyo_local">
+
+                    Apoyo a local
+
+                </option>
+
+
+                <option value="apertura">
+
+                    Apertura
+
+                </option>
+
+
+                <option value="cierre">
+
+                    Cierre
+
+                </option>
+
+
+                <option value="ronda_vigilancia">
+
+                    Ronda de vigilancia
+
+                </option>
+
+
+                <option value="visita_autoridad">
+
+                    Visita de autoridad
+
+                </option>
+
+
+                <option value="otro">
+
+                    Otro
+
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- *UBICACIÓN* -->
+
+        <div>
+
+            <label for="ubicacion">
+
+                Ubicación
+
+            </label>
+
+
+            <select
+                id="ubicacion"
+                name="ubicacion"
+                required
+            >
+
+                <option value="">
+
+                    Seleccione...
+
+                </option>
+
+
+                <option value="administracion">
+
+                    Administración
+
+                </option>
+
+
+                <option value="primer_piso">
+
+                    Primer Piso
+
+                </option>
+
+
+                <option value="segundo_piso">
+
+                    Segundo Piso
+
+                </option>
+
+
+                <option value="tercer_piso">
+
+                    Tercer Piso
+
+                </option>
+
+
+                <option value="segundo_piso_hub">
+
+                    Segundo Piso - Hub Ventura
+
+                </option>
+
+
+                <option value="tercer_piso_centro_negocios">
+
+                    Tercer Piso - Centro de Negocios
+
+                </option>
+
+
+                <option value="cuarto_piso_centro_negocios">
+
+                    Cuarto Piso - Centro de Negocios
+
+                </option>
+
+
+                <option value="cubierta_centro_negocios">
+
+                    Cubierta - Centro de Negocios
+
+                </option>
+
+
+                <option value="cubierta_a">
+
+                    Cubierta A
+
+                </option>
+
+
+                <option value="cubierta_b">
+
+                    Cubierta B
+
+                </option>
+
+
+                <option value="cubierta_c">
+
+                    Cubierta C
+
+                </option>
+
+
+                <option value="cubierta_d">
+
+                    Cubierta D
+
+                </option>
+
+
+                <option value="parqueadero">
+
+                    Parqueadero
+
+                </option>
+
+
+                <option value="externa_centro_comercial">
+                    Externa del centro comercial
+                </option>
+
+
+                <option value="banos_torre_a_primer">
+
+                    Baños Torre A - Primer piso
+
+                </option>
+
+
+                <option value="banos_torre_a_segundo">
+
+                    Baños Torre A - Segundo piso
+
+                </option>
+
+
+                <option value="banos_torre_a_tercer">
+
+                    Baños Torre A - Tercer piso
+
+                </option>
+
+
+                <option value="banos_torre_b_primer">
+
+                    Baños Torre B - Primer piso
+
+                </option>
+
+
+                <option value="banos_torre_b_segundo">
+
+                    Baños Torre B - Segundo piso
+
+                </option>
+
+
+                <option value="banos_torre_b_tercer">
+
+                    Baños Torre B - Tercer piso
+
+                </option>
+
+
+                <option value="banos_hub_ventura">
+
+                    Baños Segundo piso - Hub Ventura
+
+                </option>
+
+
+                <option value="banos_torre_a_centro_tercer">
+
+                    Baños Torre A - Centro de Negocios - Tercer piso
+
+                </option>
+
+
+                <option value="banos_torre_b_centro_tercer">
+
+                    Baños Torre B - Centro de Negocios - Tercer piso
+
+                </option>
+
+
+                <option value="banos_torre_a_centro_cuarto">
+
+                    Baños Torre A - Centro de Negocios - Cuarto piso
+
+                </option>
+
+
+                <option value="banos_torre_b_centro_cuarto">
+
+                    Baños Torre B - Centro de Negocios - Cuarto piso
+
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- *LUGAR* -->
+
+        <div>
+
+            <label for="lugar">
+
+                Lugar de la novedad
+
+            </label>
+
+
+            <select
+                id="lugar"
+                name="lugar"
+                required
+            >
+
+                <option value="">
+
+                    Seleccione...
+
+                </option>
+
+
+                <option value="area_comun">
+
+                    Área común
+
+                </option>
+
+
+                <option value="local_comercial">
+
+                    Local comercial
+
+                </option>
+
+
+                <option value="parqueadero">
+
+                    Parqueadero
+
+                </option>
+
+
+                <option value="parte_externa_entrada_1">
+
+                    Parte externa entrada 1
+
+                </option>
+
+
+                <option value="parte_externa_entrada_2">
+
+                    Parte externa entrada 2
+
+                </option>
+
+
+                <option value="parte_externa_entrada_3">
+
+                    Parte externa entrada 3
+
+                </option>
+
+
+                <option value="parte_externa_entrada_4">
+
+                    Parte externa entrada 4
+
+                </option>
+
+
+                <option value="parte_externa_patio_maniobras">
+
+                    Parte externa Patio maniobras
+
+                </option>
+
+
+                <option value="parte_externa_plazoleta_amelia">
+
+                    Parte externa plazoleta amelia
+                    (lotes la diagonal)
+
+                </option>
+
+
+                <option value="otro">
+
+                    Otro
+
+                </option>
+
+            </select>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+            <!-- ==================================================
+                 04. INFORMACIÓN ESPECÍFICA DEL LUGAR
+            =================================================== -->
+
+            <section
+                class="tarjeta"
+                id="informacionLugar"
+                aria-labelledby="titulo-lugar"
+            >
+
+                <h2 id="titulo-lugar">
+
+                    <i
+                        class="fa-solid fa-location-dot"
+                        aria-hidden="true">
+                    </i>
+
+                    Información del lugar
+
+                </h2>
+
+
+                <div class="grid">
+
+
+                    <!-- COLUMNA DEL PARQUEADERO -->
+
+                    <div
+                        id="campoColumna"
+                        hidden
+                    >
+
+                        <label for="columna">
+                            Columna del parqueadero
+                        </label>
+
+                        <select
+                            id="columna"
+                            name="columna"
+                        >
+
+                            <option value="">
+                                Seleccione la columna
+                            </option>
+
+                            <option value="a01">
+                                A-01
+                            </option>
+
+                            <option value="a02">
+                                A-02
+                            </option>
+
+                            <option value="a03">
+                                A-03
+                            </option>
+
+                            <option value="a04">
+                                A-04
+                            </option>
+
+                            <option value="a05">
+                                A-05
+                            </option>
+
+                            <option value="b01">
+                                B-01
+                            </option>
+
+                            <option value="b02">
+                                B-02
+                            </option>
+
+                            <option value="b03">
+                                B-03
+                            </option>
+
+                            <option value="b04">
+                                B-04
+                            </option>
+
+                            <option value="b05">
+                                B-05
+                            </option>
+
+                            <option value="c01">
+                                C-01
+                            </option>
+
+                            <option value="c02">
+                                C-02
+                            </option>
+
+                            <option value="c03">
+                                C-03
+                            </option>
+
+                            <option value="c04">
+                                C-04
+                            </option>
+
+                            <option value="c05">
+                                C-05
+                            </option>
+
+                            <option value="otro">
+                                Otra columna
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- OTRA COLUMNA -->
+
+                    <div
+                        id="campoOtraColumna"
+                        hidden
+                    >
+
+                        <label for="otraColumna">
+                            Describa la columna
+                        </label>
+
+                        <input
+                            type="text"
+                            id="otraColumna"
+                            name="otraColumna"
+                            placeholder="Escriba la columna"
+                        >
+
+                    </div>
+
+
+                    <!-- NÚMERO DEL LOCAL -->
+
+                    <div
+                        id="campoNumeroLocal"
+                        hidden
+                    >
+
+                        <label for="numeroLocal">
+                            Número del local
+                        </label>
+
+                        <input
+                            type="text"
+                            id="numeroLocal"
+                            name="numeroLocal"
+                            placeholder="Ejemplo: 2-15"
+                        >
+
+                    </div>
+
+
+                    <!-- NOMBRE DEL LOCAL -->
+
+                    <div
+                        id="campoNombreLocal"
+                        hidden
+                    >
+
+                        <label for="nombreLocal">
+                            Nombre del local
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombreLocal"
+                            name="nombreLocal"
+                            placeholder="Ejemplo: Studio F"
+                        >
+
+                    </div>
+
+
+                    <!-- ÁREA COMÚN -->
+
+                    <div
+                        id="campoAreaComun"
+                        hidden
+                    >
+
+                        <label for="areaComun">
+                            Área común
+                        </label>
+
+                        <input
+                            type="text"
+                            id="areaComun"
+                            name="areaComun"
+                            placeholder="Ejemplo: Pasillo Principal"
+                        >
+
+                    </div>
+
+
+                    <!-- DESCRIPCIÓN DEL LUGAR -->
+
+                    <div
+                        id="campoDescripcionLugar"
+                        hidden
+                    >
+
+                        <label for="descripcionLugar">
+                            Descripción del lugar
+                        </label>
+
+                        <input
+                            type="text"
+                            id="descripcionLugar"
+                            name="descripcionLugar"
+                            placeholder="Describa el lugar"
+                        >
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 05. DESCRIPCIÓN DE LA NOVEDAD
+            =================================================== -->
+
+            <section
+                class="tarjeta"
+                aria-labelledby="titulo-descripcion"
+            >
+
+                <h2 id="titulo-descripcion">
+
+                    <i
+                        class="fa-solid fa-file-lines"
+                        aria-hidden="true">
+                    </i>
+
+                    Descripción de la novedad
+
+                </h2>
+
+
+                <label for="descripcion">
+                    Detalle de lo ocurrido
+                </label>
+
+
+                <textarea
+                    id="descripcion"
+                    name="descripcion"
+                    rows="8"
+                    maxlength="1000"
+                    placeholder="Describa detalladamente qué ocurrió, quién estuvo involucrado, qué acciones se realizaron y cuál fue el resultado."
+                    required
+                ></textarea>
+
+
+            </section>
+
+
+            <!-- ==================================================
+                 06. EVIDENCIA FOTOGRÁFICA
+            =================================================== -->
+
+            <section
+                class="tarjeta"
+                aria-labelledby="titulo-evidencia"
+            >
+
+                <h2 id="titulo-evidencia">
+
+                    <i
+                        class="fa-solid fa-camera"
+                        aria-hidden="true">
+                    </i>
+
+                    Evidencia fotográfica
+
+                </h2>
+
+
+                <p class="texto-ayuda">
+
+                    Adjunte fotografías relacionadas con la novedad.
+
+                </p>
+
+
+                <!-- ==================================================
+                     OPCIONES DE EVIDENCIA
+                =================================================== -->
+
+                <div class="opciones-evidencia">
+
+
+                    <!-- SUBIR FOTOGRAFÍAS -->
+
+                    <label
+                        for="evidencia"
+                        class="btn-evidencia"
+                    >
+
+                        <i
+                            class="fa-solid fa-folder-open"
+                            aria-hidden="true">
+                        </i>
+
+                        Subir fotografías
+
+                    </label>
+
+
+                    <input
+                        type="file"
+                        id="evidencia"
+                        name="evidencia"
+                        accept="image/*"
+                        multiple
+                        hidden
+                    >
+
+
+                    <!-- TOMAR FOTOGRAFÍA -->
+
+                    <button
+                        type="button"
+                        id="btnTomarFoto"
+                        class="btn-evidencia"
+                    >
+
+                        <i
+                            class="fa-solid fa-camera"
+                            aria-hidden="true">
+                        </i>
+
+                        Tomar fotografía
+
+                    </button>
+
+
+                </div>
+
+
+                <!-- ==================================================
+                     VISTA PREVIA DE LAS FOTOGRAFÍAS
+                =================================================== -->
+
+                <div
+                    id="vistaPreviaEvidencias"
+                    class="vista-previa-evidencias"
+                    aria-live="polite"
+                ></div>
+
+
+                <!-- ==================================================
+                     INFORMACIÓN
+                =================================================== -->
+
+                <small class="texto-ayuda">
+
+                    Puede seleccionar varias fotografías o tomar
+                    una nueva directamente desde la cámara.
+
+                </small>
+
+
+            </section>
+
+
+            <!-- ==================================================
+                 07. ACCIONES
+            =================================================== -->
+
+            <section class="acciones">
+
+
+                <!-- GUARDAR -->
+
+                <button
+                    type="submit"
+                    id="btnGuardarNovedad"
+                    class="btn-primario"
+                >
+
+                    <i
+                        class="fa-solid fa-floppy-disk"
+                        aria-hidden="true">
+                    </i>
+
+                    Guardar Novedad
+
+                </button>
+
+
+                <!-- LIMPIAR -->
+
+                <button
+                    type="reset"
+                    id="btnLimpiarMinuta"
+                    class="btn-secundario"
+                >
+
+                    <i
+                        class="fa-solid fa-rotate-left"
+                        aria-hidden="true">
+                    </i>
+
+                    Limpiar
+
+                </button>
+
+
+            </section>
+
+
+            <!-- ==================================================
+                 08. MENSAJE DEL SISTEMA
+            =================================================== -->
+
+            <div
+                id="mensaje-minuta"
+                class="mensaje-minuta"
+                role="status"
+                aria-live="polite"
+            ></div>
+
+
+        </form>
+
+    </main>
+
+
+    <!-- ======================================================
+         JAVASCRIPT
+    ======================================================= -->
+
+    <script
+        src="../js/minuta.js"
+        defer>
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,875 @@
+/* ==========================================================
+   PROYECTO : MINUTA DIGITAL 360
+   ARCHIVO  : dashboard.css
+   DESCRIPCIÓN:
+   Estilos del panel principal del sistema.
+========================================================== */
+
+
+/* ==========================================================
+   01. ESTRUCTURA PRINCIPAL
+========================================================== */
+
+.dashboard {
+
+    /* Coloca el menú y el contenido juntos */
+    display: flex;
+
+    /* Ocupa toda la pantalla */
+    min-height: 100vh;
+
+    /* Fondo del Dashboard */
+    background: linear-gradient(
+        135deg,
+        #0F172A,
+        #1E3A8A,
+        #2563EB
+    );
+}
+
+
+/* ==========================================================
+   02. MENÚ LATERAL
+========================================================== */
+
+.menu-lateral {
+
+    /* Ancho del menú */
+    width: 250px;
+
+    /* Evita que cambie de tamaño */
+    flex-shrink: 0;
+
+    /* Espacio interno */
+    padding: 20px 15px;
+
+    /* Fondo oscuro */
+    background: rgba(15, 23, 42, 0.92);
+
+    /* Línea de separación */
+    border-right: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+/* ==========================================================
+   03. LOGO
+========================================================== */
+
+.logo-menu {
+
+    /* Centra el logo */
+    display: flex;
+    justify-content: center;
+
+    /* Espacio */
+    padding: 10px 0 20px;
+}
+
+
+.logo-menu img {
+
+    /* Tamaño del logo */
+    width: 110px;
+}
+
+
+/* ==========================================================
+   04. USUARIO DEL MENÚ
+========================================================== */
+
+.usuario-menu {
+
+    /* Centra el texto */
+    text-align: center;
+
+    /* Espacio */
+    padding: 15px 5px;
+
+    /* Líneas de separación */
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.usuario-menu h3 {
+
+    /* Nombre */
+    margin-bottom: 4px;
+
+    color: var(--blanco);
+
+    font-size: 14px;
+}
+
+
+.usuario-menu span {
+
+    /* Rol */
+    color: var(--gris);
+
+    font-size: 12px;
+}
+
+
+/* ==========================================================
+   05. MENÚ DE NAVEGACIÓN
+========================================================== */
+
+.menu {
+
+    /* Quita las viñetas */
+    list-style: none;
+
+    /* Espacio superior */
+    margin-top: 20px;
+
+    /* Organiza los enlaces */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.menu a {
+
+    /* Alinea icono y texto */
+    display: flex;
+    align-items: center;
+
+    /* Separación */
+    gap: 12px;
+
+    /* Espacio */
+    padding: 11px 12px;
+
+    /* Texto */
+    color: var(--gris);
+
+    /* Bordes */
+    border-radius: var(--radio-sm);
+
+    /* Transición */
+    transition: 0.2s ease;
+}
+
+
+.menu a i {
+
+    /* Ancho del icono */
+    width: 20px;
+
+    /* Centrado */
+    text-align: center;
+}
+
+
+.menu a:hover {
+
+    /* Texto */
+    color: var(--blanco);
+
+    /* Fondo */
+    background: rgba(37, 99, 235, 0.20);
+
+    /* Movimiento */
+    transform: translateX(3px);
+}
+
+
+.menu a.activo {
+
+    /* Texto */
+    color: var(--blanco);
+
+    /* Fondo */
+    background: var(--azul-claro);
+}
+
+
+/* ==========================================================
+   06. VERSIÓN
+========================================================== */
+
+.version-sistema {
+
+    /* Separación */
+    margin-top: 20px;
+
+    /* Espacio superior */
+    padding-top: 15px;
+
+    /* Línea */
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    /* Texto */
+    color: var(--gris);
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+
+/* ==========================================================
+   07. CONTENIDO PRINCIPAL
+========================================================== */
+
+.contenido-dashboard {
+
+    /* Ocupa el espacio restante */
+    flex: 1;
+
+    /* Evita desbordamientos */
+    min-width: 0;
+
+    /* Espacio */
+    padding: 30px;
+
+    /* Texto claro sobre fondo oscuro */
+    color: var(--blanco);
+}
+
+
+/* ==========================================================
+   08. ENCABEZADO
+========================================================== */
+
+.encabezado-dashboard {
+
+    /* Coloca título y usuario en una fila */
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    /* Espacio debajo */
+    margin-bottom: 30px;
+}
+
+
+.encabezado-dashboard h1 {
+
+    /* Título */
+    color: var(--blanco);
+
+    font-size: 30px;
+
+    font-weight: 700;
+}
+
+
+.encabezado-dashboard > div:first-child p {
+
+    /* Separación */
+    margin-top: 5px;
+
+    /* Texto secundario */
+    color: var(--gris);
+
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   09. USUARIO DEL ENCABEZADO
+========================================================== */
+
+.usuario {
+
+    /* Alinea icono y datos */
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    /* Espacio */
+    padding: 10px 14px;
+
+    /* Fondo */
+    background: rgba(255, 255, 255, 0.08);
+
+    /* Borde */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    /* Forma */
+    border-radius: var(--radio-md);
+}
+
+
+.usuario i {
+
+    /* Icono */
+    color: var(--cian);
+
+    font-size: 24px;
+}
+
+
+.usuario strong {
+
+    /* Nombre */
+    display: block;
+
+    color: var(--blanco);
+
+    font-size: 14px;
+}
+
+
+.usuario p {
+
+    /* Rol */
+    margin-top: 2px;
+
+    color: var(--gris);
+
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   10. TÍTULOS DE SECCIÓN
+========================================================== */
+
+.informacion-dashboard h2,
+.acciones-dashboard h2,
+.resumen-dashboard h2 {
+
+    /* Blanco para mejorar el contraste */
+    color: var(--blanco);
+
+    font-size: 19px;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   11. SISTEMA DE TARJETAS
+========================================================== */
+
+.tarjetas {
+
+    /* Organiza las tarjetas */
+    display: grid;
+
+    /* Se adapta al espacio */
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(200px, 1fr)
+    );
+
+    /* Separación */
+    gap: 15px;
+}
+
+
+/* ==========================================================
+   12. INFORMACIÓN DEL TURNO
+========================================================== */
+
+.informacion-dashboard {
+
+    /* Separación inferior */
+    margin-bottom: 30px;
+}
+
+
+.informacion-dashboard h2 {
+
+    margin-bottom: 15px;
+}
+
+
+.tarjeta-info {
+
+    /* Espacio */
+    padding: 20px;
+
+    /* Fondo de tarjeta */
+    background: rgba(255, 255, 255, 0.08);
+
+    /* Borde */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    /* Forma */
+    border-radius: var(--radio-md);
+
+    /* Transición */
+    transition: 0.2s ease;
+}
+
+
+.tarjeta-info:hover {
+
+    /* Eleva ligeramente la tarjeta */
+    transform: translateY(-3px);
+}
+
+
+.tarjeta-info i {
+
+    /* Icono */
+    color: var(--cian);
+
+    font-size: 22px;
+}
+
+
+.tarjeta-info h3 {
+
+    /* Título */
+    margin: 10px 0 5px;
+
+    color: var(--blanco);
+
+    font-size: 14px;
+}
+
+
+.tarjeta-info p {
+
+    /* Valor */
+    color: var(--gris);
+
+    font-size: 13px;
+}
+
+
+/* Estado del turno */
+
+.estado-alerta {
+
+    color: var(--cian) !important;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   13. ACCIONES RÁPIDAS
+========================================================== */
+
+.acciones-dashboard {
+
+    /* Separación */
+    margin-bottom: 30px;
+}
+
+
+.titulo-seccion {
+
+    /* Espacio */
+    margin-bottom: 15px;
+}
+
+
+.titulo-seccion p {
+
+    /* Separación */
+    margin-top: 4px;
+
+    /* Texto secundario */
+    color: var(--gris);
+
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   14. TARJETAS DE ACCIÓN
+========================================================== */
+
+.tarjeta-modulo {
+
+    /* Espacio */
+    padding: 20px;
+
+    /* Fondo */
+    background: rgba(255, 255, 255, 0.08);
+
+    /* Borde */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    /* Forma */
+    border-radius: var(--radio-md);
+
+    /* Transición */
+    transition: 0.2s ease;
+}
+
+
+.tarjeta-modulo:hover {
+
+    /* Eleva la tarjeta */
+    transform: translateY(-4px);
+
+    /* Hace visible el fondo */
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+.tarjeta-modulo i {
+
+    /* Icono */
+    color: var(--cian);
+
+    font-size: 24px;
+}
+
+
+.tarjeta-modulo h3 {
+
+    /* Título */
+    margin: 10px 0 5px;
+
+    color: var(--blanco);
+
+    font-size: 15px;
+}
+
+
+.tarjeta-modulo p {
+
+    /* Descripción */
+    color: var(--gris);
+
+    font-size: 12px;
+}
+
+
+/* ==========================================================
+   15. NOVEDADES PENDIENTES
+========================================================== */
+
+.resumen-dashboard {
+
+    /* Separación */
+    margin-bottom: 30px;
+}
+
+
+.tarjeta-resumen {
+
+    /* Organiza los elementos */
+    display: grid;
+
+    grid-template-columns:
+        auto 1fr auto auto;
+
+    align-items: center;
+
+    gap: 15px;
+
+    /* Espacio */
+    padding: 20px;
+
+    /* Fondo */
+    background: rgba(255, 255, 255, 0.08);
+
+    /* Borde */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    /* Forma */
+    border-radius: var(--radio-md);
+}
+
+
+.icono-resumen {
+
+    /* Tamaño */
+    width: 45px;
+    height: 45px;
+
+    /* Centra el icono */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Fondo */
+    background: rgba(34, 211, 238, 0.10);
+
+    /* Forma */
+    border-radius: 10px;
+}
+
+
+.icono-resumen i {
+
+    /* Icono */
+    color: var(--cian);
+
+    font-size: 18px;
+}
+
+
+.contenido-resumen h2 {
+
+    /* Tamaño */
+    font-size: 17px;
+}
+
+
+.contenido-resumen p {
+
+    /* Separación */
+    margin-top: 4px;
+
+    /* Texto */
+    color: var(--gris);
+
+    font-size: 12px;
+}
+
+
+.numero-resumen {
+
+    /* Centra la cantidad */
+    text-align: center;
+}
+
+
+.numero-resumen strong {
+
+    /* Número */
+    display: block;
+
+    color: var(--blanco);
+
+    font-size: 24px;
+}
+
+
+.numero-resumen span {
+
+    /* Texto */
+    color: var(--gris);
+
+    font-size: 11px;
+}
+
+
+.boton-resumen {
+
+    /* Alineación */
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    /* Espacio */
+    padding: 9px 12px;
+
+    /* Texto */
+    color: var(--blanco);
+
+    /* Fondo */
+    background: var(--azul-claro);
+
+    /* Forma */
+    border-radius: var(--radio-sm);
+
+    /* Tamaño */
+    font-size: 12px;
+
+    /* Transición */
+    transition: 0.2s ease;
+}
+
+
+.boton-resumen:hover {
+
+    /* Fondo al pasar el cursor */
+    background: #1D4ED8;
+}
+
+
+/* ==========================================================
+   16. PIE DE PÁGINA
+========================================================== */
+
+.pie-dashboard {
+
+    /* Distribución */
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    /* Espacio */
+    padding-top: 20px;
+
+    /* Línea */
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    /* Texto */
+    color: var(--gris);
+
+    font-size: 11px;
+}
+
+
+.pie-dashboard p {
+
+    /* Alinea icono y texto */
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.pie-dashboard i {
+
+    /* Icono */
+    color: var(--cian);
+}
+
+
+.pie-dashboard span {
+
+    color: var(--gris);
+}
+
+
+/* ==========================================================
+   17. TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .dashboard {
+
+        /* Coloca el menú arriba */
+        flex-direction: column;
+    }
+
+
+    .menu-lateral {
+
+        /* Ancho completo */
+        width: 100%;
+
+        /* Altura automática */
+        min-height: auto;
+
+        padding: 15px;
+    }
+
+
+    .logo-menu img {
+
+        width: 90px;
+    }
+
+
+    .menu {
+
+        /* Dos opciones por fila */
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 5px;
+    }
+
+
+    .contenido-dashboard {
+
+        padding: 25px;
+    }
+
+}
+
+
+/* ==========================================================
+   18. MÓVIL
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .contenido-dashboard {
+
+        padding: 15px;
+    }
+
+
+    .menu {
+
+        /* Una opción por fila */
+        grid-template-columns: 1fr;
+    }
+
+
+    .encabezado-dashboard {
+
+        /* Elementos uno debajo del otro */
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .encabezado-dashboard h1 {
+
+        font-size: 24px;
+    }
+
+
+    .usuario {
+
+        /* Ocupa todo el ancho */
+        width: 100%;
+    }
+
+
+    .tarjetas {
+
+        /* Una tarjeta por fila */
+        grid-template-columns: 1fr;
+    }
+
+
+    .tarjeta-resumen {
+
+        /* Organización vertical */
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .numero-resumen {
+
+        text-align: left;
+    }
+
+
+    .boton-resumen {
+
+        /* Ancho completo */
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .pie-dashboard {
+
+        /* Organización vertical */
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}

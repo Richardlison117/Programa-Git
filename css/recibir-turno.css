@@ -1,0 +1,812 @@
+/* ==========================================================
+   PROYECTO : MINUTA DIGITAL 360
+   ARCHIVO  : recibir-turno.css
+   DESCRIPCIÓN:
+   Estilos de la pantalla de recepción de turno.
+========================================================== */
+
+
+/* ==========================================================
+   01. CONTENEDOR PRINCIPAL
+========================================================== */
+
+.contenedor-recibir-turno {
+
+    /* Ocupa toda la pantalla */
+    min-height: 100vh;
+
+    /* Espacio exterior */
+    padding: 30px;
+
+    /* Fondo principal */
+    background: linear-gradient(
+        135deg,
+        #0F172A,
+        #1E3A8A,
+        #2563EB
+    );
+}
+
+
+/* ==========================================================
+   02. ENCABEZADO
+========================================================== */
+
+.encabezado {
+
+    /* Coloca título y botón */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Separación */
+    gap: 20px;
+
+    /* Ancho máximo */
+    max-width: 1100px;
+
+    /* Centrado */
+    margin: 0 auto 25px;
+}
+
+
+.informacion-encabezado h1 {
+
+    /* Título */
+    color: var(--blanco);
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+.informacion-encabezado h1 i {
+
+    /* Icono */
+    color: var(--cian);
+
+    margin-right: 8px;
+}
+
+
+.informacion-encabezado p {
+
+    /* Descripción */
+    margin-top: 6px;
+
+    color: var(--gris);
+
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   03. BOTÓN VOLVER
+========================================================== */
+
+.btn-volver-inicio {
+
+    /* Alinea icono y texto */
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    /* Espacio */
+    padding: 10px 14px;
+
+    /* Texto */
+    color: var(--blanco);
+
+    /* Fondo */
+    background: rgba(255, 255, 255, 0.08);
+
+    /* Borde */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    /* Forma */
+    border-radius: var(--radio-sm);
+
+    /* Transición */
+    transition: 0.2s ease;
+}
+
+
+.btn-volver-inicio:hover {
+
+    /* Fondo */
+    background: rgba(255, 255, 255, 0.15);
+
+    /* Movimiento */
+    transform: translateX(-2px);
+}
+
+
+/* ==========================================================
+   04. FORMULARIO
+========================================================== */
+
+#formulario-recibir-turno {
+
+    /* Ancho máximo */
+    max-width: 1100px;
+
+    /* Centrado */
+    margin: 0 auto;
+}
+
+
+/* ==========================================================
+   05. TARJETAS
+========================================================== */
+
+.tarjeta {
+
+    /* Espacio interno */
+    padding: 24px;
+
+    /* Separación */
+    margin-bottom: 20px;
+
+    /* Fondo */
+    background: rgba(255, 255, 255, 0.08);
+
+    /* Borde */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    /* Forma */
+    border-radius: var(--radio-md);
+
+    /* Efecto cristal */
+    backdrop-filter: blur(10px);
+}
+
+
+/* ==========================================================
+   06. TÍTULOS
+========================================================== */
+
+.tarjeta h2 {
+
+    /* Alineación */
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    /* Espacio */
+    margin-bottom: 20px;
+
+    /* Texto */
+    color: var(--blanco);
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.tarjeta h2 i {
+
+    /* Iconos */
+    color: var(--cian);
+
+    font-size: 17px;
+}
+
+
+/* ==========================================================
+   07. SISTEMA DE COLUMNAS
+========================================================== */
+
+.grid {
+
+    /* Organiza los campos */
+    display: grid;
+
+    /* Dos columnas */
+    grid-template-columns: repeat(2, 1fr);
+
+    /* Separación */
+    gap: 18px;
+}
+
+
+.grid > div {
+
+    /* Evita desbordamientos */
+    min-width: 0;
+}
+
+
+/* ==========================================================
+   08. ETIQUETAS
+========================================================== */
+
+.tarjeta label {
+
+    /* Cada etiqueta ocupa su línea */
+    display: block;
+
+    /* Separación */
+    margin-bottom: 7px;
+
+    /* Texto blanco */
+    color: var(--blanco);
+
+    /* Tamaño */
+    font-size: 13px;
+
+    /* Grosor */
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   09. CAMPOS DEL FORMULARIO
+========================================================== */
+
+.contenedor-recibir-turno input,
+.contenedor-recibir-turno select,
+.contenedor-recibir-turno textarea {
+
+    /* Ancho completo */
+    width: 100%;
+
+    /* Espacio interno */
+    padding: 12px 13px;
+
+    /* Fondo del diseño original */
+    background: rgba(255, 255, 255, 0.08);
+
+    /* Texto */
+    color: var(--blanco);
+
+    /* Borde */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    /* Forma */
+    border-radius: var(--radio-sm);
+
+    /* Quita el estilo predeterminado */
+    outline: none;
+
+    /* Transición */
+    transition: 0.2s ease;
+}
+
+
+/* ==========================================================
+   10. PLACEHOLDER
+========================================================== */
+
+.contenedor-recibir-turno input::placeholder,
+.contenedor-recibir-turno textarea::placeholder {
+
+    /* Texto de ayuda */
+    color: var(--gris);
+
+    opacity: 1;
+}
+
+
+/* ==========================================================
+   11. AUTORRELLENO DEL NAVEGADOR
+========================================================== */
+
+/*
+   Mantiene el aspecto oscuro cuando el navegador
+   intenta rellenar automáticamente un campo.
+*/
+
+.contenedor-recibir-turno input:-webkit-autofill,
+.contenedor-recibir-turno input:-webkit-autofill:hover,
+.contenedor-recibir-turno input:-webkit-autofill:focus,
+.contenedor-recibir-turno input:-webkit-autofill:active {
+
+    /* Evita el fondo claro del navegador */
+    -webkit-box-shadow:
+        0 0 0 1000px #243765 inset;
+
+    /* Mantiene el texto claro */
+    -webkit-text-fill-color: #FFFFFF;
+
+    /* Suaviza el cambio */
+    transition:
+        background-color 9999s ease-in-out 0s;
+}
+
+
+/* ==========================================================
+   12. MENÚS DESPLEGABLES
+========================================================== */
+
+.contenedor-recibir-turno select {
+
+    /* Texto claro */
+    color: var(--blanco);
+}
+
+
+.contenedor-recibir-turno select option {
+
+    /* Fondo del menú */
+    background: #0F172A;
+
+    /* Texto */
+    color: var(--blanco);
+}
+
+
+/* ==========================================================
+   13. CAMPOS ACTIVOS
+========================================================== */
+
+.contenedor-recibir-turno input:focus,
+.contenedor-recibir-turno select:focus,
+.contenedor-recibir-turno textarea:focus {
+
+    /* Borde cian */
+    border-color: var(--cian);
+
+    /* Resplandor */
+    box-shadow:
+        0 0 0 2px rgba(34, 211, 238, 0.12);
+}
+
+
+/* ==========================================================
+   14. CAMPOS OCULTOS
+========================================================== */
+
+[hidden] {
+
+    /* Oculta completamente */
+    display: none !important;
+}
+
+
+/* ==========================================================
+   15. OTRA EMPRESA
+========================================================== */
+
+.campo-extra {
+
+    /* Separación del campo anterior */
+    margin-top: 18px;
+}
+
+
+/* ==========================================================
+   16. IDENTIFICACIÓN DEL RECEPTOR
+========================================================== */
+
+.tarjeta-selfie {
+
+    /* Centra el contenido */
+    text-align: center;
+}
+
+
+.texto-ayuda {
+
+    /* Ancho máximo */
+    max-width: 700px;
+
+    /* Centrado */
+    margin: 0 auto 18px;
+
+    /* Texto */
+    color: var(--gris);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   17. CÁMARA
+========================================================== */
+
+.contenedor-camara {
+
+    /* Ancho */
+    width: 100%;
+
+    max-width: 600px;
+
+    /* Altura mínima */
+    min-height: 320px;
+
+    /* Centrado */
+    margin: 0 auto 15px;
+
+    /* Fondo */
+    background: #0F172A;
+
+    /* Forma */
+    border-radius: var(--radio-md);
+
+    /* Recorta la imagen */
+    overflow: hidden;
+}
+
+
+#vistaCamara,
+.vista-selfie {
+
+    /* Ocupa el área disponible */
+    display: block;
+
+    width: 100%;
+
+    height: 360px;
+
+    /* Ajuste */
+    object-fit: cover;
+}
+
+
+/* Vista tipo espejo */
+
+#vistaCamara {
+
+    transform: scaleX(-1);
+}
+
+
+/* ==========================================================
+   18. ESTADO DE LA SELFIE
+========================================================== */
+
+.estado-selfie {
+
+    /* Alineación */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    /* Separación */
+    margin-bottom: 18px;
+
+    /* Texto */
+    color: var(--gris);
+
+    font-size: 13px;
+}
+
+
+.estado-selfie i {
+
+    /* Icono */
+    color: var(--cian);
+}
+
+
+/* ==========================================================
+   19. BOTONES DE CÁMARA
+========================================================== */
+
+.acciones-camara {
+
+    /* Organiza los botones */
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+/* ==========================================================
+   20. BOTONES
+========================================================== */
+
+.btn-primario,
+.btn-secundario {
+
+    /* Alineación */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    /* Espacio */
+    padding: 11px 16px;
+
+    /* Forma */
+    border-radius: var(--radio-sm);
+
+    /* Texto */
+    color: var(--blanco);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    /* Transición */
+    transition: 0.2s ease;
+}
+
+
+/* Botón principal */
+
+.btn-primario {
+
+    background: var(--azul-claro);
+}
+
+
+.btn-primario:hover {
+
+    background: #1D4ED8;
+
+    transform: translateY(-2px);
+}
+
+
+/* Botón secundario */
+
+.btn-secundario {
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+.btn-secundario:hover {
+
+    background: rgba(255, 255, 255, 0.14);
+}
+
+
+/* Botón desactivado */
+
+button:disabled {
+
+    opacity: 0.5;
+
+    cursor: not-allowed;
+}
+
+
+/* ==========================================================
+   21. AVISOS
+========================================================== */
+
+.aviso-privacidad,
+.aviso-armamento {
+
+    /* Alineación */
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    /* Espacio */
+    margin-top: 18px;
+
+    padding: 13px;
+
+    /* Fondo */
+    background: rgba(34, 211, 238, 0.07);
+
+    /* Borde */
+    border: 1px solid rgba(34, 211, 238, 0.15);
+
+    /* Forma */
+    border-radius: var(--radio-sm);
+
+    /* Texto */
+    color: var(--gris);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+.aviso-privacidad i,
+.aviso-armamento i {
+
+    /* Iconos */
+    color: var(--cian);
+
+    margin-top: 2px;
+}
+
+
+/* ==========================================================
+   22. ARMAMENTO
+========================================================== */
+
+.bloque-armamento {
+
+    /* Separación */
+    margin-top: 20px;
+}
+
+
+.bloque-armamento h3 {
+
+    /* Título */
+    margin-bottom: 18px;
+
+    color: var(--blanco);
+
+    font-size: 15px;
+}
+
+
+/* ==========================================================
+   23. OBSERVACIONES
+========================================================== */
+
+.tarjeta textarea {
+
+    /* Altura */
+    min-height: 130px;
+
+    /* Ancho */
+    max-width: 100%;
+
+    /* Permite modificar la altura */
+    resize: vertical;
+
+    /* Texto */
+    color: var(--blanco);
+}
+
+
+/* ==========================================================
+   24. ACCIONES FINALES
+========================================================== */
+
+.acciones {
+
+    /* Alineación */
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    /* Espacio */
+    padding: 5px 0 20px;
+}
+
+
+.acciones button {
+
+    /* Tamaño mínimo */
+    min-width: 220px;
+}
+
+
+/* ==========================================================
+   25. TABLETA
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .contenedor-recibir-turno {
+
+        /* Menor espacio */
+        padding: 20px;
+    }
+
+
+    .encabezado {
+
+        /* Alineación */
+        align-items: flex-start;
+    }
+
+
+    .grid {
+
+        /* Una columna */
+        grid-template-columns: 1fr;
+    }
+
+
+    .tarjeta {
+
+        /* Menor espacio */
+        padding: 20px;
+    }
+
+
+    #vistaCamara,
+    .vista-selfie {
+
+        /* Menor altura */
+        height: 320px;
+    }
+
+}
+
+
+/* ==========================================================
+   26. MÓVIL
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .contenedor-recibir-turno {
+
+        padding: 15px;
+    }
+
+
+    .encabezado {
+
+        /* Elementos verticales */
+        flex-direction: column;
+    }
+
+
+    .informacion-encabezado h1 {
+
+        font-size: 23px;
+    }
+
+
+    .informacion-encabezado p {
+
+        font-size: 12px;
+    }
+
+
+    .btn-volver-inicio {
+
+        /* Ancho completo */
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .tarjeta {
+
+        padding: 17px;
+    }
+
+
+    .tarjeta h2 {
+
+        font-size: 16px;
+    }
+
+
+    #vistaCamara,
+    .vista-selfie {
+
+        height: 260px;
+    }
+
+
+    .acciones-camara,
+    .acciones {
+
+        /* Botones verticales */
+        flex-direction: column;
+    }
+
+
+    .acciones-camara button,
+    .acciones button {
+
+        /* Ancho completo */
+        width: 100%;
+
+        min-width: 0;
+    }
+
+}

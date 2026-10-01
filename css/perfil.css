@@ -1,0 +1,588 @@
+/* ==========================================================
+   PROYECTO : MINUTA DIGITAL 360
+   ARCHIVO  : perfil.css
+
+   DESCRIPCIÓN:
+   Estilos del perfil del usuario.
+========================================================== */
+
+
+/* ==========================================================
+   01. CONTENEDOR
+========================================================== */
+
+.contenedor-perfil {
+
+    min-height: 100vh;
+
+    padding: 35px 25px;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(59, 130, 246, .20),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(34, 211, 238, .12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            var(--color-fondo),
+            var(--color-primario),
+            var(--color-secundario)
+        );
+}
+
+
+/* ==========================================================
+   02. ENCABEZADO
+========================================================== */
+
+.encabezado-perfil {
+
+    max-width: 1000px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.encabezado-perfil h1 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 0;
+
+    color: #FFFFFF;
+
+    font-size: 30px;
+
+    font-weight: 800;
+}
+
+
+.encabezado-perfil h1 i {
+
+    color: #22D3EE;
+}
+
+
+.encabezado-perfil p {
+
+    margin-top: 5px;
+
+    color: #CBD5E1;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   03. BOTÓN VOLVER
+========================================================== */
+
+.btn-volver {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 16px;
+
+    color: #FFFFFF;
+
+    background: rgba(255, 255, 255, .08);
+
+    border: 1px solid rgba(103, 232, 249, .30);
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: .2s ease;
+}
+
+
+.btn-volver i {
+
+    color: #67E8F9;
+}
+
+
+.btn-volver:hover {
+
+    background: rgba(37, 99, 235, .25);
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   04. PERFIL PRINCIPAL
+========================================================== */
+
+.perfil-principal {
+
+    max-width: 1000px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 25px;
+
+    background: rgba(255, 255, 255, .08);
+
+    border: 1px solid rgba(255, 255, 255, .14);
+
+    border-radius: 14px;
+}
+
+
+/* ==========================================================
+   05. AVATAR
+========================================================== */
+
+.avatar-usuario {
+
+    width: 76px;
+
+    height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #FFFFFF;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563EB,
+            #06B6D4
+        );
+
+    border-radius: 50%;
+
+    font-size: 28px;
+}
+
+
+/* ==========================================================
+   06. IDENTIDAD
+========================================================== */
+
+.identidad-usuario h2 {
+
+    margin: 0;
+
+    color: #FFFFFF;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+
+.identidad-usuario p {
+
+    margin: 4px 0 8px;
+
+    color: #CBD5E1;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   07. ESTADO
+========================================================== */
+
+.estado-usuario {
+
+    display: inline-flex;
+
+    padding: 5px 10px;
+
+    color: #166534;
+
+    background: #DCFCE7;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   08. TARJETAS
+========================================================== */
+
+.tarjeta-perfil {
+
+    max-width: 1000px;
+
+    margin: 0 auto 20px;
+
+    padding: 25px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E2E8F0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 12px
+        rgba(15, 23, 42, .08);
+}
+
+
+.tarjeta-perfil h2 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin: 0 0 20px;
+
+    color: #1E3A8A;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+.tarjeta-perfil h2 i {
+
+    color: #2563EB;
+}
+
+
+/* ==========================================================
+   09. GRID
+========================================================== */
+
+.grid-perfil {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 14px;
+}
+
+
+/* ==========================================================
+   10. DATOS
+========================================================== */
+
+.dato-perfil {
+
+    padding: 15px;
+
+    background: #F8FAFC;
+
+    border: 1px solid #E2E8F0;
+
+    border-radius: 10px;
+}
+
+
+.dato-perfil span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #64748B;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+.dato-perfil strong {
+
+    color: #1E293B;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================================
+   11. SEGURIDAD
+========================================================== */
+
+.seguridad-perfil {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.icono-seguridad {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #2563EB;
+
+    background: #EFF6FF;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+
+.seguridad-perfil h2 {
+
+    margin-bottom: 5px;
+
+    color: #1E293B;
+}
+
+
+.seguridad-perfil p {
+
+    color: #64748B;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   12. ACCIONES
+========================================================== */
+
+.acciones-perfil {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+}
+
+
+.btn-primario,
+.btn-secundario {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 42px;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    font-family: var(--fuente);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    transition: .2s ease;
+}
+
+
+.btn-primario {
+
+    color: #FFFFFF;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563EB,
+            #06B6D4
+        );
+
+    border: none;
+}
+
+
+.btn-primario:hover {
+
+    transform: translateY(-2px);
+}
+
+
+.btn-secundario {
+
+    color: #1E293B;
+
+    background: #F8FAFC;
+
+    border: 1px solid #E2E8F0;
+}
+
+
+.btn-secundario:hover {
+
+    background: #E2E8F0;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   13. MÓVIL
+========================================================== */
+
+@media (max-width: 700px) {
+
+    .contenedor-perfil {
+
+        padding: 20px 14px;
+    }
+
+
+    .encabezado-perfil {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .encabezado-perfil h1 {
+
+        font-size: 24px;
+    }
+
+
+    .btn-volver {
+
+        width: 100%;
+    }
+
+
+    .perfil-principal {
+
+        padding: 20px;
+
+        align-items: flex-start;
+    }
+
+
+    .avatar-usuario {
+
+        width: 62px;
+
+        height: 62px;
+
+        font-size: 22px;
+    }
+
+
+    .identidad-usuario h2 {
+
+        font-size: 19px;
+    }
+
+
+    .grid-perfil {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .tarjeta-perfil {
+
+        padding: 18px;
+    }
+
+
+    .seguridad-perfil {
+
+        align-items: flex-start;
+    }
+
+
+    .acciones-perfil {
+
+        flex-direction: column;
+    }
+
+
+    .acciones-perfil a,
+    .acciones-perfil button {
+
+        width: 100%;
+    }
+
+}

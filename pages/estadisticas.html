@@ -1,0 +1,702 @@
+<!-- ==========================================================
+     PROYECTO : MINUTA DIGITAL 360
+     ARCHIVO  : estadisticas.html
+
+     DESCRIPCIÓN:
+     Panel de estadísticas e indicadores de seguridad.
+
+     AUTOR:
+     Richard Duvan Gelves Laguado
+
+     FECHA:
+     2026
+========================================================== -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- ======================================================
+         01. CONFIGURACIÓN
+    ======================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Estadísticas e indicadores de seguridad de Minuta Digital 360.">
+
+    <meta
+        name="theme-color"
+        content="#2563EB">
+
+
+    <!-- ======================================================
+         02. TÍTULO
+    ======================================================= -->
+
+    <title>
+        Estadísticas | Minuta Digital 360
+    </title>
+
+
+    <!-- ======================================================
+         03. FUENTE
+    ======================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+
+
+    <!-- ======================================================
+         04. ICONOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- ======================================================
+         05. GRÁFICAS
+    ======================================================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js">
+    </script>
+
+
+    <!-- ======================================================
+         06. ESTILOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/estadisticas.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ======================================================
+         CONTENEDOR PRINCIPAL
+    ======================================================= -->
+
+    <main class="contenedor-estadisticas">
+
+
+        <!-- ==================================================
+             01. ENCABEZADO
+        =================================================== -->
+
+        <header class="encabezado-estadisticas">
+
+            <div>
+
+                <h1>
+
+                    <i
+                        class="fa-solid fa-chart-line"
+                        aria-hidden="true">
+                    </i>
+
+                    Estadísticas
+
+                </h1>
+
+
+                <p>
+
+                    Analice el comportamiento de las novedades
+                    registradas en el sistema.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="./dashboard.html"
+                class="btn-volver">
+
+                <i
+                    class="fa-solid fa-arrow-left"
+                    aria-hidden="true">
+                </i>
+
+                Volver al inicio
+
+            </a>
+
+        </header>
+
+
+        <!-- ==================================================
+             02. INDICADORES
+        =================================================== -->
+
+        <section class="indicadores-estadisticas">
+
+
+            <article class="indicador">
+
+                <div class="indicador-icono">
+
+                    <i
+                        class="fa-solid fa-layer-group"
+                        aria-hidden="true">
+                    </i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Total novedades
+                    </span>
+
+                    <strong id="totalNovedades">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="indicador">
+
+                <div class="indicador-icono">
+
+                    <i
+                        class="fa-solid fa-calendar-day"
+                        aria-hidden="true">
+                    </i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Novedades de hoy
+                    </span>
+
+                    <strong id="novedadesHoy">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="indicador">
+
+                <div class="indicador-icono">
+
+                    <i
+                        class="fa-solid fa-clock"
+                        aria-hidden="true">
+                    </i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Pendientes
+                    </span>
+
+                    <strong id="novedadesPendientes">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="indicador">
+
+                <div class="indicador-icono">
+
+                    <i
+                        class="fa-solid fa-check-double"
+                        aria-hidden="true">
+                    </i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Atención
+                    </span>
+
+                    <strong id="porcentajeAtencion">
+                        0%
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- ==================================================
+             03. ALERTA PRINCIPAL
+        =================================================== -->
+
+        <section
+            id="alertaEstadistica"
+            class="alerta-estadistica"
+            aria-live="polite">
+
+
+            <div class="alerta-icono">
+
+                <i
+                    class="fa-solid fa-triangle-exclamation"
+                    aria-hidden="true">
+                </i>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Alerta operativa
+                </span>
+
+
+                <strong id="textoAlerta">
+
+                    Sin novedades registradas.
+
+                </strong>
+
+
+                <p id="detalleAlerta">
+
+                    El sistema mostrará aquí la novedad
+                    más frecuente.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             04. FILTROS
+        =================================================== -->
+
+        <section class="tarjeta-estadistica">
+
+
+            <div class="cabecera-seccion">
+
+                <div>
+
+                    <h2>
+
+                        <i
+                            class="fa-solid fa-sliders"
+                            aria-hidden="true">
+                        </i>
+
+                        Analizar estadísticas
+
+                    </h2>
+
+
+                    <p>
+
+                        Seleccione el período y la información
+                        que desea analizar.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="filtros-estadisticas">
+
+
+                <!-- PERÍODO -->
+
+                <div class="campo-estadistica">
+
+                    <label for="periodo">
+
+                        Período
+
+                    </label>
+
+
+                    <select id="periodo">
+
+                        <option value="diario">
+                            Diario
+                        </option>
+
+                        <option value="semanal">
+                            Semanal
+                        </option>
+
+                        <option value="mensual">
+                            Mensual
+                        </option>
+
+                        <option value="anual">
+                            Anual
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ANALIZAR POR -->
+
+                <div class="campo-estadistica">
+
+                    <label for="analizarPor">
+
+                        Analizar por
+
+                    </label>
+
+
+                    <select id="analizarPor">
+
+                        <option value="tipo">
+                            Tipo de novedad
+                        </option>
+
+                        <option value="estado">
+                            Estado
+                        </option>
+
+                        <option value="ubicacion">
+                            Ubicación
+                        </option>
+
+                        <option value="lugar">
+                            Lugar
+                        </option>
+
+                        <option value="usuario">
+                            Usuario
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- FECHA INICIAL -->
+
+                <div class="campo-estadistica">
+
+                    <label for="fechaInicio">
+
+                        Desde
+
+                    </label>
+
+
+                    <input
+                        type="date"
+                        id="fechaInicio">
+
+                </div>
+
+
+                <!-- FECHA FINAL -->
+
+                <div class="campo-estadistica">
+
+                    <label for="fechaFin">
+
+                        Hasta
+
+                    </label>
+
+
+                    <input
+                        type="date"
+                        id="fechaFin">
+
+                </div>
+
+
+            </div>
+
+
+            <div class="acciones-estadisticas">
+
+                <button
+                    type="button"
+                    id="btnActualizar"
+                    class="btn-primario">
+
+                    <i
+                        class="fa-solid fa-arrows-rotate"
+                        aria-hidden="true">
+                    </i>
+
+                    Actualizar
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="btnLimpiar"
+                    class="btn-secundario">
+
+                    <i
+                        class="fa-solid fa-rotate-left"
+                        aria-hidden="true">
+                    </i>
+
+                    Restablecer
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             05. GRÁFICA
+        =================================================== -->
+
+        <section class="tarjeta-estadistica">
+
+
+            <div class="cabecera-grafica">
+
+                <div>
+
+                    <h2>
+
+                        <i
+                            class="fa-solid fa-chart-column"
+                            aria-hidden="true">
+                        </i>
+
+                        Comportamiento de las novedades
+
+                    </h2>
+
+
+                    <p id="textoGrafica">
+
+                        Distribución de novedades.
+
+                    </p>
+
+                </div>
+
+
+                <span
+                    id="totalGrafica"
+                    class="contador-grafica">
+
+                    0
+
+                </span>
+
+            </div>
+
+
+            <div class="contenedor-grafica">
+
+                <canvas
+                    id="graficaNovedades">
+                </canvas>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ==================================================
+             06. RESUMEN OPERATIVO
+        =================================================== -->
+
+        <section class="resumen-operativo">
+
+
+            <article class="tarjeta-operativa">
+
+                <div class="icono-operativo">
+
+                    <i
+                        class="fa-solid fa-location-dot"
+                        aria-hidden="true">
+                    </i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Zona con más novedades
+                    </span>
+
+                    <strong id="zonaFrecuente">
+
+                        Sin datos
+
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="tarjeta-operativa">
+
+                <div class="icono-operativo">
+
+                    <i
+                        class="fa-solid fa-bullseye"
+                        aria-hidden="true">
+                    </i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Novedad más frecuente
+                    </span>
+
+                    <strong id="tipoFrecuente">
+
+                        Sin datos
+
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <article class="tarjeta-operativa">
+
+                <div class="icono-operativo">
+
+                    <i
+                        class="fa-solid fa-user-shield"
+                        aria-hidden="true">
+                    </i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Usuario con más registros
+                    </span>
+
+                    <strong id="usuarioFrecuente">
+
+                        Sin datos
+
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- ==================================================
+             07. SIN DATOS
+        =================================================== -->
+
+        <div
+            id="sinDatos"
+            class="sin-datos"
+            hidden>
+
+            <i
+                class="fa-solid fa-chart-simple"
+                aria-hidden="true">
+            </i>
+
+
+            <h3>
+
+                No hay datos suficientes
+
+            </h3>
+
+
+            <p>
+
+                Registre novedades para comenzar
+                a generar estadísticas.
+
+            </p>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- ======================================================
+         08. JAVASCRIPT
+    ======================================================= -->
+
+    <script
+        src="../js/estadisticas.js"
+        defer>
+    </script>
+
+</body>
+
+</html>

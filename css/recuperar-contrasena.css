@@ -1,0 +1,789 @@
+/* ==========================================================
+   PROYECTO : MINUTA DIGITAL 360
+   ARCHIVO  : recuperar-contrasena.css
+   DESCRIPCIÓN:
+   Estilos de la pantalla de recuperación de contraseña.
+========================================================== */
+
+
+/* ==========================================================
+   01. CONTENEDOR PRINCIPAL
+========================================================== */
+
+.contenedor-recuperacion {
+
+    /* Ocupa toda la pantalla */
+    min-height: 100vh;
+
+    /* Centra la tarjeta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Espacio en los bordes */
+    padding: 20px;
+
+    /* Fondo */
+    background: linear-gradient(
+        135deg,
+        #0F172A,
+        #1E3A8A,
+        #2563EB
+    );
+}
+
+
+/* ==========================================================
+   02. TARJETA
+========================================================== */
+
+.tarjeta-recuperacion {
+
+    /* Ancho de la tarjeta */
+    width: 100%;
+    max-width: 480px;
+
+    /* Espacio interno */
+    padding: 40px;
+
+    /* Fondo transparente */
+    background: rgba(255, 255, 255, 0.10);
+
+    /* Borde */
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    /* Bordes redondeados */
+    border-radius: 20px;
+
+    /* Sombra */
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.20);
+
+    /* Efecto de cristal */
+    backdrop-filter: blur(12px);
+
+    /* Texto centrado */
+    text-align: center;
+}
+
+
+/* ==========================================================
+   03. LOGO
+========================================================== */
+
+.tarjeta-recuperacion .logo {
+
+    /* Tamaño del logo */
+    width: 130px;
+
+    /* Centra el logo */
+    margin: 0 auto 20px;
+}
+
+
+/* ==========================================================
+   04. TÍTULO
+========================================================== */
+
+.tarjeta-recuperacion h1 {
+
+    /* Tamaño */
+    font-size: 32px;
+
+    /* Grosor */
+    font-weight: 700;
+
+    /* Color */
+    color: white;
+
+    /* Espacio */
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================================
+   05. DESCRIPCIÓN
+========================================================== */
+
+.descripcion-recuperacion {
+
+    /* Color */
+    color: #E2E8F0;
+
+    /* Tamaño */
+    font-size: 15px;
+
+    /* Espacio */
+    margin-bottom: 30px;
+}
+
+
+/* ==========================================================
+   06. FORMULARIO
+========================================================== */
+
+.formulario-recuperacion {
+
+    /* Alinea el contenido a la izquierda */
+    text-align: left;
+}
+
+
+/* ==========================================================
+   07. GRUPO DEL CAMPO
+========================================================== */
+
+.grupo-input {
+
+    /* Organiza etiqueta y campo */
+    display: flex;
+    flex-direction: column;
+
+    /* Espacio */
+    gap: 8px;
+}
+
+
+/* ==========================================================
+   08. ETIQUETA
+========================================================== */
+
+.grupo-input label {
+
+    /* Color */
+    color: white;
+
+    /* Grosor */
+    font-weight: 600;
+
+    /* Tamaño */
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   09. CAMPO DE USUARIO
+========================================================== */
+
+.grupo-input input {
+
+    /* Ancho */
+    width: 100%;
+
+    /* Espacio interno */
+    padding: 14px;
+
+    /* Borde */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    /* Bordes */
+    border-radius: 8px;
+
+    /* Fondo */
+    background: rgba(255, 255, 255, 0.08);
+
+    /* Texto */
+    color: white;
+
+    /* Quita el borde del navegador */
+    outline: none;
+}
+
+
+/* ==========================================================
+   10. PLACEHOLDER
+========================================================== */
+
+.grupo-input input::placeholder {
+
+    color: #CBD5E1;
+}
+
+
+/* ==========================================================
+   11. CAMPO ACTIVO
+========================================================== */
+
+.grupo-input input:focus {
+
+    /* Borde cian */
+    border-color: #22D3EE;
+
+    /* Resalte */
+    box-shadow:
+        0 0 0 2px rgba(34, 211, 238, 0.15);
+}
+
+
+/* ==========================================================
+   12. MENSAJE
+========================================================== */
+
+.mensaje-recuperacion {
+
+    /* Reserva espacio */
+    min-height: 22px;
+
+    /* Tamaño */
+    font-size: 14px;
+
+    /* Centrado */
+    text-align: center;
+
+    /* Espacio */
+    margin: 18px 0;
+}
+
+
+/* ==========================================================
+   13. MENSAJE DE ERROR
+========================================================== */
+
+.mensaje-recuperacion.error {
+
+    color: #FCA5A5;
+}
+
+
+/* ==========================================================
+   14. MENSAJE DE ÉXITO
+========================================================== */
+
+.mensaje-recuperacion.exito {
+
+    color: #86EFAC;
+}
+
+
+/* ==========================================================
+   15. BOTÓN
+========================================================== */
+
+.btn-recuperar {
+
+    /* Ancho */
+    width: 100%;
+
+    /* Espacio interno */
+    padding: 14px;
+
+    /* Fondo */
+    background: #2563EB;
+
+    /* Texto */
+    color: white;
+
+    /* Tamaño */
+    font-size: 16px;
+
+    /* Grosor */
+    font-weight: 600;
+
+    /* Bordes */
+    border-radius: 10px;
+
+    /* Cursor */
+    cursor: pointer;
+
+    /* Transición */
+    transition: 0.2s ease;
+}
+
+
+/* ==========================================================
+   16. EFECTO DEL BOTÓN
+========================================================== */
+
+.btn-recuperar:hover {
+
+    /* Cambio de color */
+    background: #1D4ED8;
+
+    /* Pequeño movimiento */
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================================
+   17. BOTÓN DESACTIVADO
+========================================================== */
+
+.btn-recuperar:disabled {
+
+    /* Transparencia */
+    opacity: 0.7;
+
+    /* Cursor */
+    cursor: not-allowed;
+
+    /* No se mueve */
+    transform: none;
+}
+
+
+/* ==========================================================
+   18. VOLVER AL LOGIN
+========================================================== */
+
+.volver-login {
+
+    /* Alineación */
+    display: inline-flex;
+    align-items: center;
+
+    /* Espacio entre icono y texto */
+    gap: 8px;
+
+    /* Separación */
+    margin-top: 25px;
+
+    /* Color */
+    color: #22D3EE;
+
+    /* Tamaño */
+    font-size: 14px;
+
+    /* Subrayado */
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   19. PIE
+========================================================== */
+
+.pie-recuperacion {
+
+    /* Separación */
+    margin-top: 30px;
+
+    /* Color */
+    color: #CBD5E1;
+
+    /* Tamaño */
+    font-size: 13px;
+}
+
+
+.pie-recuperacion p {
+
+    margin-bottom: 6px;
+}
+
+
+/* ==========================================================
+   20. MÓVIL
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .contenedor-recuperacion {
+
+        padding: 15px;
+    }
+
+
+    .tarjeta-recuperacion {
+
+        padding: 30px 20px;
+    }
+
+
+    .tarjeta-recuperacion h1 {
+
+        font-size: 27px;
+    }
+}/* ==========================================================
+   PROYECTO : MINUTA DIGITAL 360
+   ARCHIVO  : recuperar-contrasena.css
+   DESCRIPCIÓN:
+   Estilos de la pantalla de recuperación de contraseña.
+========================================================== */
+
+
+/* ==========================================================
+   01. CONTENEDOR PRINCIPAL
+========================================================== */
+
+.contenedor-recuperacion {
+
+    /* Ocupa toda la pantalla */
+    min-height: 100vh;
+
+    /* Centra la tarjeta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Espacio en los bordes */
+    padding: 20px;
+
+    /* Fondo */
+    background: linear-gradient(
+        135deg,
+        #0F172A,
+        #1E3A8A,
+        #2563EB
+    );
+}
+
+
+/* ==========================================================
+   02. TARJETA
+========================================================== */
+
+.tarjeta-recuperacion {
+
+    /* Ancho de la tarjeta */
+    width: 100%;
+    max-width: 480px;
+
+    /* Espacio interno */
+    padding: 40px;
+
+    /* Fondo transparente */
+    background: rgba(255, 255, 255, 0.10);
+
+    /* Borde */
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    /* Bordes redondeados */
+    border-radius: 20px;
+
+    /* Sombra */
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.20);
+
+    /* Efecto de cristal */
+    backdrop-filter: blur(12px);
+
+    /* Texto centrado */
+    text-align: center;
+}
+
+
+/* ==========================================================
+   03. LOGO
+========================================================== */
+
+.tarjeta-recuperacion .logo {
+
+    /* Tamaño del logo */
+    width: 130px;
+
+    /* Centra el logo */
+    margin: 0 auto 20px;
+}
+
+
+/* ==========================================================
+   04. TÍTULO
+========================================================== */
+
+.tarjeta-recuperacion h1 {
+
+    /* Tamaño */
+    font-size: 32px;
+
+    /* Grosor */
+    font-weight: 700;
+
+    /* Color */
+    color: white;
+
+    /* Espacio */
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================================
+   05. DESCRIPCIÓN
+========================================================== */
+
+.descripcion-recuperacion {
+
+    /* Color */
+    color: #E2E8F0;
+
+    /* Tamaño */
+    font-size: 15px;
+
+    /* Espacio */
+    margin-bottom: 30px;
+}
+
+
+/* ==========================================================
+   06. FORMULARIO
+========================================================== */
+
+.formulario-recuperacion {
+
+    /* Alinea el contenido a la izquierda */
+    text-align: left;
+}
+
+
+/* ==========================================================
+   07. GRUPO DEL CAMPO
+========================================================== */
+
+.grupo-input {
+
+    /* Organiza etiqueta y campo */
+    display: flex;
+    flex-direction: column;
+
+    /* Espacio */
+    gap: 8px;
+}
+
+
+/* ==========================================================
+   08. ETIQUETA
+========================================================== */
+
+.grupo-input label {
+
+    /* Color */
+    color: white;
+
+    /* Grosor */
+    font-weight: 600;
+
+    /* Tamaño */
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   09. CAMPO DE USUARIO
+========================================================== */
+
+.grupo-input input {
+
+    /* Ancho */
+    width: 100%;
+
+    /* Espacio interno */
+    padding: 14px;
+
+    /* Borde */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    /* Bordes */
+    border-radius: 8px;
+
+    /* Fondo */
+    background: rgba(255, 255, 255, 0.08);
+
+    /* Texto */
+    color: white;
+
+    /* Quita el borde del navegador */
+    outline: none;
+}
+
+
+/* ==========================================================
+   10. PLACEHOLDER
+========================================================== */
+
+.grupo-input input::placeholder {
+
+    color: #CBD5E1;
+}
+
+
+/* ==========================================================
+   11. CAMPO ACTIVO
+========================================================== */
+
+.grupo-input input:focus {
+
+    /* Borde cian */
+    border-color: #22D3EE;
+
+    /* Resalte */
+    box-shadow:
+        0 0 0 2px rgba(34, 211, 238, 0.15);
+}
+
+
+/* ==========================================================
+   12. MENSAJE
+========================================================== */
+
+.mensaje-recuperacion {
+
+    /* Reserva espacio */
+    min-height: 22px;
+
+    /* Tamaño */
+    font-size: 14px;
+
+    /* Centrado */
+    text-align: center;
+
+    /* Espacio */
+    margin: 18px 0;
+}
+
+
+/* ==========================================================
+   13. MENSAJE DE ERROR
+========================================================== */
+
+.mensaje-recuperacion.error {
+
+    color: #FCA5A5;
+}
+
+
+/* ==========================================================
+   14. MENSAJE DE ÉXITO
+========================================================== */
+
+.mensaje-recuperacion.exito {
+
+    color: #86EFAC;
+}
+
+
+/* ==========================================================
+   15. BOTÓN
+========================================================== */
+
+.btn-recuperar {
+
+    /* Ancho */
+    width: 100%;
+
+    /* Espacio interno */
+    padding: 14px;
+
+    /* Fondo */
+    background: #2563EB;
+
+    /* Texto */
+    color: white;
+
+    /* Tamaño */
+    font-size: 16px;
+
+    /* Grosor */
+    font-weight: 600;
+
+    /* Bordes */
+    border-radius: 10px;
+
+    /* Cursor */
+    cursor: pointer;
+
+    /* Transición */
+    transition: 0.2s ease;
+}
+
+
+/* ==========================================================
+   16. EFECTO DEL BOTÓN
+========================================================== */
+
+.btn-recuperar:hover {
+
+    /* Cambio de color */
+    background: #1D4ED8;
+
+    /* Pequeño movimiento */
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================================
+   17. BOTÓN DESACTIVADO
+========================================================== */
+
+.btn-recuperar:disabled {
+
+    /* Transparencia */
+    opacity: 0.7;
+
+    /* Cursor */
+    cursor: not-allowed;
+
+    /* No se mueve */
+    transform: none;
+}
+
+
+/* ==========================================================
+   18. VOLVER AL LOGIN
+========================================================== */
+
+.volver-login {
+
+    /* Alineación */
+    display: inline-flex;
+    align-items: center;
+
+    /* Espacio entre icono y texto */
+    gap: 8px;
+
+    /* Separación */
+    margin-top: 25px;
+
+    /* Color */
+    color: #22D3EE;
+
+    /* Tamaño */
+    font-size: 14px;
+
+    /* Subrayado */
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   19. PIE
+========================================================== */
+
+.pie-recuperacion {
+
+    /* Separación */
+    margin-top: 30px;
+
+    /* Color */
+    color: #CBD5E1;
+
+    /* Tamaño */
+    font-size: 13px;
+}
+
+
+.pie-recuperacion p {
+
+    margin-bottom: 6px;
+}
+
+
+/* ==========================================================
+   20. MÓVIL
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .contenedor-recuperacion {
+
+        padding: 15px;
+    }
+
+
+    .tarjeta-recuperacion {
+
+        padding: 30px 20px;
+    }
+
+
+    .tarjeta-recuperacion h1 {
+
+        font-size: 27px;
+    }
+}

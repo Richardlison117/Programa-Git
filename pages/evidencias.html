@@ -1,0 +1,653 @@
+<!-- ==========================================================
+     PROYECTO : MINUTA DIGITAL 360
+     ARCHIVO  : evidencias.html
+
+     DESCRIPCIÓN:
+     Consulta y gestión de evidencias fotográficas y de video.
+
+     AUTOR:
+     Richard Duvan Gelves Laguado
+
+     FECHA:
+     2026
+========================================================== -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- ======================================================
+         01. CONFIGURACIÓN
+    ======================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Consulta y gestión de evidencias de Minuta Digital 360.">
+
+    <meta
+        name="author"
+        content="Richard Duvan Gelves Laguado">
+
+    <meta
+        name="theme-color"
+        content="#2563EB">
+
+
+    <!-- ======================================================
+         02. TÍTULO
+    ======================================================= -->
+
+    <title>
+        Evidencias | Minuta Digital 360
+    </title>
+
+
+    <!-- ======================================================
+         03. FUENTE
+    ======================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+
+
+    <!-- ======================================================
+         04. ICONOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- ======================================================
+         05. ESTILOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/evidencias.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ======================================================
+         CONTENEDOR PRINCIPAL
+    ======================================================= -->
+
+    <main class="contenedor-evidencias">
+
+
+        <!-- ==================================================
+             01. ENCABEZADO
+        =================================================== -->
+
+        <header class="encabezado">
+
+
+            <!-- INFORMACIÓN -->
+
+            <div class="informacion-encabezado">
+
+                <h1>
+
+                    <i
+                        class="fa-solid fa-camera"
+                        aria-hidden="true">
+                    </i>
+
+                    Evidencias
+
+                </h1>
+
+
+                <p>
+
+                    Consulte y gestione las fotografías y videos
+                    registrados durante los turnos.
+
+                </p>
+
+            </div>
+
+
+            <!-- VOLVER -->
+
+            <a
+                href="./dashboard.html"
+                class="btn-volver-inicio"
+                title="Volver al inicio">
+
+                <i
+                    class="fa-solid fa-arrow-left"
+                    aria-hidden="true">
+                </i>
+
+                Volver al inicio
+
+            </a>
+
+
+        </header>
+
+
+        <!-- ==================================================
+             02. RESUMEN
+        =================================================== -->
+
+        <section
+            class="resumen-evidencias"
+            aria-label="Resumen de evidencias">
+
+
+            <!-- FOTOGRAFÍAS -->
+
+            <article class="tarjeta-resumen">
+
+                <div class="icono-resumen">
+
+                    <i
+                        class="fa-solid fa-image"
+                        aria-hidden="true">
+                    </i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Fotografías
+                    </span>
+
+                    <strong id="totalFotografias">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <!-- VIDEOS -->
+
+            <article class="tarjeta-resumen">
+
+                <div class="icono-resumen">
+
+                    <i
+                        class="fa-solid fa-video"
+                        aria-hidden="true">
+                    </i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Videos
+                    </span>
+
+                    <strong id="totalVideos">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <!-- TOTAL -->
+
+            <article class="tarjeta-resumen">
+
+                <div class="icono-resumen">
+
+                    <i
+                        class="fa-solid fa-folder"
+                        aria-hidden="true">
+                    </i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="totalEvidencias">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- ==================================================
+             03. BÚSQUEDA Y FILTROS
+        =================================================== -->
+
+        <section
+            class="tarjeta"
+            aria-labelledby="titulo-filtros">
+
+
+            <div class="cabecera-seccion">
+
+                <div>
+
+                    <h2 id="titulo-filtros">
+
+                        <i
+                            class="fa-solid fa-filter"
+                            aria-hidden="true">
+                        </i>
+
+                        Buscar y filtrar
+
+                    </h2>
+
+
+                    <p>
+
+                        Localice rápidamente una fotografía
+                        o un video.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="filtros-evidencias">
+
+
+                <!-- BUSCAR -->
+
+                <div class="campo-filtro">
+
+                    <label for="buscarEvidencia">
+
+                        Buscar
+
+                    </label>
+
+
+                    <div class="entrada-busqueda">
+
+                        <i
+                            class="fa-solid fa-magnifying-glass"
+                            aria-hidden="true">
+                        </i>
+
+
+                        <input
+                            type="search"
+                            id="buscarEvidencia"
+                            placeholder="Novedad, usuario, lugar..."
+                            autocomplete="off">
+
+                    </div>
+
+                </div>
+
+
+                <!-- TIPO -->
+
+                <div class="campo-filtro">
+
+                    <label for="filtroTipoEvidencia">
+
+                        Tipo
+
+                    </label>
+
+
+                    <select id="filtroTipoEvidencia">
+
+                        <option value="">
+                            Todos
+                        </option>
+
+                        <option value="fotografia">
+                            Fotografía
+                        </option>
+
+                        <option value="video">
+                            Video
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- FECHA -->
+
+                <div class="campo-filtro">
+
+                    <label for="filtroFechaEvidencia">
+
+                        Fecha
+
+                    </label>
+
+
+                    <input
+                        type="date"
+                        id="filtroFechaEvidencia">
+
+                </div>
+
+
+                <!-- USUARIO -->
+
+                <div class="campo-filtro">
+
+                    <label for="filtroUsuarioEvidencia">
+
+                        Usuario
+
+                    </label>
+
+
+                    <select id="filtroUsuarioEvidencia">
+
+                        <option value="">
+                            Todos
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ACCIONES -->
+
+            <div class="acciones-filtros">
+
+                <button
+                    type="button"
+                    id="btnAplicarFiltros"
+                    class="btn-primario">
+
+                    <i
+                        class="fa-solid fa-magnifying-glass"
+                        aria-hidden="true">
+                    </i>
+
+                    Buscar
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="btnLimpiarFiltros"
+                    class="btn-secundario">
+
+                    <i
+                        class="fa-solid fa-rotate-left"
+                        aria-hidden="true">
+                    </i>
+
+                    Limpiar filtros
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ==================================================
+             04. LISTADO DE EVIDENCIAS
+        =================================================== -->
+
+        <section
+            class="tarjeta"
+            aria-labelledby="titulo-listado">
+
+
+            <!-- CABECERA -->
+
+            <div class="cabecera-listado">
+
+                <div>
+
+                    <h2 id="titulo-listado">
+
+                        <i
+                            class="fa-solid fa-photo-film"
+                            aria-hidden="true">
+                        </i>
+
+                        Evidencias registradas
+
+                    </h2>
+
+
+                    <p id="resultadoBusqueda">
+
+                        Mostrando evidencias.
+
+                    </p>
+
+                </div>
+
+
+                <span
+                    class="contador-resultados"
+                    id="contadorResultados">
+
+                    0
+
+                </span>
+
+            </div>
+
+
+            <!-- GALERÍA -->
+
+            <div
+                id="listaEvidencias"
+                class="lista-evidencias">
+            </div>
+
+
+            <!-- SIN RESULTADOS -->
+
+            <div
+                id="sinResultados"
+                class="sin-resultados"
+                hidden>
+
+                <i
+                    class="fa-regular fa-image"
+                    aria-hidden="true">
+                </i>
+
+
+                <h3>
+
+                    No se encontraron evidencias
+
+                </h3>
+
+
+                <p>
+
+                    No existen evidencias que coincidan
+                    con los filtros seleccionados.
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ======================================================
+         05. MODAL DE EVIDENCIA
+    ======================================================= -->
+
+    <div
+        id="modalEvidencia"
+        class="modal-evidencia"
+        hidden>
+
+
+        <div
+            class="contenedor-modal-evidencia"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="tituloModalEvidencia">
+
+
+            <!-- CABECERA -->
+
+            <div class="cabecera-modal">
+
+                <div>
+
+                    <span class="etiqueta-modal">
+
+                        Evidencia
+
+                    </span>
+
+
+                    <h2 id="tituloModalEvidencia">
+
+                        Detalle de evidencia
+
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="btnCerrarModal"
+                    class="btn-cerrar-modal"
+                    aria-label="Cerrar ventana">
+
+                    <i
+                        class="fa-solid fa-xmark"
+                        aria-hidden="true">
+                    </i>
+
+                </button>
+
+            </div>
+
+
+            <!-- VISUALIZACIÓN -->
+
+            <div
+                id="visorEvidencia"
+                class="visor-evidencia">
+            </div>
+
+
+            <!-- INFORMACIÓN -->
+
+            <div
+                id="detalleEvidencia"
+                class="detalle-evidencia">
+            </div>
+
+
+            <!-- ACCIONES -->
+
+            <div class="acciones-modal">
+
+                <button
+                    type="button"
+                    id="btnDescargarEvidencia"
+                    class="btn-primario">
+
+                    <i
+                        class="fa-solid fa-download"
+                        aria-hidden="true">
+                    </i>
+
+                    Descargar
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="btnCerrarModalInferior"
+                    class="btn-secundario">
+
+                    <i
+                        class="fa-solid fa-xmark"
+                        aria-hidden="true">
+                    </i>
+
+                    Cerrar
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================================================
+         06. JAVASCRIPT
+    ======================================================= -->
+
+    <script
+        src="../js/evidencias.js"
+        defer>
+    </script>
+
+
+</body>
+
+</html>

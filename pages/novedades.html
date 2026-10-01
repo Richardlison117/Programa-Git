@@ -1,0 +1,1205 @@
+/* ==========================================================
+   PROYECTO : MINUTA DIGITAL 360
+   ARCHIVO  : novedades.html
+
+   DESCRIPCIÓN:
+   Consulta, detalle, edición y gestión de novedades.
+
+   AUTOR:
+   Richard Duvan Gelves Laguado
+
+   FECHA:
+   2026
+========================================================== */
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- ======================================================
+         01. CONFIGURACIÓN
+    ======================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Consulta y gestión de novedades - Minuta Digital 360">
+
+    <meta
+        name="author"
+        content="Richard Duvan Gelves Laguado">
+
+    <meta
+        name="theme-color"
+        content="#2563EB">
+
+
+    <!-- ======================================================
+         02. TÍTULO
+    ======================================================= -->
+
+    <title>
+        Novedades | Minuta Digital 360
+    </title>
+
+
+    <!-- ======================================================
+         03. FUENTE PRINCIPAL
+    ======================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+
+
+    <!-- ======================================================
+         04. ICONOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- ======================================================
+         05. ESTILOS GLOBALES
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css">
+
+
+    <!-- ======================================================
+         06. ESTILOS DE NOVEDADES
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/novedades.css">
+
+</head>
+
+
+<body>
+
+    <!-- ======================================================
+         CONTENEDOR PRINCIPAL
+    ======================================================= -->
+
+    <main class="contenedor-novedades">
+
+
+        <!-- ==================================================
+             01. ENCABEZADO
+        =================================================== -->
+
+        <header class="encabezado">
+
+
+            <!-- INFORMACIÓN DEL ENCABEZADO -->
+
+            <div class="informacion-encabezado">
+
+                <h1>
+
+                    <i
+                        class="fa-solid fa-triangle-exclamation"
+                        aria-hidden="true">
+                    </i>
+
+                    Novedades
+
+                </h1>
+
+
+                <p>
+
+                    Consulte, busque y gestione las novedades
+                    registradas durante los turnos.
+
+                </p>
+
+            </div>
+
+
+            <!-- BOTÓN VOLVER -->
+
+            <a
+                href="./dashboard.html"
+                class="btn-volver-inicio"
+                title="Volver al inicio"
+                aria-label="Volver al inicio">
+
+                <i
+                    class="fa-solid fa-arrow-left"
+                    aria-hidden="true">
+                </i>
+
+                Volver al inicio
+
+            </a>
+
+
+        </header>
+
+
+        <!-- ==================================================
+             02. RESUMEN
+        =================================================== -->
+
+        <section
+            class="resumen-novedades"
+            aria-label="Resumen de novedades">
+
+
+            <!-- TOTAL -->
+
+            <article class="tarjeta-resumen">
+
+                <div class="icono-resumen">
+
+                    <i
+                        class="fa-solid fa-layer-group"
+                        aria-hidden="true">
+                    </i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="totalNovedades">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <!-- PENDIENTES -->
+
+            <article class="tarjeta-resumen">
+
+                <div class="icono-resumen">
+
+                    <i
+                        class="fa-solid fa-clock"
+                        aria-hidden="true">
+                    </i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Pendientes
+                    </span>
+
+                    <strong id="totalPendientes">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <!-- EN PROCESO -->
+
+            <article class="tarjeta-resumen">
+
+                <div class="icono-resumen">
+
+                    <i
+                        class="fa-solid fa-spinner"
+                        aria-hidden="true">
+                    </i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        En proceso
+                    </span>
+
+                    <strong id="totalProceso">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <!-- CERRADAS -->
+
+            <article class="tarjeta-resumen">
+
+                <div class="icono-resumen">
+
+                    <i
+                        class="fa-solid fa-circle-check"
+                        aria-hidden="true">
+                    </i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Cerradas
+                    </span>
+
+                    <strong id="totalCerradas">
+                        0
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- ==================================================
+             03. BÚSQUEDA Y FILTROS
+        =================================================== -->
+
+        <section
+            class="tarjeta"
+            aria-labelledby="titulo-filtros">
+
+
+            <!-- CABECERA -->
+
+            <div class="cabecera-seccion">
+
+                <div>
+
+                    <h2 id="titulo-filtros">
+
+                        <i
+                            class="fa-solid fa-filter"
+                            aria-hidden="true">
+                        </i>
+
+                        Buscar y filtrar
+
+                    </h2>
+
+
+                    <p>
+
+                        Utilice los filtros para localizar una novedad.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FILTROS -->
+
+            <div class="filtros-novedades">
+
+
+                <!-- BUSCAR -->
+
+                <div class="campo-filtro campo-busqueda">
+
+                    <label for="buscarNovedad">
+                        Buscar
+                    </label>
+
+
+                    <div class="entrada-busqueda">
+
+                        <i
+                            class="fa-solid fa-magnifying-glass"
+                            aria-hidden="true">
+                        </i>
+
+
+                        <input
+                            type="search"
+                            id="buscarNovedad"
+                            placeholder="Descripción, usuario o lugar..."
+                            autocomplete="off">
+
+                    </div>
+
+                </div>
+
+
+                <!-- TIPO -->
+
+                <div class="campo-filtro">
+
+                    <label for="filtroTipo">
+                        Tipo
+                    </label>
+
+
+                    <select id="filtroTipo">
+
+                        <option value="">
+                            Todos
+                        </option>
+
+                        <option value="hurto">
+                            Hurto
+                        </option>
+
+                        <option value="accidente">
+                            Accidente
+                        </option>
+
+                        <option value="persona_sospechosa">
+                            Persona sospechosa
+                        </option>
+
+                        <option value="rina">
+                            Riña
+                        </option>
+
+                        <option value="incendio">
+                            Incendio
+                        </option>
+
+                        <option value="emergencia_medica">
+                            Emergencia médica
+                        </option>
+
+                        <option value="objeto_perdido">
+                            Objeto perdido
+                        </option>
+
+                        <option value="dano_tecnico">
+                            Daño técnico
+                        </option>
+
+                        <option value="apoyo_local">
+                            Apoyo a local
+                        </option>
+
+                        <option value="apertura">
+                            Apertura
+                        </option>
+
+                        <option value="cierre">
+                            Cierre
+                        </option>
+
+                        <option value="ronda_vigilancia">
+                            Ronda de vigilancia
+                        </option>
+
+                        <option value="visita_autoridad">
+                            Visita de autoridad
+                        </option>
+
+                        <option value="otro">
+                            Otro
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ESTADO -->
+
+                <div class="campo-filtro">
+
+                    <label for="filtroEstado">
+                        Estado
+                    </label>
+
+
+                    <select id="filtroEstado">
+
+                        <option value="">
+                            Todos
+                        </option>
+
+                        <option value="Pendiente">
+                            Pendiente
+                        </option>
+
+                        <option value="En proceso">
+                            En proceso
+                        </option>
+
+                        <option value="Cerrada">
+                            Cerrada
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- FECHA -->
+
+                <div class="campo-filtro">
+
+                    <label for="filtroFecha">
+                        Fecha
+                    </label>
+
+
+                    <input
+                        type="date"
+                        id="filtroFecha">
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ACCIONES -->
+
+            <div class="acciones-filtros">
+
+                <button
+                    type="button"
+                    id="btnAplicarFiltros"
+                    class="btn-primario">
+
+                    <i
+                        class="fa-solid fa-magnifying-glass"
+                        aria-hidden="true">
+                    </i>
+
+                    Buscar
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="btnLimpiarFiltros"
+                    class="btn-secundario">
+
+                    <i
+                        class="fa-solid fa-rotate-left"
+                        aria-hidden="true">
+                    </i>
+
+                    Limpiar filtros
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ==================================================
+             04. LISTADO DE NOVEDADES
+        =================================================== -->
+
+        <section
+            class="tarjeta"
+            aria-labelledby="titulo-listado">
+
+
+            <!-- CABECERA DEL LISTADO -->
+
+            <div class="cabecera-listado">
+
+                <div>
+
+                    <h2 id="titulo-listado">
+
+                        <i
+                            class="fa-solid fa-list"
+                            aria-hidden="true">
+                        </i>
+
+                        Novedades registradas
+
+                    </h2>
+
+
+                    <p id="resultadoBusqueda">
+
+                        Mostrando novedades.
+
+                    </p>
+
+                </div>
+
+
+                <span
+                    class="contador-resultados"
+                    id="contadorResultados">
+                    0
+                </span>
+
+
+            </div>
+
+
+            <!-- LISTADO DINÁMICO -->
+
+            <div
+                id="listaNovedades"
+                class="lista-novedades">
+            </div>
+
+
+            <!-- SIN RESULTADOS -->
+
+            <div
+                id="sinResultados"
+                class="sin-resultados"
+                hidden>
+
+                <i
+                    class="fa-solid fa-folder-open"
+                    aria-hidden="true">
+                </i>
+
+
+                <h3>
+
+                    No se encontraron novedades
+
+                </h3>
+
+
+                <p>
+
+                    No existen registros que coincidan
+                    con los filtros seleccionados.
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ======================================================
+         05. MODAL DE NOVEDAD
+    ======================================================= -->
+
+    <div
+        id="modalNovedad"
+        class="modal-novedad"
+        hidden>
+
+
+        <div
+            class="contenedor-modal-novedad"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="tituloModalNovedad">
+
+
+            <!-- ==================================================
+                 CABECERA
+            =================================================== -->
+
+            <div class="cabecera-modal">
+
+                <div>
+
+                    <span class="etiqueta-modal">
+
+                        Detalle de novedad
+
+                    </span>
+
+
+                    <h2 id="tituloModalNovedad">
+
+                        Novedad
+
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="btnCerrarModal"
+                    class="btn-cerrar-modal"
+                    aria-label="Cerrar ventana">
+
+                    <i
+                        class="fa-solid fa-xmark"
+                        aria-hidden="true">
+                    </i>
+
+                </button>
+
+            </div>
+
+
+            <!-- ==================================================
+                 INFORMACIÓN DE LA NOVEDAD
+            =================================================== -->
+
+            <div
+                id="detalleNovedad"
+                class="detalle-novedad">
+            </div>
+
+
+            <!-- ==================================================
+                 FORMULARIO DE EDICIÓN
+            =================================================== -->
+
+            <form
+                id="formularioEditarNovedad"
+                class="formulario-editar-novedad"
+                hidden>
+
+
+                <!-- ID INTERNO -->
+
+                <input
+                    type="hidden"
+                    id="editarId"
+                    name="id">
+
+
+                <!-- TIPO -->
+
+                <div class="campo-edicion">
+
+                    <label for="editarTipo">
+
+                        Tipo de novedad
+
+                    </label>
+
+
+                    <select
+                        id="editarTipo"
+                        name="tipo">
+
+                        <option value="">
+                            Seleccione...
+                        </option>
+
+                        <option value="hurto">
+                            Hurto
+                        </option>
+
+                        <option value="accidente">
+                            Accidente
+                        </option>
+
+                        <option value="persona_sospechosa">
+                            Persona sospechosa
+                        </option>
+
+                        <option value="rina">
+                            Riña
+                        </option>
+
+                        <option value="incendio">
+                            Incendio
+                        </option>
+
+                        <option value="emergencia_medica">
+                            Emergencia médica
+                        </option>
+
+                        <option value="objeto_perdido">
+                            Objeto perdido
+                        </option>
+
+                        <option value="dano_tecnico">
+                            Daño técnico
+                        </option>
+
+                        <option value="apoyo_local">
+                            Apoyo a local
+                        </option>
+
+                        <option value="apertura">
+                            Apertura
+                        </option>
+
+                        <option value="cierre">
+                            Cierre
+                        </option>
+
+                        <option value="ronda_vigilancia">
+                            Ronda de vigilancia
+                        </option>
+
+                        <option value="visita_autoridad">
+                            Visita de autoridad
+                        </option>
+
+                        <option value="otro">
+                            Otro
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- UBICACIÓN -->
+
+                <div class="campo-edicion">
+
+                    <label for="editarUbicacion">
+
+                        Ubicación
+
+                    </label>
+
+
+                    <select
+                        id="editarUbicacion"
+                        name="ubicacion">
+
+                        <option value="">
+                            Seleccione...
+                        </option>
+
+                        <option value="administracion">
+                            Administración
+                        </option>
+
+                        <option value="primer_piso">
+                            Primer Piso
+                        </option>
+
+                        <option value="segundo_piso">
+                            Segundo Piso
+                        </option>
+
+                        <option value="tercer_piso">
+                            Tercer Piso
+                        </option>
+
+                        <option value="segundo_piso_hub">
+                            Segundo Piso - Hub Ventura
+                        </option>
+
+                        <option value="tercer_piso_centro_negocios">
+                            Tercer Piso - Centro de Negocios
+                        </option>
+
+                        <option value="cuarto_piso_centro_negocios">
+                            Cuarto Piso - Centro de Negocios
+                        </option>
+
+                        <option value="cubierta_centro_negocios">
+                            Cubierta - Centro de Negocios
+                        </option>
+
+                        <option value="cubierta_a">
+                            Cubierta A
+                        </option>
+
+                        <option value="cubierta_b">
+                            Cubierta B
+                        </option>
+
+                        <option value="cubierta_c">
+                            Cubierta C
+                        </option>
+
+                        <option value="cubierta_d">
+                            Cubierta D
+                        </option>
+
+                        <option value="parqueadero">
+                            Parqueadero
+                        </option>
+
+                        <option value="externa_centro_comercial">
+                            Externa del centro comercial
+                        </option>
+
+                        <option value="banos_torre_a_primer">
+                            Baños Torre A - Primer piso
+                        </option>
+
+                        <option value="banos_torre_a_segundo">
+                            Baños Torre A - Segundo piso
+                        </option>
+
+                        <option value="banos_torre_a_tercer">
+                            Baños Torre A - Tercer piso
+                        </option>
+
+                        <option value="banos_torre_b_primer">
+                            Baños Torre B - Primer piso
+                        </option>
+
+                        <option value="banos_torre_b_segundo">
+                            Baños Torre B - Segundo piso
+                        </option>
+
+                        <option value="banos_torre_b_tercer">
+                            Baños Torre B - Tercer piso
+                        </option>
+
+                        <option value="banos_hub_ventura">
+                            Baños Segundo piso - Hub Ventura
+                        </option>
+
+                        <option value="banos_torre_a_centro_tercer">
+                            Baños Torre A - Centro de Negocios - Tercer piso
+                        </option>
+
+                        <option value="banos_torre_b_centro_tercer">
+                            Baños Torre B - Centro de Negocios - Tercer piso
+                        </option>
+
+                        <option value="banos_torre_a_centro_cuarto">
+                            Baños Torre A - Centro de Negocios - Cuarto piso
+                        </option>
+
+                        <option value="banos_torre_b_centro_cuarto">
+                            Baños Torre B - Centro de Negocios - Cuarto piso
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- LUGAR -->
+
+                <div class="campo-edicion">
+
+                    <label for="editarLugar">
+
+                        Lugar
+
+                    </label>
+
+
+                    <select
+                        id="editarLugar"
+                        name="lugar">
+
+                        <option value="">
+                            Seleccione...
+                        </option>
+
+                        <option value="area_comun">
+                            Área común
+                        </option>
+
+                        <option value="local_comercial">
+                            Local comercial
+                        </option>
+
+                        <option value="parqueadero">
+                            Parqueadero
+                        </option>
+
+                        <option value="parte_externa_entrada_1">
+                            Parte externa entrada 1
+                        </option>
+
+                        <option value="parte_externa_entrada_2">
+                            Parte externa entrada 2
+                        </option>
+
+                        <option value="parte_externa_entrada_3">
+                            Parte externa entrada 3
+                        </option>
+
+                        <option value="parte_externa_entrada_4">
+                            Parte externa entrada 4
+                        </option>
+
+                        <option value="parte_externa_patio_maniobras">
+                            Parte externa Patio maniobras
+                        </option>
+
+                        <option value="parte_externa_plazoleta_amelia">
+                            Parte externa plazoleta amelia
+                            (lotes la diagonal)
+                        </option>
+
+                        <option value="otro">
+                            Otro
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- LUGAR ESPECÍFICO -->
+
+                <div class="campo-edicion">
+
+                    <label for="editarDetalleLugar">
+
+                        Lugar específico
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="editarDetalleLugar"
+                        name="detalleLugar"
+                        placeholder="Ingrese el detalle del lugar">
+
+                </div>
+
+
+                <!-- ESTADO -->
+
+                <div class="campo-edicion">
+
+                    <label for="editarEstado">
+
+                        Estado
+
+                    </label>
+
+
+                    <select
+                        id="editarEstado"
+                        name="estado">
+
+                        <option value="Pendiente">
+                            Pendiente
+                        </option>
+
+                        <option value="En proceso">
+                            En proceso
+                        </option>
+
+                        <option value="Cerrada">
+                            Cerrada
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- DESCRIPCIÓN -->
+
+                <div class="campo-edicion campo-edicion-completo">
+
+                    <label for="editarDescripcion">
+
+                        Descripción
+
+                    </label>
+
+
+                    <textarea
+                        id="editarDescripcion"
+                        name="descripcion"
+                        rows="6"
+                        maxlength="1000">
+                    </textarea>
+
+                </div>
+
+
+                <!-- ==================================================
+                     ACCIONES DE EDICIÓN
+                =================================================== -->
+
+                <div class="acciones-edicion">
+
+                    <button
+                        type="button"
+                        id="btnGuardarEdicion"
+                        class="btn-primario">
+
+                        <i
+                            class="fa-solid fa-floppy-disk"
+                            aria-hidden="true">
+                        </i>
+
+                        Guardar cambios
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="btnCancelarEdicion"
+                        class="btn-secundario">
+
+                        <i
+                            class="fa-solid fa-xmark"
+                            aria-hidden="true">
+                        </i>
+
+                        Cancelar
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+            <!-- ==================================================
+                 EVIDENCIAS
+            =================================================== -->
+
+            <section
+                class="detalle-evidencias"
+                aria-labelledby="tituloEvidenciasDetalle">
+
+
+                <h3 id="tituloEvidenciasDetalle">
+
+                    <i
+                        class="fa-solid fa-camera"
+                        aria-hidden="true">
+                    </i>
+
+                    Evidencias
+
+                </h3>
+
+
+                <div
+                    id="evidenciasNovedad"
+                    class="evidencias-novedad">
+
+                    <div class="sin-evidencias">
+
+                        <i
+                            class="fa-regular fa-image"
+                            aria-hidden="true">
+                        </i>
+
+                        <p>
+
+                            Esta novedad no tiene evidencias registradas.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- ==================================================
+                 ACCIONES DEL MODAL
+            =================================================== -->
+
+            <div class="acciones-modal">
+
+
+                <!-- EDITAR -->
+
+                <button
+                    type="button"
+                    id="btnEditarNovedad"
+                    class="btn-secundario">
+
+                    <i
+                        class="fa-solid fa-pen"
+                        aria-hidden="true">
+                    </i>
+
+                    Editar novedad
+
+                </button>
+
+
+                <!-- CAMBIAR ESTADO -->
+
+                <button
+                    type="button"
+                    id="btnCambiarEstado"
+                    class="btn-primario">
+
+                    <i
+                        class="fa-solid fa-arrows-rotate"
+                        aria-hidden="true">
+                    </i>
+
+                    Cambiar estado
+
+                </button>
+
+
+                <!-- CERRAR -->
+
+                <button
+                    type="button"
+                    id="btnCerrarModalInferior"
+                    class="btn-secundario">
+
+                    <i
+                        class="fa-solid fa-xmark"
+                        aria-hidden="true">
+                    </i>
+
+                    Cerrar
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================================================
+         06. JAVASCRIPT
+    ======================================================= -->
+
+    <script
+        src="../js/novedades.js"
+        defer>
+    </script>
+
+
+</body>
+
+</html>

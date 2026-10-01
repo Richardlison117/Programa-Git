@@ -1,0 +1,1416 @@
+<!-- ==========================================================
+     PROYECTO : MINUTA DIGITAL 360
+     ARCHIVO  : recibir-turno.html
+     DESCRIPCIÓN:
+     Registro de recepción de turno.
+     AUTOR:
+     Richard Duvan Gelves Laguado
+     FECHA:
+     2026
+========================================================== -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- ======================================================
+         CONFIGURACIÓN BÁSICA
+    ======================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Registro de recepción de turno de Minuta Digital 360.">
+
+    <meta
+        name="theme-color"
+        content="#2563EB">
+
+
+    <!-- ======================================================
+         TÍTULO
+    ======================================================= -->
+
+    <title>
+        Recibir turno | Minuta Digital 360
+    </title>
+
+
+    <!-- ======================================================
+         FAVICON
+    ======================================================= -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../img/logo-minuta-digital-360.png">
+
+
+    <!-- ======================================================
+         FUENTE
+    ======================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+
+
+    <!-- ======================================================
+         ICONOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- ======================================================
+         ESTILOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/recibir-turno.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ======================================================
+         CONTENEDOR PRINCIPAL
+    ======================================================= -->
+
+    <main class="contenedor-recibir-turno">
+
+
+        <!-- ==================================================
+             ENCABEZADO
+        =================================================== -->
+
+        <header class="encabezado">
+
+            <div class="informacion-encabezado">
+
+                <h1>
+
+                    <i
+                        class="fa-solid fa-right-to-bracket"
+                        aria-hidden="true">
+                    </i>
+
+                    Recibir turno
+
+                </h1>
+
+                <p>
+                    Registre la recepción del puesto y el estado
+                    inicial del servicio.
+                </p>
+
+            </div>
+
+
+            <!-- REGRESAR AL INICIO -->
+
+            <a
+                href="./dashboard.html"
+                class="btn-volver-inicio">
+
+                <i
+                    class="fa-solid fa-arrow-left"
+                    aria-hidden="true">
+                </i>
+
+                Volver al inicio
+
+            </a>
+
+        </header>
+
+
+        <!-- ==================================================
+             FORMULARIO PRINCIPAL
+        =================================================== -->
+
+        <form
+            id="formulario-recibir-turno">
+
+
+            <!-- ==================================================
+                 01. INFORMACIÓN DEL RECEPTOR
+            =================================================== -->
+
+            <section class="tarjeta">
+
+                <h2>
+
+                    <i
+                        class="fa-solid fa-user-shield"
+                        aria-hidden="true">
+                    </i>
+
+                    Información del receptor
+
+                </h2>
+
+
+                <div class="grid">
+
+
+                    <!-- NOMBRE -->
+
+                    <div>
+
+                        <label for="nombre">
+                            Nombre completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Ingrese su nombre completo"
+                            required>
+
+                    </div>
+
+
+                    <!-- DOCUMENTO -->
+
+                    <div>
+
+                        <label for="documento">
+                            Documento
+                        </label>
+
+                        <input
+                            type="text"
+                            id="documento"
+                            name="documento"
+                            placeholder="Ingrese su documento"
+                            required>
+
+                    </div>
+
+
+                    <!-- CARGO -->
+
+                    <div>
+
+                        <label for="cargo">
+                            Cargo
+                        </label>
+
+                        <select
+                            id="cargo"
+                            name="cargo"
+                            required>
+
+                            <option value="">
+                                Seleccione el cargo
+                            </option>
+
+                            <option value="guarda">
+                                Guarda de Seguridad
+                            </option>
+
+                            <option value="operador_cctv">
+                                Operador de CCTV
+                            </option>
+
+                            <option value="supervisor">
+                                Supervisor
+                            </option>
+
+                            <option value="coordinador">
+                                Coordinador
+                            </option>
+
+                            <option value="jefe_seguridad">
+                                Jefe de Seguridad
+                            </option>
+
+                            <option value="administrativo">
+                                Administrativo
+                            </option>
+
+                            <option value="soporte_tecnico">
+                                Soporte Técnico
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- EMPRESA -->
+
+                    <div>
+
+                        <label for="empresa">
+                            Empresa
+                        </label>
+
+                        <select
+                            id="empresa"
+                            name="empresa"
+                            required>
+
+                            <option value="">
+                                Seleccione la empresa
+                            </option>
+
+                            <option value="ventura_plaza">
+                                C.C. Ventura Plaza
+                            </option>
+
+                            <option value="coopsercivicos">
+                                Coopsercivicos
+                            </option>
+
+                            <option value="otra">
+                                Otra empresa
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- PUESTO -->
+
+                    <div>
+
+                        <label for="puestoReceptor">
+                            Puesto asignado
+                        </label>
+
+                        <select
+                            id="puestoReceptor"
+                            name="puestoReceptor"
+                            required>
+
+                            <option value="">
+                                Seleccione el puesto
+                            </option>
+
+                            <option value="mercurio">
+                                Mercurio
+                            </option>
+
+                            <option value="apolo">
+                                Apolo
+                            </option>
+
+                            <option value="orion">
+                                Orion
+                            </option>
+
+                            <option value="apolo1">
+                                Apolo 1
+                            </option>
+
+                            <option value="apolo2">
+                                Apolo 2
+                            </option>
+
+                            <option value="apolo3">
+                                Apolo 3
+                            </option>
+
+                            <!--
+                                Posteriormente agregaremos
+                                Apolo 4 hasta Apolo 45.
+                            -->
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- ==================================================
+                     OTRA EMPRESA
+                =================================================== -->
+
+                <div
+                    id="otraEmpresa"
+                    class="campo-extra"
+                    hidden>
+
+                    <label for="nombreEmpresa">
+                        Nombre de la empresa
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombreEmpresa"
+                        name="nombreEmpresa"
+                        placeholder="Ingrese el nombre de la empresa">
+
+                </div>
+
+            </section>
+
+
+
+<!-- ==================================================
+     02. INFORMACIÓN DE QUIEN ENTREGA
+================================================== -->
+
+<section class="tarjeta">
+
+    <h2>
+
+        <i
+            class="fa-solid fa-user-check"
+            aria-hidden="true">
+        </i>
+
+        Información de quien entrega
+
+    </h2>
+
+
+    <div class="grid">
+
+
+        <!-- NOMBRE COMPLETO -->
+
+        <div>
+
+            <label for="nombreEntrega">
+                Nombre completo
+            </label>
+
+            <input
+                type="text"
+                id="nombreEntrega"
+                name="nombreEntrega"
+                placeholder="Ingrese el nombre completo"
+                required>
+
+        </div>
+
+
+        <!-- DOCUMENTO -->
+
+        <div>
+
+            <label for="documentoEntrega">
+                Documento
+            </label>
+
+            <input
+                type="text"
+                id="documentoEntrega"
+                name="documentoEntrega"
+                placeholder="Ingrese el documento"
+                required>
+
+        </div>
+
+
+        <!-- CARGO -->
+
+        <div>
+
+            <label for="cargoEntrega">
+                Cargo
+            </label>
+
+            <select
+                id="cargoEntrega"
+                name="cargoEntrega"
+                required>
+
+                <option value="">
+                    Seleccione el cargo
+                </option>
+
+                <option value="guarda">
+                    Guarda de Seguridad
+                </option>
+
+                <option value="operador_cctv">
+                    Operador de CCTV
+                </option>
+
+                <option value="supervisor">
+                    Supervisor
+                </option>
+
+                <option value="coordinador">
+                    Coordinador
+                </option>
+
+                <option value="jefe_seguridad">
+                    Jefe de Seguridad
+                </option>
+
+                <option value="administrativo">
+                    Administrativo
+                </option>
+
+                <option value="soporte_tecnico">
+                    Soporte Técnico
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- EMPRESA -->
+
+        <div>
+
+            <label for="empresaEntrega">
+                Empresa
+            </label>
+
+            <select
+                id="empresaEntrega"
+                name="empresaEntrega"
+                required>
+
+                <option value="">
+                    Seleccione la empresa
+                </option>
+
+                <option value="ventura_plaza">
+                    C.C. Ventura Plaza
+                </option>
+
+                <option value="coopsercivicos">
+                    Coopsercivicos
+                </option>
+
+                <option value="otra">
+                    Otra empresa
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- PUESTO -->
+
+        <div>
+
+            <label for="puestoEntrega">
+                Puesto
+            </label>
+
+            <select
+                id="puestoEntrega"
+                name="puestoEntrega"
+                required>
+
+                <option value="">
+                    Seleccione el puesto
+                </option>
+
+                <option value="mercurio">
+                    Mercurio
+                </option>
+
+                <option value="apolo">
+                    Apolo
+                </option>
+
+                <option value="orion">
+                    Orion
+                </option>
+
+                <option value="apolo1">
+                    Apolo 1
+                </option>
+
+                <option value="apolo2">
+                    Apolo 2
+                </option>
+
+                <option value="apolo3">
+                    Apolo 3
+                </option>
+
+            </select>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ==================================================
+         OTRA EMPRESA
+    =================================================== -->
+
+    <div
+        id="otraEmpresaEntrega"
+        class="campo-extra"
+        hidden>
+
+        <label for="nombreEmpresaEntrega">
+            Nombre de la empresa
+        </label>
+
+        <input
+            type="text"
+            id="nombreEmpresaEntrega"
+            name="nombreEmpresaEntrega"
+            placeholder="Ingrese el nombre de la empresa">
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+            <!-- ==================================================
+                 03. INFORMACIÓN DEL TURNO
+            =================================================== -->
+
+            <section class="tarjeta">
+
+                <h2>
+
+                    <i
+                        class="fa-solid fa-clock"
+                        aria-hidden="true">
+                    </i>
+
+                    Información del turno
+
+                </h2>
+
+
+                <div class="grid">
+
+
+                    <!-- FECHA -->
+
+                    <div>
+
+                        <label for="fecha">
+                            Fecha de recepción
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fecha"
+                            name="fecha"
+                            readonly
+                            required>
+
+                    </div>
+
+
+                    <!-- HORA -->
+
+                    <div>
+
+                        <label for="hora">
+                            Hora de recepción
+                        </label>
+
+                        <input
+                            type="time"
+                            id="hora"
+                            name="hora"
+                            readonly
+                            required>
+
+                    </div>
+
+
+                    <!-- ESTADO -->
+
+                    <div>
+
+                        <label for="estado">
+                            Estado del puesto
+                        </label>
+
+                        <select
+                            id="estado"
+                            name="estado"
+                            required>
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="optimo">
+                                Óptimo
+                            </option>
+
+                            <option value="con_novedades">
+                                Con novedades
+                            </option>
+
+                            <option value="requiere_inspeccion">
+                                Requiere inspección
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 04. IDENTIFICACIÓN DEL RECEPTOR
+            =================================================== -->
+
+            <section class="tarjeta tarjeta-selfie">
+
+                <h2>
+
+                    <i
+                        class="fa-solid fa-camera"
+                        aria-hidden="true">
+                    </i>
+
+                    Identificación del receptor
+
+                </h2>
+
+
+                <p class="texto-ayuda">
+
+                    Realice una selfie como evidencia de la
+                    recepción del turno.
+
+                </p>
+
+
+                <!-- CÁMARA -->
+
+                <div class="contenedor-camara">
+
+                    <video
+                        id="vistaCamara"
+                        autoplay
+                        playsinline
+                        muted
+                        hidden>
+                    </video>
+
+
+                    <img
+                        id="vistaSelfie"
+                        class="vista-selfie"
+                        alt="Vista previa de la selfie"
+                        hidden>
+
+                </div>
+
+
+                <!-- LIENZO -->
+
+                <canvas
+                    id="canvasSelfie"
+                    hidden>
+                </canvas>
+
+
+                <!-- ESTADO -->
+
+                <div
+                    id="estadoSelfie"
+                    class="estado-selfie"
+                    role="status">
+
+                    <i
+                        class="fa-solid fa-circle-info"
+                        aria-hidden="true">
+                    </i>
+
+                    Debe capturar una selfie para continuar.
+
+                </div>
+
+
+                <!-- BOTONES -->
+
+                <div class="acciones-camara">
+
+
+                    <!-- ACTIVAR -->
+
+                    <button
+                        type="button"
+                        id="btnActivarCamara"
+                        class="btn-secundario">
+
+                        <i
+                            class="fa-solid fa-video"
+                            aria-hidden="true">
+                        </i>
+
+                        Activar cámara
+
+                    </button>
+
+
+                    <!-- TOMAR -->
+
+                    <button
+                        type="button"
+                        id="btnTomarSelfie"
+                        class="btn-primario"
+                        disabled>
+
+                        <i
+                            class="fa-solid fa-camera"
+                            aria-hidden="true">
+                        </i>
+
+                        Tomar selfie
+
+                    </button>
+
+
+                    <!-- REPETIR -->
+
+                    <button
+                        type="button"
+                        id="btnRepetirSelfie"
+                        class="btn-secundario"
+                        hidden>
+
+                        <i
+                            class="fa-solid fa-rotate"
+                            aria-hidden="true">
+                        </i>
+
+                        Repetir selfie
+
+                    </button>
+
+                </div>
+
+
+                <!-- AVISO -->
+
+                <div class="aviso-privacidad">
+
+                    <i
+                        class="fa-solid fa-shield-halved"
+                        aria-hidden="true">
+                    </i>
+
+                    <span>
+                        La fotografía se utilizará como evidencia
+                        de la recepción del turno.
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 05. ELEMENTOS RECIBIDOS
+            =================================================== -->
+
+            <section class="tarjeta">
+
+                <h2>
+
+                    <i
+                        class="fa-solid fa-box-open"
+                        aria-hidden="true">
+                    </i>
+
+                    Elementos recibidos
+
+                </h2>
+
+
+                <div class="grid">
+
+
+                    <!-- RADIO -->
+
+                    <div>
+
+                        <label for="radio">
+                            Radio de comunicación
+                        </label>
+
+                        <select
+                            id="radio"
+                            name="radio"
+                            required>
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="buen_estado">
+                                En buen estado
+                            </option>
+
+                            <option value="con_observacion">
+                                Con observación
+                            </option>
+
+                            <option value="no_entregado">
+                                No entregado
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- LLAVES -->
+
+                    <div>
+
+                        <label for="llaves">
+                            Llaves
+                        </label>
+
+                        <select
+                            id="llaves"
+                            name="llaves"
+                            required>
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="recibidas">
+                                Recibidas
+                            </option>
+
+                            <option value="con_observacion">
+                                Con observación
+                            </option>
+
+                            <option value="no_recibidas">
+                                No recibidas
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- TONFA -->
+
+                    <div>
+
+                        <label for="tonfa">
+                            Tonfa
+                        </label>
+
+                        <select
+                            id="tonfa"
+                            name="tonfa"
+                            required>
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="buen_estado">
+                                En buen estado
+                            </option>
+
+                            <option value="con_observacion">
+                                Con observación
+                            </option>
+
+                            <option value="no_entregada">
+                                No entregada
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- OTROS -->
+
+                    <div>
+
+                        <label for="otrosElementos">
+                            Otros elementos
+                        </label>
+
+                        <input
+                            type="text"
+                            id="otrosElementos"
+                            name="otrosElementos"
+                            placeholder="Describa otros elementos">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 06. DOTACIÓN DE ARMAMENTO
+            =================================================== -->
+
+            <section class="tarjeta">
+
+                <h2>
+
+                    <i
+                        class="fa-solid fa-shield-halved"
+                        aria-hidden="true">
+                    </i>
+
+                    Dotación de armamento
+
+                </h2>
+
+
+                <!-- TIPO DE ARMAMENTO -->
+
+                <div>
+
+                    <label for="tipoArmamento">
+                        Armamento recibido
+                    </label>
+
+                    <select
+                        id="tipoArmamento"
+                        name="tipoArmamento"
+                        required>
+
+                        <option value="">
+                            Seleccione
+                        </option>
+
+                        <option value="no_recibe">
+                            No recibe armamento
+                        </option>
+
+                        <option value="letal">
+                            Arma letal
+                        </option>
+
+                        <option value="no_letal">
+                            Arma no letal
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ==================================================
+                     INFORMACIÓN DEL ARMA LETAL
+                =================================================== -->
+
+                <div
+                    id="datosArmaLetal"
+                    class="bloque-armamento"
+                    hidden>
+
+
+                    <h3>
+                        Información del arma
+                    </h3>
+
+
+                    <div class="grid">
+
+
+                        <!-- TIPO -->
+
+                        <div>
+
+                            <label for="tipoArmaLetal">
+                                Tipo de arma
+                            </label>
+
+                            <select
+                                id="tipoArmaLetal"
+                                name="tipoArmaLetal">
+
+                                <option value="">
+                                    Seleccione
+                                </option>
+
+                                <option value="pistola">
+                                    Pistola
+                                </option>
+
+                                <option value="revolver">
+                                    Revólver
+                                </option>
+
+                                <option value="escopeta">
+                                    Escopeta
+                                </option>
+
+                                <option value="otra">
+                                    Otra
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- SERIAL -->
+
+                        <div>
+
+                            <label for="serialArma">
+                                Serial
+                            </label>
+
+                            <input
+                                type="text"
+                                id="serialArma"
+                                name="serialArma"
+                                placeholder="Ingrese el serial">
+
+                        </div>
+
+
+                        <!-- MUNICIÓN -->
+
+                        <div>
+
+                            <label for="municion">
+                                Munición
+                            </label>
+
+                            <input
+                                type="number"
+                                id="municion"
+                                name="municion"
+                                min="0"
+                                placeholder="Cantidad">
+
+                        </div>
+
+
+                        <!-- ESTADO -->
+
+                        <div>
+
+                            <label for="estadoArmaLetal">
+                                Estado
+                            </label>
+
+                            <select
+                                id="estadoArmaLetal"
+                                name="estadoArmaLetal">
+
+                                <option value="">
+                                    Seleccione
+                                </option>
+
+                                <option value="optimo">
+                                    Óptimo
+                                </option>
+
+                                <option value="con_observacion">
+                                    Con observación
+                                </option>
+
+                                <option value="requiere_revision">
+                                    Requiere revisión
+                                </option>
+
+                                <option value="no_conforme">
+                                    No conforme
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==================================================
+                     INFORMACIÓN DEL ARMA NO LETAL
+                =================================================== -->
+
+                <div
+                    id="datosArmaNoLetal"
+                    class="bloque-armamento"
+                    hidden>
+
+
+                    <h3>
+                        Información del arma no letal
+                    </h3>
+
+
+                    <div class="grid">
+
+
+                        <!-- TIPO -->
+
+                        <div>
+
+                            <label for="tipoArmaNoLetal">
+                                Tipo
+                            </label>
+
+                            <select
+                                id="tipoArmaNoLetal"
+                                name="tipoArmaNoLetal">
+
+                                <option value="">
+                                    Seleccione
+                                </option>
+
+                                <option value="pistola_gas">
+                                    Pistola de gas
+                                </option>
+
+                                <option value="aerosol_pimienta">
+                                    Aerosol de pimienta
+                                </option>
+
+                                <option value="otro">
+                                    Otro
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- SERIAL -->
+
+                        <div>
+
+                            <label for="serialArmaNoLetal">
+                                Serial
+                            </label>
+
+                            <input
+                                type="text"
+                                id="serialArmaNoLetal"
+                                name="serialArmaNoLetal"
+                                placeholder="Ingrese el serial">
+
+                        </div>
+
+
+                        <!-- CANTIDAD -->
+
+                        <div>
+
+                            <label for="cantidadNoLetal">
+                                Cantidad
+                            </label>
+
+                            <input
+                                type="number"
+                                id="cantidadNoLetal"
+                                name="cantidadNoLetal"
+                                min="1"
+                                placeholder="Cantidad">
+
+                        </div>
+
+
+                        <!-- ESTADO -->
+
+                        <div>
+
+                            <label for="estadoArmaNoLetal">
+                                Estado
+                            </label>
+
+                            <select
+                                id="estadoArmaNoLetal"
+                                name="estadoArmaNoLetal">
+
+                                <option value="">
+                                    Seleccione
+                                </option>
+
+                                <option value="optimo">
+                                    Óptimo
+                                </option>
+
+                                <option value="con_observacion">
+                                    Con observación
+                                </option>
+
+                                <option value="requiere_revision">
+                                    Requiere revisión
+                                </option>
+
+                                <option value="no_conforme">
+                                    No conforme
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AVISO -->
+
+                <div class="aviso-armamento">
+
+                    <i
+                        class="fa-solid fa-circle-info"
+                        aria-hidden="true">
+                    </i>
+
+                    <span>
+                        Registre el serial y el estado del elemento
+                        cuando corresponda.
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 07. OBSERVACIONES
+            =================================================== -->
+
+            <section class="tarjeta">
+
+                <h2>
+
+                    <i
+                        class="fa-solid fa-clipboard"
+                        aria-hidden="true">
+                    </i>
+
+                    Observaciones
+
+                </h2>
+
+
+                <label for="observaciones">
+                    Observaciones del recibo
+                </label>
+
+                <textarea
+                    id="observaciones"
+                    name="observaciones"
+                    rows="5"
+                    maxlength="1000"
+                    placeholder="Registre el estado del puesto, equipos, elementos y novedades encontradas.">
+                </textarea>
+
+            </section>
+
+
+            <!-- ==================================================
+                 08. ACCIONES
+            =================================================== -->
+
+            <div class="acciones">
+
+
+                <!-- CONFIRMAR -->
+
+                <button
+                    type="submit"
+                    id="btnConfirmarRecibo"
+                    class="btn-primario">
+
+                    <i
+                        class="fa-solid fa-check"
+                        aria-hidden="true">
+                    </i>
+
+                    Confirmar recepción
+
+                </button>
+
+
+                <!-- LIMPIAR -->
+
+                <button
+                    type="reset"
+                    id="btnLimpiar"
+                    class="btn-secundario">
+
+                    <i
+                        class="fa-solid fa-rotate-left"
+                        aria-hidden="true">
+                    </i>
+
+                    Limpiar formulario
+
+                </button>
+
+
+            </div>
+
+
+        </form>
+
+    </main>
+
+
+    <!-- ======================================================
+         JAVASCRIPT
+    ======================================================= -->
+
+    <script
+        src="../js/recibir-turno.js"
+        defer>
+    </script>
+
+</body>
+
+</html>

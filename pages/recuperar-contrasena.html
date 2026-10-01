@@ -1,0 +1,263 @@
+<!-- ==========================================================
+     PROYECTO : MINUTA DIGITAL 360
+     ARCHIVO  : recuperar-contraseña.html
+     DESCRIPCIÓN:
+     Pantalla para solicitar la recuperación de contraseña.
+     AUTOR:
+     Richard Duvan Gelves Laguado
+========================================================== -->
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <!-- ======================================================
+         CONFIGURACIÓN DEL DOCUMENTO
+    ======================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Recuperación de contraseña de Minuta Digital 360.">
+
+    <meta
+        name="theme-color"
+        content="#2563EB">
+
+
+    <!-- ======================================================
+         TÍTULO
+    ======================================================= -->
+
+    <title>
+        Recuperar Contraseña | Minuta Digital 360
+    </title>
+
+
+    <!-- ======================================================
+         FAVICON
+    ======================================================= -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../img/logo-minuta-digital-360.png">
+
+
+    <!-- ======================================================
+         FUENTE PRINCIPAL
+    ======================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- ======================================================
+         ICONOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- ======================================================
+         ESTILOS GLOBALES
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css">
+
+
+    <!-- ======================================================
+         ESTILOS DE RECUPERACIÓN
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/recuperar-contrasena.css">
+
+</head>
+
+
+<body>
+
+    <!-- ======================================================
+         CONTENEDOR PRINCIPAL
+    ======================================================= -->
+
+    <main class="contenedor-recuperacion">
+
+
+        <!-- ==================================================
+             TARJETA DE RECUPERACIÓN
+        =================================================== -->
+
+        <section class="tarjeta-recuperacion">
+
+
+            <!-- ==================================================
+                 LOGO
+            =================================================== -->
+
+            <img
+                src="../img/logo-minuta-digital-360.png"
+                alt="Logo de Minuta Digital 360"
+                class="logo">
+
+
+            <!-- ==================================================
+                 TÍTULO
+            =================================================== -->
+
+            <h1>
+                Recuperar contraseña
+            </h1>
+
+
+            <!-- ==================================================
+                 DESCRIPCIÓN
+            =================================================== -->
+
+            <p class="descripcion-recuperacion">
+
+                Ingrese su usuario para solicitar
+                la recuperación de su contraseña.
+
+            </p>
+
+
+            <!-- ==================================================
+                 FORMULARIO
+            =================================================== -->
+
+            <form
+                id="formulario-recuperacion"
+                class="formulario-recuperacion">
+
+
+                <!-- ==================================================
+                     USUARIO
+                =================================================== -->
+
+                <div class="grupo-input">
+
+                    <label for="usuario-recuperacion">
+                        Usuario
+                    </label>
+
+                    <input
+                        type="text"
+                        id="usuario-recuperacion"
+                        name="usuario"
+                        placeholder="Ingrese su usuario"
+                        autocomplete="username"
+                        required>
+
+                </div>
+
+
+                <!-- ==================================================
+                     MENSAJE DEL SISTEMA
+                =================================================== -->
+
+                <div
+                    id="mensaje-recuperacion"
+                    class="mensaje-recuperacion"
+                    role="alert"
+                    aria-live="polite">
+                </div>
+
+
+                <!-- ==================================================
+                     BOTÓN DE RECUPERACIÓN
+                =================================================== -->
+
+                <button
+                    type="submit"
+                    id="btn-recuperar"
+                    class="btn-recuperar">
+
+                    <i
+                        class="fa-solid fa-key"
+                        aria-hidden="true">
+                    </i>
+
+                    Solicitar recuperación
+
+                </button>
+
+
+            </form>
+
+
+            <!-- ==================================================
+                 VOLVER AL LOGIN
+            =================================================== -->
+
+            <a
+                href="./login.html"
+                class="volver-login">
+
+                <i
+                    class="fa-solid fa-arrow-left"
+                    aria-hidden="true">
+                </i>
+
+                Volver al inicio de sesión
+
+            </a>
+
+
+            <!-- ==================================================
+                 PIE
+            =================================================== -->
+
+            <footer class="pie-recuperacion">
+
+                <p>
+                    © 2026 Minuta Digital 360
+                </p>
+
+                <small>
+                    Versión 1.0.0
+                </small>
+
+            </footer>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ======================================================
+         JAVASCRIPT
+    ======================================================= -->
+
+    <script
+        src="../js/recuperar-contrasena.js"
+        defer>
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+/* ==========================================================
+   PROYECTO : MINUTA DIGITAL 360
+   ARCHIVO  : index.css
+   DESCRIPCIÓN:
+   Estilos de la pantalla de bienvenida.
+========================================================== */
+
+
+/* ==========================================================
+   01. PANTALLA PRINCIPAL
+========================================================== */
+
+.contenedor-principal {
+
+    /* Centra el contenido */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Texto centrado */
+    text-align: center;
+
+    /* Espacio interno */
+    padding: 20px;
+
+    /* Fondo */
+    background: linear-gradient(
+        135deg,
+        #0F172A,
+        #1E3A8A,
+        #2563EB
+    );
+
+    /* Color del texto */
+    color: white;
+}
+
+
+/* ==========================================================
+   02. CONTENEDOR DE BIENVENIDA
+========================================================== */
+
+.contenedor-bienvenida {
+
+    /* Organiza el contenido verticalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Ancho máximo */
+    width: 100%;
+    max-width: 480px;
+}
+
+
+/* ==========================================================
+   03. LOGO
+========================================================== */
+
+.logo {
+
+    /* Tamaño del logo */
+    width: 150px;
+
+    /* Espacio debajo */
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================================
+   04. TÍTULO
+========================================================== */
+
+.titulo {
+
+    /* Tamaño */
+    font-size: 32px;
+
+    /* Espacio debajo */
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================================
+   05. DESCRIPCIÓN
+========================================================== */
+
+.descripcion {
+
+    /* Ancho máximo */
+    max-width: 400px;
+
+    /* Espacio debajo */
+    margin-bottom: 25px;
+
+    /* Color */
+    color: #CBD5E1;
+}
+
+
+/* ==========================================================
+   06. CÍRCULO DE CARGA
+========================================================== */
+
+.loader {
+
+    /* Tamaño */
+    width: 50px;
+    height: 50px;
+
+    /* Borde */
+    border: 5px solid rgba(255, 255, 255, 0.25);
+
+    /* Colores que permiten ver el giro */
+    border-top-color: white;
+    border-right-color: #22D3EE;
+
+    /* Forma circular */
+    border-radius: 50%;
+
+    /* Animación */
+    animation: girar 1s linear infinite;
+
+    /* Espacio debajo */
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================================
+   07. ANIMACIÓN DEL CÍRCULO
+========================================================== */
+
+@keyframes girar {
+
+    /* Inicio */
+    from {
+        transform: rotate(0deg);
+    }
+
+    /* Una vuelta completa */
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ==========================================================
+   08. MENSAJE DE CARGA
+========================================================== */
+
+.cargando {
+
+    /* Color */
+    color: #E2E8F0;
+
+    /* Espacio debajo */
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================================
+   09. VERSIÓN
+========================================================== */
+
+.version {
+
+    /* Color */
+    color: #CBD5E1;
+
+    /* Tamaño */
+    font-size: 13px;
+}

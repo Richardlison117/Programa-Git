@@ -1,0 +1,465 @@
+<!-- ==========================================================
+     PROYECTO : MINUTA DIGITAL 360
+     ARCHIVO  : perfil.html
+
+     DESCRIPCIÓN:
+     Consulta de información del usuario.
+
+     AUTOR:
+     Richard Duvan Gelves Laguado
+
+     FECHA:
+     2026
+========================================================== -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- ======================================================
+         01. CONFIGURACIÓN
+    ======================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Perfil del usuario de Minuta Digital 360.">
+
+    <meta
+        name="theme-color"
+        content="#2563EB">
+
+
+    <!-- ======================================================
+         02. TÍTULO
+    ======================================================= -->
+
+    <title>
+        Perfil | Minuta Digital 360
+    </title>
+
+
+    <!-- ======================================================
+         03. FUENTE
+    ======================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+
+
+    <!-- ======================================================
+         04. ICONOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- ======================================================
+         05. ESTILOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/perfil.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ======================================================
+         CONTENEDOR PRINCIPAL
+    ======================================================= -->
+
+    <main class="contenedor-perfil">
+
+
+        <!-- ==================================================
+             01. ENCABEZADO
+        =================================================== -->
+
+        <header class="encabezado-perfil">
+
+            <div>
+
+                <h1>
+
+                    <i
+                        class="fa-solid fa-user"
+                        aria-hidden="true">
+                    </i>
+
+                    Mi perfil
+
+                </h1>
+
+
+                <p>
+
+                    Consulte la información de su cuenta
+                    en Minuta Digital 360.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="./dashboard.html"
+                class="btn-volver">
+
+                <i
+                    class="fa-solid fa-arrow-left"
+                    aria-hidden="true">
+                </i>
+
+                Volver al inicio
+
+            </a>
+
+        </header>
+
+
+        <!-- ==================================================
+             02. PERFIL PRINCIPAL
+        =================================================== -->
+
+        <section class="perfil-principal">
+
+
+            <!-- AVATAR -->
+
+            <div class="avatar-usuario">
+
+                <i
+                    class="fa-solid fa-user"
+                    aria-hidden="true">
+                </i>
+
+            </div>
+
+
+            <!-- INFORMACIÓN PRINCIPAL -->
+
+            <div class="identidad-usuario">
+
+                <h2 id="nombrePerfil">
+
+                    Usuario
+
+                </h2>
+
+
+                <p id="cargoPerfil">
+
+                    Cargo
+
+                </p>
+
+
+                <span
+                    id="estadoPerfil"
+                    class="estado-usuario">
+
+                    Activo
+
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             03. INFORMACIÓN PERSONAL
+        =================================================== -->
+
+        <section
+            class="tarjeta-perfil"
+            aria-labelledby="titulo-personal">
+
+
+            <h2 id="titulo-personal">
+
+                <i
+                    class="fa-solid fa-id-card"
+                    aria-hidden="true">
+                </i>
+
+                Información personal
+
+            </h2>
+
+
+            <div class="grid-perfil">
+
+
+                <!-- NOMBRE -->
+
+                <div class="dato-perfil">
+
+                    <span>
+                        Nombre completo
+                    </span>
+
+                    <strong id="nombreCompleto">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <!-- DOCUMENTO -->
+
+                <div class="dato-perfil">
+
+                    <span>
+                        Documento
+                    </span>
+
+                    <strong id="documentoPerfil">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <!-- CARGO -->
+
+                <div class="dato-perfil">
+
+                    <span>
+                        Cargo
+                    </span>
+
+                    <strong id="cargoCompleto">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <!-- EMPRESA -->
+
+                <div class="dato-perfil">
+
+                    <span>
+                        Empresa
+                    </span>
+
+                    <strong id="empresaPerfil">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             04. INFORMACIÓN OPERATIVA
+        =================================================== -->
+
+        <section
+            class="tarjeta-perfil"
+            aria-labelledby="titulo-operativa">
+
+
+            <h2 id="titulo-operativa">
+
+                <i
+                    class="fa-solid fa-building-shield"
+                    aria-hidden="true">
+                </i>
+
+                Información operativa
+
+            </h2>
+
+
+            <div class="grid-perfil">
+
+
+                <!-- PUESTO -->
+
+                <div class="dato-perfil">
+
+                    <span>
+                        Puesto asignado
+                    </span>
+
+                    <strong id="puestoPerfil">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <!-- ROL -->
+
+                <div class="dato-perfil">
+
+                    <span>
+                        Rol del sistema
+                    </span>
+
+                    <strong id="rolPerfil">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <!-- ESTADO -->
+
+                <div class="dato-perfil">
+
+                    <span>
+                        Estado de cuenta
+                    </span>
+
+                    <strong id="estadoCuenta">
+                        Activo
+                    </strong>
+
+                </div>
+
+
+                <!-- USUARIO -->
+
+                <div class="dato-perfil">
+
+                    <span>
+                        Usuario de acceso
+                    </span>
+
+                    <strong id="usuarioPerfil">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             05. SEGURIDAD
+        =================================================== -->
+
+        <section
+            class="tarjeta-perfil seguridad-perfil"
+            aria-labelledby="titulo-seguridad">
+
+
+            <div class="icono-seguridad">
+
+                <i
+                    class="fa-solid fa-shield-halved"
+                    aria-hidden="true">
+                </i>
+
+            </div>
+
+
+            <div>
+
+                <h2 id="titulo-seguridad">
+
+                    Seguridad de la cuenta
+
+                </h2>
+
+
+                <p>
+
+                    Su información de usuario es administrada
+                    por el sistema y se utiliza para identificar
+                    sus actividades y registros dentro de
+                    Minuta Digital 360.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             06. ACCIONES
+        =================================================== -->
+
+        <div class="acciones-perfil">
+
+            <a
+                href="./dashboard.html"
+                class="btn-primario">
+
+                <i
+                    class="fa-solid fa-house"
+                    aria-hidden="true">
+                </i>
+
+                Ir al inicio
+
+            </a>
+
+
+            <button
+                type="button"
+                id="btnCerrarSesion"
+                class="btn-secundario">
+
+                <i
+                    class="fa-solid fa-right-from-bracket"
+                    aria-hidden="true">
+                </i>
+
+                Cerrar sesión
+
+            </button>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- ======================================================
+         07. JAVASCRIPT
+    ======================================================= -->
+
+    <script
+        src="../js/perfil.js"
+        defer>
+    </script>
+
+</body>
+
+</html>

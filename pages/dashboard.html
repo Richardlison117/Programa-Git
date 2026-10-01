@@ -1,0 +1,766 @@
+<!-- ==========================================================
+     PROYECTO : MINUTA DIGITAL 360
+     ARCHIVO  : dashboard.html
+     DESCRIPCIÓN:
+     Panel principal del sistema de seguridad.
+     AUTOR:
+     Richard Duvan Gelves Laguado
+========================================================== -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- ======================================================
+         CONFIGURACIÓN
+    ======================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Panel principal de Minuta Digital 360.">
+
+    <meta
+        name="theme-color"
+        content="#2563EB">
+
+
+    <!-- ======================================================
+         TÍTULO
+    ======================================================= -->
+
+    <title>
+        Dashboard | Minuta Digital 360
+    </title>
+
+
+    <!-- ======================================================
+         FAVICON
+    ======================================================= -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../img/logo-minuta-digital-360.png">
+
+
+    <!-- ======================================================
+         FUENTE
+    ======================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+
+
+    <!-- ======================================================
+         ICONOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- ======================================================
+         ESTILOS
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css">
+
+</head>
+
+
+<body>
+
+    <!-- ======================================================
+         CONTENEDOR DEL DASHBOARD
+    ======================================================= -->
+
+    <div class="dashboard">
+
+
+        <!-- ==================================================
+             MENÚ LATERAL
+        =================================================== -->
+
+        <aside class="menu-lateral">
+
+
+            <!-- LOGO -->
+
+            <div class="logo-menu">
+
+                <img
+                    src="../img/logo-minuta-digital-360.png"
+                    alt="Logo Minuta Digital 360">
+
+            </div>
+
+
+            <!-- INFORMACIÓN DEL USUARIO -->
+
+            <div class="usuario-menu">
+
+                <h3 id="nombreUsuarioMenu">
+                    Cargando...
+                </h3>
+
+                <span id="rolUsuarioMenu">
+                    Cargando...
+                </span>
+
+            </div>
+
+
+            <!-- ==================================================
+                 NAVEGACIÓN PRINCIPAL
+            =================================================== -->
+
+            <nav aria-label="Menú principal">
+
+                <ul class="menu">
+
+
+                    <!-- INICIO -->
+
+                    <li>
+
+                        <a
+                            href="./dashboard.html"
+                            class="activo"
+                            aria-current="page">
+
+                            <i
+                                class="fa-solid fa-house"
+                                aria-hidden="true">
+                            </i>
+
+                            <span>
+                                Inicio
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- RECIBIR TURNO -->
+
+                    <li>
+
+                        <a href="./recibir-turno.html">
+
+                            <i
+                                class="fa-solid fa-right-to-bracket"
+                                aria-hidden="true">
+                            </i>
+
+                            <span>
+                                Recibir turno
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- MINUTA -->
+
+                    <li>
+
+                        <a href="./minuta.html">
+
+                            <i
+                                class="fa-solid fa-book"
+                                aria-hidden="true">
+                            </i>
+
+                            <span>
+                                Minuta
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- NOVEDADES -->
+
+                    <li>
+
+                        <a href="./novedades.html">
+
+                            <i
+                                class="fa-solid fa-triangle-exclamation"
+                                aria-hidden="true">
+                            </i>
+
+                            <span>
+                                Novedades
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- EVIDENCIAS -->
+
+                    <li>
+
+                        <a href="./evidencias.html">
+
+                            <i
+                                class="fa-solid fa-camera"
+                                aria-hidden="true">
+                            </i>
+
+                            <span>
+                                Evidencias
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- ESTADÍSTICAS -->
+
+                    <li>
+
+                        <a href="./estadisticas.html">
+
+                            <i
+                                class="fa-solid fa-chart-column"
+                                aria-hidden="true">
+                            </i>
+
+                            <span>
+                                Estadísticas
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- PERFIL -->
+
+                    <li>
+
+                        <a href="./perfil.html">
+
+                            <i
+                                class="fa-solid fa-user"
+                                aria-hidden="true">
+                            </i>
+
+                            <span>
+                                Perfil
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- CONFIGURACIÓN -->
+
+                    <li>
+
+                        <a href="./configuracion.html">
+
+                            <i
+                                class="fa-solid fa-gear"
+                                aria-hidden="true">
+                            </i>
+
+                            <span>
+                                Configuración
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- AYUDA -->
+
+                    <li>
+
+                        <a href="./ayuda.html">
+
+                            <i
+                                class="fa-solid fa-circle-question"
+                                aria-hidden="true">
+                            </i>
+
+                            <span>
+                                Ayuda
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- ACERCA DE -->
+
+                    <li>
+
+                        <a href="./acerca-de.html">
+
+                            <i
+                                class="fa-solid fa-circle-info"
+                                aria-hidden="true">
+                            </i>
+
+                            <span>
+                                Acerca de
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- CERRAR SESIÓN -->
+
+                    <li>
+
+                        <a
+                            href="./login.html"
+                            id="btnCerrarSesion">
+
+                            <i
+                                class="fa-solid fa-right-from-bracket"
+                                aria-hidden="true">
+                            </i>
+
+                            <span>
+                                Cerrar sesión
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </nav>
+
+
+            <!-- VERSIÓN DEL SISTEMA -->
+
+            <div class="version-sistema">
+
+                Minuta Digital 360
+
+                <br>
+
+                Versión 1.0.0
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- ======================================================
+             CONTENIDO PRINCIPAL
+        ======================================================= -->
+
+        <main class="contenido-dashboard">
+
+
+            <!-- ==================================================
+                 ENCABEZADO
+            =================================================== -->
+
+            <header class="encabezado-dashboard">
+
+
+                <!-- TÍTULO -->
+
+                <div>
+
+                    <h1>
+                        Panel de Control
+                    </h1>
+
+                    <p>
+                        Bienvenido a Minuta Digital 360
+                    </p>
+
+                </div>
+
+
+                <!-- USUARIO ACTUAL -->
+
+                <div class="usuario">
+
+                    <i
+                        class="fa-solid fa-user-shield"
+                        aria-hidden="true">
+                    </i>
+
+                    <div>
+
+                        <strong id="nombreUsuario">
+                            Cargando...
+                        </strong>
+
+                        <p id="rolUsuario">
+                            Cargando...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </header>
+
+
+            <!-- ==================================================
+                 INFORMACIÓN DEL TURNO
+            =================================================== -->
+
+            <section
+                class="informacion-dashboard"
+                aria-labelledby="titulo-turno">
+
+
+                <h2 id="titulo-turno">
+                    Mi turno
+                </h2>
+
+
+                <div class="tarjetas">
+
+
+                    <!-- ESTADO DEL TURNO -->
+
+                    <article class="tarjeta-info">
+
+                        <i
+                            class="fa-solid fa-clock"
+                            aria-hidden="true">
+                        </i>
+
+                        <h3>
+                            Estado del turno
+                        </h3>
+
+                        <p
+                            id="estadoTurno"
+                            class="estado-alerta">
+
+                            Cargando...
+
+                        </p>
+
+                    </article>
+
+
+                    <!-- PUESTO -->
+
+                    <article class="tarjeta-info">
+
+                        <i
+                            class="fa-solid fa-building-shield"
+                            aria-hidden="true">
+                        </i>
+
+                        <h3>
+                            Puesto
+                        </h3>
+
+                        <p id="puestoActual">
+                            No asignado
+                        </p>
+
+                    </article>
+
+
+                    <!-- FECHA -->
+
+                    <article class="tarjeta-info">
+
+                        <i
+                            class="fa-solid fa-calendar-days"
+                            aria-hidden="true">
+                        </i>
+
+                        <h3>
+                            Fecha
+                        </h3>
+
+                        <p id="fechaActual">
+                            Cargando...
+                        </p>
+
+                    </article>
+
+
+                    <!-- DURACIÓN -->
+
+                    <article class="tarjeta-info">
+
+                        <i
+                            class="fa-solid fa-business-time"
+                            aria-hidden="true">
+                        </i>
+
+                        <h3>
+                            Duración
+                        </h3>
+
+                        <p id="duracionTurno">
+                            0 horas
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 ACCIONES RÁPIDAS
+            =================================================== -->
+
+            <section
+                class="acciones-dashboard"
+                aria-labelledby="titulo-acciones">
+
+
+                <div class="titulo-seccion">
+
+                    <h2 id="titulo-acciones">
+                        Acciones rápidas
+                    </h2>
+
+                    <p>
+                        Acceda rápidamente a las funciones principales.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjetas">
+
+
+                    <!-- RECIBIR TURNO -->
+
+                    <a
+                        href="./recibir-turno.html"
+                        class="tarjeta-modulo">
+
+                        <i
+                            class="fa-solid fa-right-to-bracket"
+                            aria-hidden="true">
+                        </i>
+
+                        <h3>
+                            Recibir turno
+                        </h3>
+
+                        <p>
+                            Registre la recepción del puesto.
+                        </p>
+
+                    </a>
+
+
+                    <!-- REGISTRAR NOVEDAD -->
+
+                    <a
+                        href="./minuta.html"
+                        class="tarjeta-modulo">
+
+                        <i
+                            class="fa-solid fa-triangle-exclamation"
+                            aria-hidden="true">
+                        </i>
+
+                        <h3>
+                            Registrar novedad
+                        </h3>
+
+                        <p>
+                            Registre una novedad o incidente.
+                        </p>
+
+                    </a>
+
+
+                    <!-- TOMAR EVIDENCIA -->
+
+                    <a
+                        href="./evidencias.html"
+                        class="tarjeta-modulo">
+
+                        <i
+                            class="fa-solid fa-camera"
+                            aria-hidden="true">
+                        </i>
+
+                        <h3>
+                            Tomar evidencia
+                        </h3>
+
+                        <p>
+                            Capture una fotografía del servicio.
+                        </p>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 NOVEDADES PENDIENTES
+            =================================================== -->
+
+            <section
+                class="resumen-dashboard"
+                aria-labelledby="titulo-novedades">
+
+
+                <div class="tarjeta-resumen">
+
+
+                    <!-- ICONO -->
+
+                    <div class="icono-resumen">
+
+                        <i
+                            class="fa-solid fa-triangle-exclamation"
+                            aria-hidden="true">
+                        </i>
+
+                    </div>
+
+
+                    <!-- INFORMACIÓN -->
+
+                    <div class="contenido-resumen">
+
+                        <h2 id="titulo-novedades">
+                            Novedades pendientes
+                        </h2>
+
+                        <p>
+                            Novedades que requieren atención.
+                        </p>
+
+                    </div>
+
+
+                    <!-- CANTIDAD -->
+
+                    <div class="numero-resumen">
+
+                        <strong id="novedadesPendientes">
+                            0
+                        </strong>
+
+                        <span>
+                            pendientes
+                        </span>
+
+                    </div>
+
+
+                    <!-- ENLACE -->
+
+                    <a
+                        href="./novedades.html"
+                        class="boton-resumen">
+
+                        Ver novedades
+
+                        <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true">
+                        </i>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 PIE DE PÁGINA
+            =================================================== -->
+
+            <footer class="pie-dashboard">
+
+                <p>
+
+                    <i
+                        class="fa-solid fa-shield-halved"
+                        aria-hidden="true">
+                    </i>
+
+                    Minuta Digital 360
+
+                </p>
+
+                <span>
+                    Gestión inteligente de la seguridad
+                </span>
+
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- ======================================================
+         JAVASCRIPT
+    ======================================================= -->
+
+    <script
+        src="../js/dashboard.js"
+        defer>
+    </script>
+
+
+</body>
+
+</html>

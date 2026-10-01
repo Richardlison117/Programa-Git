@@ -1,0 +1,1163 @@
+/* ==========================================================
+   PROYECTO : MINUTA DIGITAL 360
+   ARCHIVO  : evidencias.css
+   DESCRIPCIÓN:
+   Estilos del módulo de evidencias.
+   AUTOR:
+   Richard Duvan Gelves Laguado
+   FECHA:
+   2026
+========================================================== */
+
+
+/* ==========================================================
+   01. CONTENEDOR PRINCIPAL
+========================================================== */
+
+.contenedor-evidencias {
+
+    min-height: 100vh;
+
+    padding: 35px 25px;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(59, 130, 246, .20),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(34, 211, 238, .12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            var(--color-fondo),
+            var(--color-primario),
+            var(--color-secundario)
+        );
+}
+
+
+/* ==========================================================
+   02. ENCABEZADO
+========================================================== */
+
+.contenedor-evidencias .encabezado {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    max-width: 1200px;
+
+    margin: 0 auto 25px;
+}
+
+
+.contenedor-evidencias
+.informacion-encabezado h1 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 0;
+
+    color: #FFFFFF;
+
+    font-size: 30px;
+
+    font-weight: 800;
+}
+
+
+.contenedor-evidencias
+.informacion-encabezado h1 i {
+
+    color: #22D3EE;
+}
+
+
+.contenedor-evidencias
+.informacion-encabezado p {
+
+    margin-top: 6px;
+
+    color: #CBD5E1;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   03. BOTÓN VOLVER
+========================================================== */
+
+.btn-volver-inicio {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 16px;
+
+    color: #FFFFFF;
+
+    background: rgba(255, 255, 255, .08);
+
+    border: 1px solid rgba(103, 232, 249, .30);
+
+    border-radius: 10px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: .2s ease;
+}
+
+
+.btn-volver-inicio i {
+
+    color: #67E8F9;
+}
+
+
+.btn-volver-inicio:hover {
+
+    background: rgba(37, 99, 235, .25);
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   04. RESUMEN
+========================================================== */
+
+.resumen-evidencias {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    max-width: 1200px;
+
+    margin: 0 auto 24px;
+}
+
+
+.tarjeta-resumen {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    min-height: 95px;
+
+    padding: 20px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E2E8F0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 12px
+        rgba(15, 23, 42, .08);
+
+    transition: .2s ease;
+}
+
+
+.tarjeta-resumen:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(15, 23, 42, .12);
+}
+
+
+.icono-resumen {
+
+    width: 46px;
+
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #FFFFFF;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563EB,
+            #06B6D4
+        );
+
+    border-radius: 12px;
+}
+
+
+.tarjeta-resumen span {
+
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #64748B;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.tarjeta-resumen strong {
+
+    display: block;
+
+    color: #1E3A8A;
+
+    font-size: 26px;
+
+    font-weight: 800;
+}
+
+
+/* ==========================================================
+   05. TARJETAS
+========================================================== */
+
+.contenedor-evidencias .tarjeta {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto 24px;
+
+    padding: 25px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E2E8F0;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 12px
+        rgba(15, 23, 42, .08);
+}
+
+
+/* ==========================================================
+   06. CABECERAS
+========================================================== */
+
+.cabecera-seccion,
+.cabecera-listado {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+.cabecera-seccion h2,
+.cabecera-listado h2 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #1E3A8A;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+.cabecera-seccion h2 i,
+.cabecera-listado h2 i {
+
+    color: #2563EB;
+}
+
+
+.cabecera-seccion p,
+.cabecera-listado p {
+
+    margin-top: 5px;
+
+    color: #64748B;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   07. FILTROS
+========================================================== */
+
+.filtros-evidencias {
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap: 16px;
+}
+
+
+.campo-filtro label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #1E293B;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.campo-filtro input,
+.campo-filtro select {
+
+    width: 100%;
+
+    min-height: 44px;
+
+    padding: 10px 13px;
+
+    color: #1E293B;
+
+    background: #FFFFFF;
+
+    border: 1px solid #CBD5E1;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-family: var(--fuente);
+
+    font-size: 13px;
+
+    transition: .2s ease;
+}
+
+
+.campo-filtro input::placeholder {
+
+    color: #94A3B8;
+}
+
+
+.campo-filtro input:focus,
+.campo-filtro select:focus {
+
+    border-color: #2563EB;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, .10);
+}
+
+
+/* ==========================================================
+   08. BÚSQUEDA
+========================================================== */
+
+.entrada-busqueda {
+
+    position: relative;
+}
+
+
+.entrada-busqueda i {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 13px;
+
+    color: #94A3B8;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+}
+
+
+.entrada-busqueda input {
+
+    padding-left: 38px;
+}
+
+
+/* ==========================================================
+   09. ACCIONES DE FILTRO
+========================================================== */
+
+.acciones-filtros {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+/* ==========================================================
+   10. BOTONES
+========================================================== */
+
+.btn-primario,
+.btn-secundario {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 42px;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    font-family: var(--fuente);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+
+.btn-primario {
+
+    color: #FFFFFF;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563EB,
+            #06B6D4
+        );
+
+    border: none;
+}
+
+
+.btn-primario:hover {
+
+    transform: translateY(-2px);
+}
+
+
+.btn-secundario {
+
+    color: #1E293B;
+
+    background: #F8FAFC;
+
+    border: 1px solid #E2E8F0;
+}
+
+
+.btn-secundario:hover {
+
+    background: #E2E8F0;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   11. CONTADOR
+========================================================== */
+
+.contador-resultados {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 36px;
+
+    height: 36px;
+
+    padding: 0 10px;
+
+    color: #FFFFFF;
+
+    background: #1E3A8A;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   12. GALERÍA
+========================================================== */
+
+.lista-evidencias {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 18px;
+}
+
+
+/* ==========================================================
+   13. TARJETA DE EVIDENCIA
+========================================================== */
+
+.tarjeta-evidencia {
+
+    overflow: hidden;
+
+    background: #F8FAFC;
+
+    border: 1px solid #E2E8F0;
+
+    border-radius: 12px;
+
+    transition: .2s ease;
+}
+
+
+.tarjeta-evidencia:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px
+        rgba(15, 23, 42, .10);
+}
+
+
+/* ==========================================================
+   14. VISTA PREVIA
+========================================================== */
+
+.vista-evidencia {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    background: #0F172A;
+}
+
+
+.vista-evidencia img,
+.vista-evidencia video {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* ==========================================================
+   15. ICONO DE VIDEO
+========================================================== */
+
+.icono-video {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #FFFFFF;
+
+    background:
+        rgba(15, 23, 42, .70);
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+/* ==========================================================
+   16. INFORMACIÓN DE EVIDENCIA
+========================================================== */
+
+.info-evidencia {
+
+    padding: 15px;
+}
+
+
+.info-evidencia h3 {
+
+    margin: 0 0 5px;
+
+    color: #1E293B;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.info-evidencia p {
+
+    margin: 3px 0;
+
+    color: #64748B;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   17. TIPO DE EVIDENCIA
+========================================================== */
+
+.tipo-evidencia {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-bottom: 8px;
+
+    padding: 5px 9px;
+
+    color: #1E3A8A;
+
+    background: #DBEAFE;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   18. ACCIÓN DE EVIDENCIA
+========================================================== */
+
+.acciones-evidencia {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+
+.btn-ver-evidencia {
+
+    flex: 1;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 9px;
+
+    color: #1E3A8A;
+
+    background: #FFFFFF;
+
+    border: 1px solid #CBD5E1;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+
+.btn-ver-evidencia:hover {
+
+    background: #EFF6FF;
+}
+
+
+/* ==========================================================
+   19. SIN RESULTADOS
+========================================================== */
+
+.sin-resultados {
+
+    padding: 45px 20px;
+
+    text-align: center;
+}
+
+
+.sin-resultados i {
+
+    color: #94A3B8;
+
+    font-size: 38px;
+}
+
+
+.sin-resultados h3 {
+
+    margin: 12px 0 6px;
+
+    color: #1E293B;
+
+    font-size: 16px;
+}
+
+
+.sin-resultados p {
+
+    color: #64748B;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   20. MODAL
+========================================================== */
+
+.modal-evidencia[hidden] {
+
+    display: none !important;
+}
+
+
+.modal-evidencia {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(15, 23, 42, .78);
+
+    backdrop-filter: blur(6px);
+}
+
+
+/* ==========================================================
+   21. CONTENEDOR DEL MODAL
+========================================================== */
+
+.contenedor-modal-evidencia {
+
+    width: min(100%, 800px);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 24px;
+
+    background: #FFFFFF;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 25px 60px
+        rgba(0, 0, 0, .30);
+}
+
+
+/* ==========================================================
+   22. CABECERA MODAL
+========================================================== */
+
+.cabecera-modal {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+.etiqueta-modal {
+
+    color: #2563EB;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+.cabecera-modal h2 {
+
+    margin-top: 4px;
+
+    color: #1E293B;
+
+    font-size: 20px;
+}
+
+
+.btn-cerrar-modal {
+
+    width: 36px;
+
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    color: #1E293B;
+
+    background: #F1F5F9;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================================
+   23. VISOR
+========================================================== */
+
+.visor-evidencia {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 300px;
+
+    overflow: hidden;
+
+    background: #0F172A;
+
+    border-radius: 10px;
+}
+
+
+.visor-evidencia img,
+.visor-evidencia video {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 500px;
+
+    object-fit: contain;
+}
+
+
+/* ==========================================================
+   24. DETALLE
+========================================================== */
+
+.detalle-evidencia {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+
+.detalle-evidencia-item {
+
+    padding: 12px;
+
+    background: #F8FAFC;
+
+    border: 1px solid #E2E8F0;
+
+    border-radius: 8px;
+}
+
+
+.detalle-evidencia-item span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #64748B;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+.detalle-evidencia-item strong {
+
+    color: #1E293B;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   25. ACCIONES MODAL
+========================================================== */
+
+.acciones-modal {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #E2E8F0;
+}
+
+
+/* ==========================================================
+   26. MÓVIL
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .resumen-evidencias {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .filtros-evidencias {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .lista-evidencias {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .contenedor-evidencias {
+
+        padding: 20px 14px;
+    }
+
+
+    .contenedor-evidencias
+    .encabezado {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .informacion-encabezado h1 {
+
+        font-size: 24px;
+    }
+
+
+    .btn-volver-inicio {
+
+        width: 100%;
+    }
+
+
+    .resumen-evidencias {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .contenedor-evidencias
+    .tarjeta {
+
+        padding: 18px;
+    }
+
+
+    .filtros-evidencias {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .lista-evidencias {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .acciones-filtros {
+
+        flex-direction: column;
+    }
+
+
+    .acciones-filtros button {
+
+        width: 100%;
+    }
+
+
+    .detalle-evidencia {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .acciones-modal {
+
+        flex-direction: column;
+    }
+
+
+    .acciones-modal button {
+
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,185 @@
+<!-- ==========================================================
+     PROYECTO   : MINUTA DIGITAL 360
+     ARCHIVO    : index.html
+     DESCRIPCIÓN: Pantalla de bienvenida del sistema
+     AUTOR      : Richard Duvan Gelves Laguado
+     FECHA      : 2026
+========================================================== -->
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <!-- ======================================================
+         CONFIGURACIÓN BÁSICA
+    ======================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Minuta Digital 360 - Sistema para la gestión digital de minutas de seguridad.">
+
+    <meta
+        name="theme-color"
+        content="#2563EB">
+
+
+    <!-- ======================================================
+         TÍTULO
+    ======================================================= -->
+
+    <title>
+        Minuta Digital 360 | Sistema Inteligente de Seguridad
+    </title>
+
+
+    <!-- ======================================================
+         FAVICON
+    ======================================================= -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="./img/logo-minuta-digital-360.png">
+
+
+    <!-- ======================================================
+         FUENTE PRINCIPAL
+    ======================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- ======================================================
+         ESTILOS GLOBALES
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="./css/estilos.css">
+
+
+    <!-- ======================================================
+         ESTILOS DE LA PANTALLA DE INICIO
+    ======================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="./css/index.css">
+
+</head>
+
+
+<body>
+
+    <!-- ======================================================
+         PANTALLA DE BIENVENIDA
+    ======================================================= -->
+
+    <main
+        id="pantalla-inicio"
+        class="contenedor-principal">
+
+
+        <!-- ==================================================
+             CONTENEDOR DE BIENVENIDA
+        =================================================== -->
+
+        <section class="contenedor-bienvenida">
+
+
+            <!-- ==================================================
+                 LOGO
+            =================================================== -->
+
+            <img
+                src="./img/logo-minuta-digital-360.png"
+                alt="Logo de Minuta Digital 360"
+                class="logo">
+
+
+            <!-- ==================================================
+                 NOMBRE DEL SISTEMA
+            =================================================== -->
+
+            <h1 class="titulo">
+                Minuta Digital 360
+            </h1>
+
+
+            <!-- ==================================================
+                 DESCRIPCIÓN
+            =================================================== -->
+
+            <p class="descripcion">
+                Sistema inteligente para la gestión
+                digital de minutas de seguridad.
+            </p>
+
+
+            <!-- ==================================================
+                 INDICADOR DE CARGA
+            =================================================== -->
+
+            <div
+                class="loader"
+                role="status"
+                aria-label="Cargando sistema"
+                aria-live="polite">
+            </div>
+
+
+            <!-- ==================================================
+                 MENSAJE DE CARGA
+            =================================================== -->
+
+            <p class="cargando">
+                Inicializando sistema...
+            </p>
+
+
+            <!-- ==================================================
+                 VERSIÓN
+            =================================================== -->
+
+            <small class="version">
+                Versión 1.0.0
+            </small>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ======================================================
+         JAVASCRIPT
+    ======================================================= -->
+
+    <script
+        src="./js/app.js"
+        defer>
+    </script>
+
+
+</body>
+
+</html>
